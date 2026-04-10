@@ -745,10 +745,26 @@
 }
 
 @media (max-width: 768px) {
+  .portfolio-shell {
+    padding-bottom: 8rem;
+  }
+
   .hero-title {
     font-size: clamp(2rem, 10vw, 2.8rem);
     line-height: 1.02;
     max-width: none;
+  }
+
+  .hero-copy,
+  .section-copy,
+  .card-copy,
+  .stat-note,
+  .quick-item,
+  .mini-links,
+  .chat-bubble,
+  .chatbot-footer-note {
+    overflow-wrap: anywhere;
+    word-break: break-word;
   }
 
   .hero-copy {
@@ -763,13 +779,20 @@
   .portfolio-nav {
     border-radius: 1.3rem;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
+  }
+
+  .portfolio-nav > div:first-child {
+    width: 100%;
+    display: grid;
+    justify-items: center;
   }
 
   .portfolio-nav > div:last-child {
     width: 100%;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: center;
   }
 
   .hero-layout,
@@ -821,6 +844,19 @@
 @media (max-width: 480px) {
   .portfolio-shell {
     padding-bottom: 8.5rem;
+  }
+
+  .portfolio-nav,
+  .hero-panel,
+  .cookiejar-hero-card,
+  .proof-column > div,
+  .stat-card,
+  .project-visual-card,
+  .hobbies-card,
+  .reel-embed-card,
+  .footer-grid .glass-panel {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
   }
 
   .fact-pill,
