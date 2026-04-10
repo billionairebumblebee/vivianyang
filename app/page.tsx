@@ -1,8 +1,6 @@
 "use client";
 
-import Link from "next/link";
 import { useMemo, useState } from "react";
-import CookieJar from "../components/CookieJar";
 import "./portfolio.css";
 
 const placeholderImage = "/IMG_4043.JPG";
@@ -85,6 +83,7 @@ const proofBullets = [
 ];
 
 const calendlyLink = "https://calendly.com/vivian-yang";
+const cookieJarLink = "https://cookiejar-five.vercel.app/";
 
 const chatFlows = {
   vc: {
@@ -255,10 +254,15 @@ export default function PortfolioPage() {
                   <div className="eyebrow">Cookie Jar</div>
                   <h2 className="section-title mt-3">Interactive proof of range.</h2>
                 </div>
-                <button className="secondary-chip" type="button">Cookie Jar live on this page</button>
+                <a className="secondary-chip" href={cookieJarLink} target="_blank" rel="noreferrer">Open full Cookie Jar</a>
               </div>
-              <div className="cookiejar-embed-shell">
-                <CookieJar />
+              <div className="cookiejar-embed-shell cookiejar-iframe-shell">
+                <iframe
+                  src={cookieJarLink}
+                  title="Vivian Yang Cookie Jar"
+                  loading="lazy"
+                  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
+                />
               </div>
             </article>
 
