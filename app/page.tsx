@@ -138,7 +138,7 @@ export default function PortfolioPage() {
       return [{ sender: "bot", text: "Hi, I’m Foozi. Are you a VC, recruiter, or just intrigued?" }];
     }
 
-    const messages: ChatMessage[] = activeFlow.messages.slice(0, currentStep + 1).map((text) => ({
+    const messages: ChatMessage[] = activeFlow.messages.slice(0, currentStep + 1).map((text): ChatMessage => ({
       sender: "bot",
       text,
     }));
