@@ -22,38 +22,47 @@
   --portfolio-shadow: 0 24px 70px rgba(0, 0, 0, 0.38);
 }
 
+/* --- Base & Shell --- */
 .portfolio-shell {
   position: relative;
   background: var(--portfolio-bg);
   color: var(--portfolio-text);
   padding-bottom: 7rem;
+  min-height: 100vh;
 }
 
 .portfolio-bg {
   position: fixed;
   inset: 0;
   pointer-events: none;
-  background:
-    radial-gradient(circle at 10% 14%, rgba(255,255,255,0.55), transparent 22%),
-    radial-gradient(circle at 88% 12%, rgba(255, 218, 196, 0.36), transparent 22%);
+  z-index: 0;
 }
 
-/* --- THE ROUNDING (FIXING THE CRUDE LOOK) --- */
-.glass-panel, .hero-panel, .cookiejar-hero-card {
+/* --- THE ROUNDING FIX --- */
+.glass-panel, 
+.hero-panel, 
+.cookiejar-hero-card, 
+.project-visual-card, 
+.stat-card, 
+.hobbies-card, 
+.reels-section {
+  border-radius: 2rem !important; /* Forces the "Mansion" rounding */
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
   background: var(--portfolio-panel);
   border: 1px solid var(--portfolio-border);
   box-shadow: var(--portfolio-shadow);
-  border-radius: 2rem !important; /* Forces the soft look back */
+  overflow: hidden; /* Ensures child backgrounds don't bleed over corners */
 }
 
-.portfolio-nav {
-  border-radius: 1.75rem !important;
+/* --- Grid Logic (Desktop Focus) --- */
+.hero-layout, .footer-grid, .reels-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
 }
 
-/* --- GRID & LAYOUT --- */
-.hero-layout, .footer-grid {
+.project-gallery {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.5rem;
@@ -61,18 +70,24 @@
 
 @media (min-width: 1024px) {
   .hero-layout {
-    grid-template-columns: 1.05fr 0.95fr;
+    grid-template-columns: 1.1fr 0.9fr;
     align-items: stretch;
   }
   .project-gallery {
-    display: grid;
     grid-template-columns: repeat(3, 1fr);
+  }
+  /* FIX: Instagram Reels Side-by-Side */
+  .reels-section .grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
     gap: 1.5rem;
   }
-  .footer-grid { grid-template-columns: 1.1fr 0.9fr; }
+  .footer-grid {
+    grid-template-columns: 1.1fr 0.9fr;
+  }
 }
 
-/* --- TYPOGRAPHY --- */
+/* --- Typography --- */
 .hero-title {
   font-family: Georgia, serif;
   font-size: clamp(2.35rem, 5vw, 4.1rem);
@@ -81,51 +96,101 @@
   margin-top: 1rem;
 }
 
-.eyebrow {
-  font-size: 0.72rem;
-  letter-spacing: 0.24em;
-  text-transform: uppercase;
-  color: var(--portfolio-accent-strong);
-  font-weight: 700;
+.section-title {
+  font-family: Georgia, serif;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  line-height: 1.1;
 }
 
-/* --- BUTTONS & PILLS --- */
-.primary-chip, .secondary-chip, .fact-pill, .hobby-pill {
-  border-radius: 999px;
-  padding: 0.7rem 1.2rem;
-  font-weight: 600;
-  border: 1px solid var(--portfolio-border);
-  display: inline-flex;
-  align-items: center;
-  text-decoration: none;
+/* --- Reels Fix (No squishing) --- */
+.reel-embed-card {
+  background: rgba(255,255,255,0.2);
+  border-radius: 1.5rem;
+  padding: 1rem;
+  width: 100%;
 }
 
-.primary-chip { background: var(--portfolio-accent); color: white; }
-.secondary-chip { background: rgba(255,255,255,0.4); color: var(--portfolio-text); }
-
-/* --- THE COOKIE JAR (PREMIUM VIEW) --- */
-.cookiejar-embed-shell {
-  border-radius: 1.7rem;
+.reel-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  border-radius: 1rem;
   overflow: hidden;
-  border: 1px solid var(--portfolio-border);
-  aspect-ratio: 1/1;
+}
+
+/* --- Cookie Jar Fix --- */
+.cookiejar-embed-shell {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  max-height: 550px;
+  border-radius: 1.5rem;
+  margin-top: 1.5rem;
   background: #000;
-  margin-top: 1rem;
 }
 
-/* --- CHAT WIDGET --- */
-.foozi-chat-panel {
-  border-radius: 1.6rem !important;
-  width: min(26rem, calc(100vw - 1.5rem));
-  background: var(--portfolio-panel);
-  box-shadow: 0 24px 70px rgba(53, 30, 18, 0.24);
+.cookiejar-embed-shell iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 
-/* --- MOBILE TIGHTENING --- */
+/* --- Mobile Fixes --- */
 @media (max-width: 768px) {
-  .hero-title { max-width: 100%; font-size: 2.4rem; }
+  .hero-title {
+    max-width: 100%;
+    font-size: 2.5rem;
+  }
+  .mx-auto {
+    padding: 0 1rem;
+  }
   .fact-pill, .hobby-pill, .primary-chip, .secondary-chip {
     width: 100%;
     justify-content: center;
   }
+}
+
+/* --- Pills & Chips --- */
+.fact-pill, .hobby-pill {
+  display: inline-flex;
+  padding: 0.6rem 1rem;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.4);
+  border: 1px solid var(--portfolio-border);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.primary-chip {
+  background: var(--portfolio-accent);
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.secondary-chip {
+  background: rgba(255,255,255,0.45);
+  color: var(--portfolio-text);
+  padding: 0.8rem 1.5rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  border: 1px solid var(--portfolio-border);
+}
+
+.foozi-chat-widget {
+  position: fixed;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  z-index: 100;
+}
+
+.foozi-chat-panel {
+  width: 350px;
+  max-width: calc(100vw - 2rem);
+  border-radius: 2rem !important;
 }
