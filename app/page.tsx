@@ -92,12 +92,12 @@ const chatFlows = {
       "Hi, I’m Foozi. Are you actively investing right now, or mostly tracking strong founders early?",
       "Vivian is a Berkeley mechanical engineering founder who built Foozi, a multi-agent operating system, and ships unusual proof fast.",
       "Her edge is the combo: engineering depth, product instinct, and real distribution energy in one person.",
-      "If you want the quick read, I can put the founder on the line, then hand you her booking link and contact card.",
-      "Drop your name, firm, and best contact and I’ll start contacting founder.",
+      "If you want the quick read, I can give you founder context and hand you her booking link and contact card.",
+      "Drop your name, firm, and best contact and I’ll pass it along cleanly.",
     ],
-    founderIntro: "Contacting founder now...",
+    founderIntro: "Here’s the founder context...",
     founderMessage: "Hi, I’m Vivian. I’m building AI-native systems that feel less like software tools and more like leverage. I care a lot about speed, product taste, and making technical systems actually useful to real people.",
-    closingMessage: "Thanks for stopping by. I’ll make sure this reaches Vivian. In the meantime, here’s her booking link and virtual business card.",
+    closingMessage: "Thanks for stopping by. I’ll pass this along to Vivian. In the meantime, here’s her booking link and virtual business card.",
     leadPrompt: "Name, firm, and best contact",
     leadInterest: "VC inbound from portfolio chat",
     ctaLabel: "Get Vivian’s booking link",
@@ -111,9 +111,9 @@ const chatFlows = {
       "She is especially strong in roles where initiative, technical depth, and communication all matter at once.",
       "Send your name, team, and best contact and I’ll route you the clean next step.",
     ],
-    founderIntro: "Contacting founder now...",
+    founderIntro: "Here’s the founder context...",
     founderMessage: "Hi, I’m Vivian. The roles I’m best in are the ones where I can think technically, move quickly, and help shape the product instead of just taking tickets.",
-    closingMessage: "Thanks, I’ve got it. Here’s Vivian’s booking link and contact card so you can keep the conversation moving.",
+    closingMessage: "Thanks, I’ve got it. I’ll pass this along to Vivian. Here’s her booking link and contact card so you can keep the conversation moving.",
     leadPrompt: "Name, team, and best contact",
     leadInterest: "Recruiter inbound from portfolio chat",
     ctaLabel: "Get Vivian’s contact card",
@@ -127,9 +127,9 @@ const chatFlows = {
       "If you want the fast version, I can give you the founder summary and point you to the right next step.",
       "Drop your name and best contact and I’ll route you cleanly.",
     ],
-    founderIntro: "Putting founder context on the line...",
+    founderIntro: "Here’s the founder context...",
     founderMessage: "Hi, I’m Vivian. I like building things that feel sharp, alive, and actually useful, whether that’s AI systems, prototypes, or product surfaces people remember.",
-    closingMessage: "Thanks for stopping by. Here’s Vivian’s booking link and virtual business card if you want to keep talking.",
+    closingMessage: "Thanks for stopping by. I’ll pass this along to Vivian. Here’s her booking link and virtual business card if you want to keep talking.",
     leadPrompt: "Name and best contact",
     leadInterest: "General inbound from portfolio chat",
     ctaLabel: "Get Vivian’s info",
@@ -477,7 +477,7 @@ export default function PortfolioPage() {
               </div>
             )}
 
-            <div className="chatbot-footer-note">Foozi qualifies intent, gives a tight founder pitch, then routes the right people forward.</div>
+            <div className="chatbot-footer-note">Foozi qualifies intent, gives founder context, and routes the right people toward Vivian’s real contact options.</div>
           </div>
         )}
       </div>
