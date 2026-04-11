@@ -36,7 +36,7 @@ const featuredProjects = [
     title: "Foozi / OpenClaw",
     meta: "AI systems • product • execution",
     description: "Built a multi-agent personal operating system with workflow routing, memory, and a polished portfolio surface.",
-    image: placeholderImage,
+    image: fooziImage,
     alt: "Photo for Foozi project work",
   },
   {
