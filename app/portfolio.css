@@ -264,6 +264,7 @@
 
 .hero-panel {
   min-height: 50%;
+  max-width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -327,13 +328,13 @@
   min-height: 100%;
 }
 
-.cookiejar-embed-shell .h-\[75vh\] {
+/*.cookiejar-embed-shell .h-\[75vh\] {
   height: calc(100% - 5.5rem);
 }
 
 .cookiejar-embed-shell .h-\[15vh\] {
   height: 5.5rem;
-}
+} */
 
 .cookiejar-embed-shell .text-\[5vw\],
 .cookiejar-embed-shell .text-\[1\.5vw\],
@@ -583,7 +584,7 @@
 
 .reel-frame {
   position: relative;
-  width: 50%;
+  width: 100%;
   aspect-ratio: 9 / 16;
   border-radius: 1.15rem;
   overflow: hidden;
@@ -591,8 +592,8 @@
 }
 
 .reel-frame iframe {
-  width: 100%;
-  height: 100%;
+  width: 50%;
+  height: 50%;
   border: 0;
 }
 
