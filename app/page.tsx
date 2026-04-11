@@ -4,8 +4,8 @@ import { useMemo, useState } from "react";
 import "./portfolio.css";
 
 const fooziImage = "/IMG_4043.JPG";
-const oskiImage = "/IMG_8690.JPG";
-const byogloImage = "/IMG_2146.JPG";
+const oskiImage = "/IMG_8690.jpg";
+const byogloImage = "/IMG_2146.jpg";
 
 const heroFacts = [
   "⚙️ UC Berkeley Mechanical Engineering",
