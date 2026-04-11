@@ -58,14 +58,35 @@
 /* --- Grid Logic (Desktop Focus) --- */
 .hero-layout, .footer-grid, .reels-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr; /* Mobile default */
   gap: 1.5rem;
 }
 
 .project-gallery {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr; /*Mobile deafult*/
   gap: 1.5rem;
+}
+
+/* DESKTOP BREAKPOINT */
+@media (min-width: 1024px) {
+  .hero-layout {
+    grid-template-columns: 1.05fr 0.95fr; /* Matches your 1.02fr split */
+    align-items: stretch;
+  }
+
+  .project-gallery {
+    grid-template-columns: repeat(3, 1fr); /* 3 Columns for Gallery */
+  }
+
+  .footer-grid {
+    grid-template-columns: 1.1fr 0.9fr; /* Split Footer */
+  }
+
+  /* Make the Hero Panel fill the same height as the Cookie Jar */
+  .hero-panel {
+    height: 100%;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -147,7 +168,7 @@
     padding: 0 1rem;
   }
   .fact-pill, .hobby-pill, .primary-chip, .secondary-chip {
-    width: 100%;
+    width: auto !important;
     justify-content: center;
   }
 }
