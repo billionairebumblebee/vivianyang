@@ -3,7 +3,9 @@
 import { useMemo, useState } from "react";
 import "./portfolio.css";
 
-const placeholderImage = "/IMG_4043.JPG";
+const openclawImage = "/IMG_4043.JPG";
+const byogloImage = "/IMG_2146.jpg";
+const oskiImage = "/IMG_8690.png";
 
 const heroFacts = [
   "⚙️ UC Berkeley Mechanical Engineering",
@@ -34,21 +36,21 @@ const featuredProjects = [
     title: "Foozi / OpenClaw",
     meta: "AI systems • product • execution",
     description: "Built a multi-agent personal operating system with workflow routing, memory, and a polished portfolio surface.",
-    image: placeholderImage,
+    image: openclawImage,
     alt: "Placeholder photo for Foozi project work",
   },
   {
     title: "Oski Sorting Trash Can",
     meta: "mechanical • CAD • Arduino",
     description: "Physical engineering build combining prototyping, systems thinking, and practical interaction design.",
-    image: placeholderImage,
+    image: oskiImage,
     alt: "Placeholder photo for Oski trash can project work",
   },
   {
     title: "ByoGlo",
     meta: "product • packaging • pricing",
-    description: "Prototype and market-facing concept work with strong taste around packaging, positioning, and customer experience.",
-    image: placeholderImage,
+    description: "https://byoglo.neocities.org/ Prototype and market-facing concept work with strong taste around packaging, positioning, and customer experience.",
+    image: byogloImage,
     alt: "Placeholder photo for ByoGlo project work",
   },
 ];
