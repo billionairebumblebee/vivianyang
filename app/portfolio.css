@@ -631,6 +631,13 @@
   color: var(--portfolio-text);
 }
 
+.chat-bubble.founder {
+  justify-self: start;
+  background: linear-gradient(180deg, rgba(210, 138, 87, 0.22), rgba(210, 138, 87, 0.14));
+  border: 1px solid rgba(210, 138, 87, 0.28);
+  color: var(--portfolio-text);
+}
+
 .chatbot-footer-note {
   margin-top: 0.9rem;
   font-size: 0.78rem;
@@ -693,6 +700,10 @@
 .chatbot-booking {
   display: grid;
   gap: 0.75rem;
+}
+
+.chatbot-booking .secondary-chip {
+  width: 100%;
 }
 
 .chatbot-input:focus {
