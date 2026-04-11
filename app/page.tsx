@@ -43,7 +43,7 @@ const featuredProjects = [
     title: "Oski Sorting Trash Can",
     meta: "mechanical • CAD • Arduino",
     description: "Physical engineering build combining prototyping, systems thinking, and practical interaction design.",
-    image: oskiImage,
+    image: openclawImage,
     alt: "Poto for Oski trash can project work",
   },
   {
