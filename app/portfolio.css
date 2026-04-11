@@ -263,8 +263,7 @@
 }
 
 .hero-panel {
-  min-height: 50%;
-  max-width: 50%;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -289,7 +288,7 @@
 
 .cookiejar-embed-shell {
   position: relative;
-  width: 50%;
+  width: 100%;
   aspect-ratio: 1 / 1;
   min-height: 0;
   max-height: 34rem;
@@ -297,6 +296,18 @@
   overflow: hidden;
   border: 1px solid var(--portfolio-border);
   background: radial-gradient(circle at top, rgba(255,255,255,0.22), rgba(61, 37, 25, 0.28) 55%, rgba(22, 14, 12, 0.72) 100%);
+}
+
+.cookiejar-iframe-shell iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+  background: #140d09;
+}
+
+.cookiejar-iframe-shell {
+  overflow: hidden;
 }
 
 .cookiejar-embed-shell > div {
@@ -328,13 +339,13 @@
   min-height: 100%;
 }
 
-/*.cookiejar-embed-shell .h-\[75vh\] {
+.cookiejar-embed-shell .h-\[75vh\] {
   height: calc(100% - 5.5rem);
 }
 
 .cookiejar-embed-shell .h-\[15vh\] {
   height: 5.5rem;
-} */
+}
 
 .cookiejar-embed-shell .text-\[5vw\],
 .cookiejar-embed-shell .text-\[1\.5vw\],
@@ -399,8 +410,7 @@
 
 @media (max-width: 1100px) {
   .cookiejar-embed-shell {
-    width: 100%;
-    max-height: 550px;
+    max-height: 30rem;
   }
 }
 
@@ -411,7 +421,7 @@
   }
 
   .cookiejar-embed-shell {
-    max-height: 100%;
+    max-height: none;
   }
 }
 
@@ -592,7 +602,7 @@
 }
 
 .reel-frame iframe {
-  width: 50%;
+  width: 100%;
   height: 100%;
   border: 0;
 }
