@@ -84,7 +84,7 @@ const proofBullets = [
   "Moves from idea to shipped visual proof unusually fast",
 ];
 
-const calendlyLink = "https://calendly.com/vivian-yang";
+const calendlyLink = "https://calendly.com/vivian_yang-berkeley/30min";
 const cookieJarLink = "https://cookiejar-five.vercel.app/";
 
 const chatFlows = {
