@@ -37,21 +37,21 @@ const featuredProjects = [
     meta: "AI systems • product • execution",
     description: "Built a multi-agent personal operating system with workflow routing, memory, and a polished portfolio surface.",
     image: openclawImage,
-    alt: "Placeholder photo for Foozi project work",
+    alt: "Photo for Foozi project work",
   },
   {
     title: "Oski Sorting Trash Can",
     meta: "mechanical • CAD • Arduino",
     description: "Physical engineering build combining prototyping, systems thinking, and practical interaction design.",
     image: oskiImage,
-    alt: "Placeholder photo for Oski trash can project work",
+    alt: "Poto for Oski trash can project work",
   },
   {
     title: "ByoGlo",
     meta: "product • packaging • pricing",
     description: "https://byoglo.neocities.org/ Prototype and market-facing concept work with strong taste around packaging, positioning, and customer experience.",
     image: byogloImage,
-    alt: "Placeholder photo for ByoGlo project work",
+    alt: "Photo for ByoGlo project work",
   },
 ];
 
