@@ -4,8 +4,8 @@ import { useMemo, useState } from "react";
 import "./portfolio.css";
 
 const fooziImage = "/IMG_4043.JPG";
-const oskiImage = "/IMG_8690.jpg";
 const byogloImage = "/IMG_2146.jpg";
+const oskiImage = "/IMG_8690.jpg";
 
 const heroFacts = [
   "⚙️ UC Berkeley Mechanical Engineering",
@@ -49,7 +49,7 @@ const featuredProjects = [
   {
     title: "ByoGlo",
     meta: "product • packaging • pricing",
-    description: "https://byoglo.neocities.org/ Prototype and market-facing concept work with positioning and customer experience.",
+    description: "https://byoglo.neocities.org/ Prototype and market-facing concept work with strong taste around packaging, positioning, and customer experience.",
     image: byogloImage,
     alt: "Photo for ByoGlo project work",
   },
@@ -84,19 +84,25 @@ const proofBullets = [
   "Moves from idea to shipped visual proof unusually fast",
 ];
 
-const calendlyLink = "https://calendly.com/vivian_yang-berkeley/30min";
+const calendlyLink = "https://calendly.com/vivian_yang-berkeley/";
 const cookieJarLink = "https://cookiejar-five.vercel.app/";
 
 const chatFlows = {
   vc: {
     label: "VC",
     messages: [
-      "Hi, I’m Foozi. Are you actively investing right now, or just tracking strong founders early?",
-      "Vivian is a Berkeley mechanical engineering founder who built Foozi, a multi-agent personal operating system, in about two weeks.",
-      "Her angle is rare: she combines engineering depth, product instinct, and real distribution energy in one package.",
-      "She moves from concept to working demo fast, across AI systems, hardware-adjacent prototyping, and founder-led GTM.",
-      "If this sounds investable, drop your name, firm, and best contact so I can route you cleanly.",
+      "Hi, I’m Foozi. Are you actively investing right now, or mostly tracking strong founders early?",
+      "Vivian is a Berkeley mechanical engineering founder who built Foozi, a multi-agent operating system, and ships unusual proof fast.",
+      "Her edge is the combo: engineering depth, product instinct, and real distribution energy in one person.",
+      "If you want the quick read, I can give you founder context and hand you her booking link and contact card.",
+      "Drop your name, firm, and best contact and I’ll pass it along cleanly.",
     ],
+    founderIntro: "Here’s the founder context...",
+    founderMessage: "Hi, I’m Vivian. I’m building AI-native systems that feel less like software tools and more like leverage. I care a lot about speed, product taste, and making technical systems actually useful to real people.",
+    closingMessage: "Thanks for stopping by. I’ll pass this along to Vivian. In the meantime, here’s her booking link and virtual business card.",
+    leadPrompt: "Name, firm, and best contact",
+    leadInterest: "VC inbound from portfolio chat",
+    ctaLabel: "Get Vivian’s booking link",
   },
   recruiter: {
     label: "Recruiter",
@@ -105,8 +111,14 @@ const chatFlows = {
       "Vivian is a Berkeley mechanical engineering student who builds like a founder, not just a candidate.",
       "She ships across AI systems, product surfaces, prototyping, and fast execution with strong taste.",
       "She is especially strong in roles where initiative, technical depth, and communication all matter at once.",
-      "If you want to talk, send your name, team, and best contact and I’ll tee it up.",
+      "Send your name, team, and best contact and I’ll route you the clean next step.",
     ],
+    founderIntro: "Here’s the founder context...",
+    founderMessage: "Hi, I’m Vivian. The roles I’m best in are the ones where I can think technically, move quickly, and help shape the product instead of just taking tickets.",
+    closingMessage: "Thanks, I’ve got it. I’ll pass this along to Vivian. Here’s her booking link and contact card so you can keep the conversation moving.",
+    leadPrompt: "Name, team, and best contact",
+    leadInterest: "Recruiter inbound from portfolio chat",
+    ctaLabel: "Get Vivian’s contact card",
   },
   intrigued: {
     label: "Just intrigued",
@@ -114,14 +126,20 @@ const chatFlows = {
       "Hi, I’m Foozi. Are you here because of the portfolio, the projects, or the vibe?",
       "Vivian is a Berkeley engineer and founder building AI-native systems, product experiments, and memorable technical artifacts.",
       "The pattern is speed plus taste, not just isolated school projects.",
-      "She thinks like an engineer, builds like a founder, and knows how to make the work legible to other people.",
-      "If you want to connect, leave your name and contact and I’ll point you to the right next step.",
+      "If you want the fast version, I can give you the founder summary and point you to the right next step.",
+      "Drop your name and best contact and I’ll route you cleanly.",
     ],
+    founderIntro: "Here’s the founder context...",
+    founderMessage: "Hi, I’m Vivian. I like building things that feel sharp, alive, and actually useful, whether that’s AI systems, prototypes, or product surfaces people remember.",
+    closingMessage: "Thanks for stopping by. I’ll pass this along to Vivian. Here’s her booking link and virtual business card if you want to keep talking.",
+    leadPrompt: "Name and best contact",
+    leadInterest: "General inbound from portfolio chat",
+    ctaLabel: "Get Vivian’s info",
   },
 } as const;
 
 type ChatRole = keyof typeof chatFlows;
-type ChatMessage = { sender: "bot" | "human"; text: string };
+type ChatMessage = { sender: "bot" | "human" | "founder"; text: string };
 
 export default function PortfolioPage() {
   const [isDark, setIsDark] = useState(false);
@@ -132,6 +150,7 @@ export default function PortfolioPage() {
   const [isBookedState, setIsBookedState] = useState(false);
   const [isSendingLead, setIsSendingLead] = useState(false);
   const [leadSaved, setLeadSaved] = useState(false);
+  const [founderConnected, setFounderConnected] = useState(false);
 
   const activeFlow = activeRole ? chatFlows[activeRole] : null;
 
@@ -149,12 +168,17 @@ export default function PortfolioPage() {
       messages.push({ sender: "human", text: leadInput.trim() });
     }
 
+    if (founderConnected) {
+      messages.push({ sender: "bot", text: activeFlow.founderIntro });
+      messages.push({ sender: "founder", text: activeFlow.founderMessage });
+    }
+
     if (leadSaved) {
-      messages.push({ sender: "bot", text: "Thank you. You’re routed. You can book time with Vivian below." });
+      messages.push({ sender: "bot", text: activeFlow.closingMessage });
     }
 
     return messages;
-  }, [activeFlow, currentStep, leadInput, leadSaved]);
+  }, [activeFlow, currentStep, founderConnected, leadInput, leadSaved]);
 
   const setTheme = (dark: boolean) => {
     setIsDark(dark);
@@ -169,6 +193,7 @@ export default function PortfolioPage() {
     setCurrentStep(0);
     setLeadInput("");
     setLeadSaved(false);
+    setFounderConnected(false);
     setIsBookedState(false);
   };
 
@@ -192,10 +217,11 @@ export default function PortfolioPage() {
           body: JSON.stringify({
             name: leadInput.trim(),
             contact: leadInput.trim(),
-            interest: "VC inbound from portfolio chat",
+            interest: activeFlow.leadInterest,
           }),
         });
       }
+      setFounderConnected(true);
       setLeadSaved(true);
     } finally {
       setIsSendingLead(false);
@@ -404,7 +430,7 @@ export default function PortfolioPage() {
             </div>
             <div className="chatbot-log">
               {chatMessages.map((message, index) => (
-                <div key={`${message.sender}-${index}`} className={`chat-bubble ${message.sender === "bot" ? "bot" : "human"}`}>
+                <div key={`${message.sender}-${index}`} className={`chat-bubble ${message.sender}`}>
                   {message.text}
                 </div>
               ))}
@@ -423,7 +449,7 @@ export default function PortfolioPage() {
                 {currentStep >= (activeFlow?.messages.length || 1) - 1 && (
                   <textarea
                     className="chatbot-input"
-                    placeholder={activeRole === "vc" ? "Name, firm, and best contact" : "Name and best contact"}
+                    placeholder={activeFlow?.leadPrompt}
                     value={leadInput}
                     onChange={(event) => setLeadInput(event.target.value)}
                   />
@@ -444,13 +470,16 @@ export default function PortfolioPage() {
             {leadSaved && (
               <div className="chatbot-booking mt-4">
                 <a className="primary-chip" href={calendlyLink} target="_blank" rel="noreferrer" onClick={() => setIsBookedState(true)}>
-                  Book with Vivian
+                  {activeFlow?.ctaLabel || "Book with Vivian"}
+                </a>
+                <a className="secondary-chip" href="mailto:vivian_yang@berkeley.edu?subject=Portfolio%20inbound" target="_blank" rel="noreferrer">
+                  Virtual business card
                 </a>
                 {isBookedState && <div className="chatbot-footer-note">Perfect. If you booked, Vivian will see it there too.</div>}
               </div>
             )}
 
-            <div className="chatbot-footer-note">Foozi qualifies intent, gives a tight founder pitch, then routes the right people forward.</div>
+            <div className="chatbot-footer-note">Foozi qualifies intent, gives founder context, and routes the right people toward Vivian’s real contact options.</div>
           </div>
         )}
       </div>
