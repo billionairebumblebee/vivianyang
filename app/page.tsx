@@ -5,7 +5,7 @@ import "./portfolio.css";
 
 const openclawImage = "/IMG_4043.JPG";
 const byogloImage = "/IMG_2146.jpg";
-const oskiImage = "/IMG_8690.png";
+const oskiImage = "/IMG_8690.jpg";
 
 const heroFacts = [
   "⚙️ UC Berkeley Mechanical Engineering",
