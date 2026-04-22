@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import "./portfolio.css";
 
 const fooziImage = "/IMG_4043.JPG";
@@ -37,21 +37,21 @@ const featuredProjects = [
     meta: "AI systems • product • execution",
     description: "Built a multi-agent personal operating system with workflow routing, memory, and a polished portfolio surface.",
     image: fooziImage,
-    alt: "Photo for Foozi project work",
+    alt: "Foozi project work",
   },
   {
     title: "Oski Sorting Trash Can",
     meta: "mechanical • CAD • Arduino",
     description: "Physical engineering build combining prototyping, systems thinking, and practical interaction design.",
     image: oskiImage,
-    alt: "Photo for Oski trash can project work",
+    alt: "Oski can project work",
   },
   {
     title: "ByoGlo",
     meta: "product • packaging • pricing",
-    description: "https://byoglo.neocities.org/ Prototype and market-facing concept work with strong taste around packaging, positioning, and customer experience.",
+    description: "Prototype and market-facing concept work with strong taste around packaging, positioning, and customer experience.",
     image: byogloImage,
-    alt: "Photo for ByoGlo project work",
+    alt: "ByoGlo project work",
   },
 ];
 
@@ -84,7 +84,7 @@ const proofBullets = [
   "Moves from idea to shipped visual proof unusually fast",
 ];
 
-const calendlyLink = "https://calendly.com/vivian_yang-berkeley/";
+const calendlyLink = "https://calendly.com/vivian-yang";
 const cookieJarLink = "https://cookiejar-five.vercel.app/";
 
 const chatFlows = {
@@ -228,17 +228,17 @@ export default function PortfolioPage() {
     }
   };
 
-  if (typeof window !== "undefined" && !window.localStorage.getItem("vivian-portfolio-theme-booted")) {
+  useEffect(() => {
     const saved = window.localStorage.getItem("vivian-portfolio-theme");
-    if (saved === "dark") {
-      document.documentElement.dataset.theme = "dark";
-    }
-    window.localStorage.setItem("vivian-portfolio-theme-booted", "1");
-  }
+    const dark = saved === "dark";
+    document.documentElement.dataset.theme = dark ? "dark" : "light";
+    setIsDark(dark);
+  }, []);
+
   return (
     <main className="portfolio-shell min-h-screen">
       <div className="portfolio-bg" />
-      <section className="mx-auto max-w-6xl px-5 py-6 md:px-8 md:py-8">
+      <section className="portfolio-container mx-auto max-w-[1280px] px-5 py-6 md:px-8 md:py-8">
         <header className="portfolio-nav glass-panel mb-6 flex items-center justify-between gap-4 rounded-[1.75rem] px-5 py-4">
           <div>
             <div className="eyebrow">Vivian Yang</div>
@@ -313,7 +313,7 @@ export default function PortfolioPage() {
           </div>
         </section>
 
-        <section className="mt-6 grid gap-4 md:grid-cols-3">
+        <section className="stats-strip mt-6 grid gap-4 md:grid-cols-3">
           {proofStats.map((stat) => (
             <article key={stat.label} className="glass-panel stat-card rounded-[1.6rem] p-6">
               <div className="stat-label">{stat.label}</div>
@@ -344,7 +344,7 @@ export default function PortfolioPage() {
           </div>
         </section>
 
-        <section className="mt-6 grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
+        <section className="story-grid mt-6 grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
           <article className="glass-panel rounded-[2rem] p-7 md:p-8 hobbies-card">
             <div className="eyebrow mb-3">About me</div>
             <h2 className="section-title">Gaming, development, and building cute things that still go hard.</h2>
@@ -486,3 +486,4 @@ export default function PortfolioPage() {
     </main>
   );
 }
+
