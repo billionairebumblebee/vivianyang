@@ -246,7 +246,7 @@ export default function PortfolioPage() {
     <main className="portfolio-shell min-h-screen">
       <div className="portfolio-bg" />
       <section className="portfolio-container mx-auto max-w-[1280px] px-5 py-6 md:px-8 md:py-8">
-        <header className="portfolio-nav glass-panel mb-4 flex items-center justify-between gap-3 rounded-[1.2rem] px-4 py-3">
+        <header className="portfolio-nav glass-panel mb-4 flex items-center justify-between gap-3 rounded-[1.2rem] px-6 py-4">
           <div className="portfolio-nav-brand">
             <div className="portfolio-name">Vivian Yang</div>
             <div className="portfolio-nav-sub">Berkeley engineer · founder · builder</div>
@@ -254,12 +254,11 @@ export default function PortfolioPage() {
           </div>
           <div className="portfolio-nav-links">
             <a className="secondary-chip" href="#featured">Projects</a>
-            <a className="primary-chip" href={calendlyLink} target="_blank" rel="noreferrer">Calendly</a>
+            <a className="primary-chip" href={calendlyLink} target="_blank" rel="noreferrer">Book Meeting</a>
             <a className="secondary-chip" href="https://github.com/billionairebumblebee" target="_blank" rel="noreferrer">GitHub</a>
             <a className="secondary-chip" href="https://www.linkedin.com/in/viviany31" target="_blank" rel="noreferrer">LinkedIn</a>
-            <button id="theme-toggle" className="theme-toggle" aria-label="Toggle dark mode" onClick={() => setTheme(!isDark)}>
-              <span className="theme-toggle__sun">☀️</span>
-              <span className="theme-toggle__moon">🌙</span>
+            <button id="theme-toggle" className="theme-toggle" aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"} onClick={() => setTheme(!isDark)}>
+              {isDark ? "Light Mode" : "Dark Mode"}
             </button>
           </div>
         </header>
@@ -277,8 +276,18 @@ export default function PortfolioPage() {
                 <span key={fact} className="fact-pill">{fact}</span>
               ))}
             </div>
-
           </div>
+
+          <article className="glass-panel cloak-preview-card rounded-[1.4rem] p-5 md:p-6">
+            <div className="eyebrow mb-2">Cloak</div>
+            <h2 className="section-title cloak-preview-title">Stealth startup launching in a week.</h2>
+            <p className="section-copy mt-3">
+              Cloak is Vivian’s stealth anti-tracking startup focused on protecting shoppers from fingerprinting, manipulation, and quiet pricing pressure.
+            </p>
+            <p className="section-copy mt-3">
+              Soon this section will embed the live Cloak website directly so the portfolio can show the product in the same tight desktop layout.
+            </p>
+          </article>
 
           <div className="hero-side-stack">
             <aside className="glass-panel skills-panel rounded-[1.4rem] p-5 md:p-6">
@@ -337,7 +346,7 @@ export default function PortfolioPage() {
           <div className="project-gallery project-grid mt-5">
             {featuredProjects.map((project) => (
               <article key={project.title} className="project-visual-card">
-                <img src={project.image} alt={project.alt} className="project-visual-image" />
+                <img src={project.image} alt={project.alt} className="project-visual-image project-visual-square" />
                 <div className="project-visual-content">
                   <div className="feature-meta">{project.meta}</div>
                   <h3 className="card-title mt-3">{project.title}</h3>
@@ -400,7 +409,7 @@ export default function PortfolioPage() {
           <article className="glass-panel rounded-[2rem] p-7 md:p-8">
             <div className="eyebrow mb-3">Links</div>
             <div className="footer-button-stack">
-              <a className="primary-chip" href={calendlyLink} target="_blank" rel="noreferrer">Calendly</a>
+              <a className="primary-chip" href={calendlyLink} target="_blank" rel="noreferrer">Book Meeting</a>
               <a className="secondary-chip" href="https://github.com/billionairebumblebee" target="_blank" rel="noreferrer">GitHub</a>
               <a className="secondary-chip" href="https://www.linkedin.com/in/viviany31" target="_blank" rel="noreferrer">LinkedIn</a>
               <a className="secondary-chip" href="mailto:vivian_yang@berkeley.edu">Email</a>
