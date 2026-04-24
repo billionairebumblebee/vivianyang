@@ -1,13 +1,13 @@
 :root {
-  --portfolio-bg: linear-gradient(180deg, #f8f1e7 0%, #f4e6da 48%, #efe6de 100%);
-  --portfolio-panel: linear-gradient(180deg, rgba(255, 251, 248, 0.68) 0%, rgba(252, 242, 234, 0.54) 100%);
-  --portfolio-border: rgba(176, 132, 97, 0.22);
+  --portfolio-bg: radial-gradient(circle at top left, #fff8f2 0%, #f7ecdf 34%, #f0e3d8 72%, #eadfd7 100%);
+  --portfolio-panel: linear-gradient(180deg, rgba(255, 255, 255, 0.56) 0%, rgba(255, 247, 241, 0.34) 100%);
+  --portfolio-border: rgba(196, 149, 112, 0.24);
   --portfolio-text: #50382c;
   --portfolio-muted: #7d6559;
   --portfolio-accent: #d28a57;
   --portfolio-accent-strong: #a96035;
-  --portfolio-soft: #f7d9cc;
-  --portfolio-shadow: 0 22px 70px rgba(127, 90, 61, 0.14);
+  --portfolio-soft: rgba(255, 220, 204, 0.5);
+  --portfolio-shadow: 0 28px 90px rgba(127, 90, 61, 0.16);
 }
 
 :root[data-theme="dark"] {
@@ -35,10 +35,11 @@
   inset: 0;
   pointer-events: none;
   background:
-    radial-gradient(circle at 10% 14%, rgba(255,255,255,0.55), transparent 22%),
-    radial-gradient(circle at 88% 12%, rgba(255, 218, 196, 0.36), transparent 22%),
-    radial-gradient(circle at 80% 76%, rgba(214, 164, 125, 0.18), transparent 18%),
-    radial-gradient(circle at 18% 84%, rgba(255, 214, 228, 0.2), transparent 14%);
+    radial-gradient(circle at 10% 14%, rgba(255,255,255,0.9), transparent 24%),
+    radial-gradient(circle at 88% 12%, rgba(255, 206, 176, 0.5), transparent 24%),
+    radial-gradient(circle at 82% 78%, rgba(214, 164, 125, 0.24), transparent 20%),
+    radial-gradient(circle at 18% 84%, rgba(255, 214, 228, 0.26), transparent 16%),
+    linear-gradient(135deg, rgba(255,255,255,0.18), rgba(255,255,255,0));
 }
 
 .glass-panel {
@@ -56,11 +57,26 @@
   inset: 0;
   border-radius: inherit;
   pointer-events: none;
-  background: linear-gradient(180deg, rgba(255,255,255,0.26) 0%, rgba(255,255,255,0.08) 32%, rgba(255,255,255,0.03) 100%);
+  background: linear-gradient(180deg, rgba(255,255,255,0.42) 0%, rgba(255,255,255,0.14) 30%, rgba(255,255,255,0.04) 100%);
+}
+
+.glass-panel::after {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  border-radius: inherit;
+  pointer-events: none;
+  background: radial-gradient(circle at top left, rgba(255,255,255,0.28), transparent 44%);
+  opacity: 0.9;
 }
 
 :root[data-theme="dark"] .glass-panel::before {
   background: linear-gradient(180deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 35%, rgba(255,255,255,0.01) 100%);
+}
+
+:root[data-theme="dark"] .glass-panel::after {
+  background: radial-gradient(circle at top left, rgba(255,255,255,0.06), transparent 40%);
+  opacity: 1;
 }
 
 .glass-panel > * {
@@ -434,12 +450,13 @@ section[id='featured'],
 
 @media (min-width: 1024px) {
   .portfolio-container {
-    max-width: 1680px !important;
+    width: min(calc(100vw - 2rem), 1880px) !important;
+    max-width: 1880px !important;
   }
 
   .hero-grid {
-    grid-template-columns: minmax(420px, 1.02fr) minmax(460px, 0.98fr);
-    gap: 1.35rem;
+    grid-template-columns: minmax(560px, 1.18fr) minmax(520px, 0.82fr);
+    gap: 1.5rem;
   }
 
   .hero-side-stack {
