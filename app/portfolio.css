@@ -1,24 +1,24 @@
 :root {
-  --portfolio-bg: linear-gradient(180deg, #f8f1e7 0%, #f4e6da 48%, #efe6de 100%);
-  --portfolio-panel: rgba(255, 250, 246, 0.82);
-  --portfolio-border: rgba(176, 132, 97, 0.18);
-  --portfolio-text: #50382c;
-  --portfolio-muted: #7d6559;
-  --portfolio-accent: #d28a57;
-  --portfolio-accent-strong: #a96035;
-  --portfolio-soft: #f7d9cc;
-  --portfolio-shadow: 0 20px 60px rgba(127, 90, 61, 0.12);
+  --portfolio-bg: linear-gradient(180deg, #eef8ef 0%, #dff1e2 46%, #d4ecd8 100%);
+  --portfolio-panel: rgba(247, 255, 248, 0.84);
+  --portfolio-border: rgba(73, 136, 92, 0.18);
+  --portfolio-text: #23402a;
+  --portfolio-muted: #567260;
+  --portfolio-accent: #5ea36f;
+  --portfolio-accent-strong: #2f7b47;
+  --portfolio-soft: #d7efdb;
+  --portfolio-shadow: 0 20px 60px rgba(60, 103, 73, 0.12);
 }
 
 :root[data-theme="dark"] {
-  --portfolio-bg: radial-gradient(circle at top, #3d2d2c 0%, #241a19 42%, #171212 100%);
-  --portfolio-panel: rgba(30, 23, 22, 0.82);
-  --portfolio-border: rgba(246, 213, 188, 0.12);
-  --portfolio-text: #faf0e8;
-  --portfolio-muted: #ddc7b5;
-  --portfolio-accent: #f2b26b;
-  --portfolio-accent-strong: #ffd59f;
-  --portfolio-soft: rgba(255, 211, 188, 0.12);
+  --portfolio-bg: radial-gradient(circle at top, #193222 0%, #101f16 42%, #0b140e 100%);
+  --portfolio-panel: rgba(15, 29, 20, 0.84);
+  --portfolio-border: rgba(173, 233, 187, 0.12);
+  --portfolio-text: #ecfff0;
+  --portfolio-muted: #bdd9c2;
+  --portfolio-accent: #7ad48d;
+  --portfolio-accent-strong: #baf5c6;
+  --portfolio-soft: rgba(122, 212, 141, 0.12);
   --portfolio-shadow: 0 24px 70px rgba(0, 0, 0, 0.38);
 }
 
