@@ -107,6 +107,8 @@
   color: var(--portfolio-accent-strong);
   font-weight: 700;
   line-height: 1.2;
+  margin-top: 0;
+  padding-top: 0.05rem;
 }
 
 .hero-badge {
@@ -163,7 +165,7 @@
 .hobbies-card .section-title,
 .cookiejar-hero-top .section-title,
 .cloak-preview-card .section-title {
-  margin-top: 0.2rem;
+  margin-top: 0.28rem;
 }
 
 .section-top,
@@ -173,7 +175,7 @@
 .stat-card,
 section[id='featured'],
 .story-layout > article {
-  overflow: hidden;
+  overflow: visible;
 }
 
 .card-title {
@@ -374,11 +376,13 @@ section[id='featured'],
 
 .hero-grid {
   gap: 1.35rem;
+  margin-top: 0.65rem;
 }
 
 .stats-grid {
   gap: 1rem;
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 1.4rem;
 }
 
 .project-grid {
@@ -662,7 +666,7 @@ section[id='featured'],
 
 .project-visual-card {
   border-radius: 1.2rem;
-  padding: 0.95rem;
+  padding: 1.05rem;
   background: rgba(255,255,255,0.3);
   border: 1px solid var(--portfolio-border);
 }
@@ -983,6 +987,11 @@ section[id='featured'],
   .hero-title {
     line-height: 1;
     max-width: none;
+  }
+
+  .hero-grid,
+  .stats-grid {
+    margin-top: 0.9rem;
   }
 
   .portfolio-nav {
