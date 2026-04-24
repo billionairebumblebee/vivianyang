@@ -246,7 +246,7 @@ export default function PortfolioPage() {
     <main className="portfolio-shell min-h-screen">
       <div className="portfolio-bg" />
       <section className="portfolio-container mx-auto max-w-[1280px] px-5 py-6 md:px-8 md:py-8">
-        <header className="portfolio-nav glass-panel mb-4 flex items-center justify-between gap-3 rounded-[1.2rem] px-6 py-4">
+        <header className="portfolio-nav glass-panel mb-4 flex items-center justify-between gap-3 rounded-[1.2rem] px-7 py-5">
           <div className="portfolio-nav-brand">
             <div className="portfolio-name">Vivian Yang</div>
             <div className="portfolio-nav-sub">Berkeley engineer · founder · builder</div>
@@ -277,17 +277,6 @@ export default function PortfolioPage() {
               ))}
             </div>
           </div>
-
-          <article className="glass-panel cloak-preview-card rounded-[1.4rem] p-5 md:p-6">
-            <div className="eyebrow mb-2">Cloak</div>
-            <h2 className="section-title cloak-preview-title">Stealth startup launching in a week.</h2>
-            <p className="section-copy mt-3">
-              Cloak is Vivian’s stealth anti-tracking startup focused on protecting shoppers from fingerprinting, manipulation, and quiet pricing pressure.
-            </p>
-            <p className="section-copy mt-3">
-              Soon this section will embed the live Cloak website directly so the portfolio can show the product in the same tight desktop layout.
-            </p>
-          </article>
 
           <div className="hero-side-stack">
             <aside className="glass-panel skills-panel rounded-[1.4rem] p-5 md:p-6">
