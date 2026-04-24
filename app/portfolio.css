@@ -109,6 +109,7 @@
   line-height: 1.2;
   margin-top: 0;
   padding-top: 0.05rem;
+  padding-left: 0.22rem;
 }
 
 .hero-badge {
@@ -193,7 +194,7 @@ section[id='featured'],
   align-items: center;
   min-height: 2.2rem;
   border-radius: 999px;
-  padding: 0.5rem 0.75rem;
+  padding: 0.5rem 0.95rem;
   background: rgba(255,255,255,0.44);
   border: 1px solid var(--portfolio-border);
   color: var(--portfolio-text);
@@ -669,7 +670,7 @@ section[id='featured'],
 .reels-section > *,
 .footer-grid .glass-panel > *,
 section[id='featured'] > * {
-  padding-left: 0.7rem;
+  padding-left: 0.92rem;
   padding-right: 0.18rem;
 }
 
@@ -680,7 +681,7 @@ section[id='featured'] > * {
 .reels-grid,
 .hobby-pill-grid,
 .footer-button-stack {
-  padding-left: 0.7rem;
+  padding-left: 0.92rem;
   padding-right: 0.18rem;
 }
 
