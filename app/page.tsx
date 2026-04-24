@@ -249,7 +249,7 @@ export default function PortfolioPage() {
   return (
     <main className="portfolio-shell min-h-screen">
       <div className="portfolio-bg" />
-      <section className="portfolio-container mx-auto max-w-[1280px] px-5 py-6 md:px-8 md:py-8">
+      <section className="portfolio-container mx-auto max-w-[1600px] px-5 py-6 md:px-8 md:py-8">
         <header className="portfolio-nav glass-panel mb-4 flex items-center justify-between gap-3 rounded-[1.2rem] px-7 py-5">
           <div className="portfolio-nav-brand">
             <div className="portfolio-name">Vivian Yang</div>
