@@ -255,29 +255,29 @@ export default function PortfolioPage() {
           </div>
         </header>
 
-        <section className="hero-layout mt-6 grid gap-6 lg:grid-cols-[1.02fr_0.98fr] items-start">
-          <div className="glass-panel hero-panel rounded-[2rem] p-7 md:p-10">
+        <section className="hero-layout mt-4 grid gap-4 lg:grid-cols-[0.72fr_1.28fr] items-start">
+          <div className="glass-panel hero-panel rounded-[1.4rem] p-5 md:p-6">
             <div className="hero-badge">✿ portfolio</div>
-            <h1 className="hero-title mt-4">UC Berkeley engineer and founder, shipping technical systems with taste.</h1>
-            <p className="hero-copy mt-5 max-w-2xl">
+            <h1 className="hero-title mt-3">UC Berkeley engineer and founder, shipping technical systems with taste.</h1>
+            <p className="hero-copy mt-3 max-w-xl">
               I build AI-native tools, hardware prototypes, product systems, and market-facing experiences that feel sharp, intentional, and shipped.
             </p>
 
-            <div className="hero-facts mt-6 flex flex-wrap gap-3">
+            <div className="hero-facts mt-4 flex flex-wrap gap-2">
               {heroFacts.map((fact) => (
                 <span key={fact} className="fact-pill">{fact}</span>
               ))}
             </div>
 
-            <div className="mt-7 flex flex-wrap gap-3">
+            <div className="mt-5 flex flex-wrap gap-2">
               <a className="primary-chip" href="https://www.linkedin.com/in/viviany31" target="_blank" rel="noreferrer">LinkedIn</a>
               <a className="secondary-chip" href="mailto:vivian_yang@berkeley.edu">Contact</a>
               <a className="secondary-chip" href="#featured">Project gallery</a>
             </div>
           </div>
 
-          <div className="cookiejar-column grid gap-6">
-            <article className="glass-panel cookiejar-hero-card rounded-[2rem] p-4 md:p-5">
+          <div className="cookiejar-column grid gap-4">
+            <article className="glass-panel cookiejar-hero-card rounded-[1.4rem] p-3 md:p-4">
               <div className="cookiejar-hero-top">
                 <div>
                   <div className="eyebrow">Cookie Jar</div>
@@ -295,8 +295,8 @@ export default function PortfolioPage() {
               </div>
             </article>
 
-            <aside className="proof-column grid gap-6">
-              <div className="glass-panel rounded-[2rem] p-6">
+            <aside className="proof-column grid gap-4">
+              <div className="glass-panel rounded-[1.4rem] p-5">
                 <div className="eyebrow mb-4">Proof</div>
                 <div className="quick-stack space-y-3">
                   {proofBullets.map((item) => (
