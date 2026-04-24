@@ -58,20 +58,41 @@
 
 .portfolio-nav-brand {
   display: grid;
-  gap: 0.18rem;
+  gap: 0.22rem;
+}
+
+.portfolio-name {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.35rem, 2.2vw, 2rem);
+  line-height: 1;
+  font-weight: 700;
+  color: var(--portfolio-text);
 }
 
 .portfolio-nav-sub {
-  font-size: 0.74rem;
+  font-size: 0.85rem;
   color: var(--portfolio-muted);
+}
+
+.portfolio-email-inline {
+  font-size: 0.88rem;
+  color: var(--portfolio-accent-strong);
+  text-decoration: none;
+  font-weight: 600;
 }
 
 .portfolio-nav-links {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.7rem;
   flex-wrap: wrap;
   justify-content: flex-end;
+}
+
+.footer-button-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
 }
 
 .eyebrow {
@@ -881,9 +902,17 @@
     border-radius: 1.1rem;
   }
 
+  .portfolio-name {
+    font-size: 1.45rem;
+  }
+
   .portfolio-nav-links {
     justify-content: flex-start;
     gap: 0.75rem;
+  }
+
+  .portfolio-email-inline {
+    overflow-wrap: anywhere;
   }
 
   .foozi-chat-widget {

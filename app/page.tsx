@@ -241,13 +241,15 @@ export default function PortfolioPage() {
       <section className="portfolio-container mx-auto max-w-[1280px] px-5 py-6 md:px-8 md:py-8">
         <header className="portfolio-nav glass-panel mb-4 flex items-center justify-between gap-3 rounded-[1.2rem] px-4 py-3">
           <div className="portfolio-nav-brand">
-            <div className="eyebrow">Vivian Yang</div>
+            <div className="portfolio-name">Vivian Yang</div>
             <div className="portfolio-nav-sub">Berkeley engineer · founder · builder</div>
+            <a className="portfolio-email-inline" href="mailto:vivian_yang@berkeley.edu">vivian_yang@berkeley.edu</a>
           </div>
           <div className="portfolio-nav-links">
-            <a className="soft-link" href="#featured">Projects</a>
-            <a className="soft-link" href="mailto:vivian_yang@berkeley.edu">Email</a>
-            <a className="soft-link" href="https://www.linkedin.com/in/viviany31" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a className="secondary-chip" href="#featured">Projects</a>
+            <a className="primary-chip" href={calendlyLink} target="_blank" rel="noreferrer">Calendly</a>
+            <a className="secondary-chip" href="https://github.com/billionairebumblebee" target="_blank" rel="noreferrer">GitHub</a>
+            <a className="secondary-chip" href="https://www.linkedin.com/in/viviany31" target="_blank" rel="noreferrer">LinkedIn</a>
             <button id="theme-toggle" className="theme-toggle" aria-label="Toggle dark mode" onClick={() => setTheme(!isDark)}>
               <span className="theme-toggle__sun">☀️</span>
               <span className="theme-toggle__moon">🌙</span>
@@ -394,11 +396,11 @@ export default function PortfolioPage() {
 
           <article className="glass-panel rounded-[2rem] p-7 md:p-8">
             <div className="eyebrow mb-3">Links</div>
-            <div className="space-y-3 text-sm">
-              <a className="soft-link block" href="https://www.linkedin.com/in/viviany31" target="_blank" rel="noreferrer">LinkedIn</a>
-              <a className="soft-link block" href="mailto:vivian_yang@berkeley.edu">Email</a>
-              <a className="soft-link block" href="https://www.instagram.com/vivian.yan6/" target="_blank" rel="noreferrer">Instagram, @vivian.yan6</a>
-              <span className="soft-muted block subtle-link">TikTok, @vivibearreviews</span>
+            <div className="footer-button-stack">
+              <a className="primary-chip" href={calendlyLink} target="_blank" rel="noreferrer">Calendly</a>
+              <a className="secondary-chip" href="https://github.com/billionairebumblebee" target="_blank" rel="noreferrer">GitHub</a>
+              <a className="secondary-chip" href="https://www.linkedin.com/in/viviany31" target="_blank" rel="noreferrer">LinkedIn</a>
+              <a className="secondary-chip" href="mailto:vivian_yang@berkeley.edu">Email</a>
             </div>
             <div className="footer-verse">Let all that you do be done in love. 1 Corinthians 16:14</div>
           </article>
