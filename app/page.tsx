@@ -424,7 +424,7 @@ export default function PortfolioPage() {
             onClick={() => setIsChatOpen(true)}
           >
             <span className="foozi-chat-toggle-emoji">🧸</span>
-            <span>Hi, I’m Foozi</span>
+            <span>Hi, I’m Foozi❕</span>
           </button>
         )}
         {isChatOpen && (
