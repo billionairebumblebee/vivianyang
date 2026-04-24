@@ -138,6 +138,14 @@
   line-height: 1.6;
 }
 
+.skills-title {
+  color: var(--portfolio-text);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.35rem;
+  line-height: 1.05;
+  font-weight: 700;
+}
+
 .section-title {
   font-size: clamp(1.45rem, 2.2vw, 2rem);
   line-height: 1.08;
@@ -186,6 +194,11 @@
   color: var(--portfolio-text);
   font-weight: 600;
   line-height: 1.5;
+}
+
+.skills-stack {
+  display: grid;
+  gap: 0.75rem;
 }
 
 .mini-links {
@@ -387,11 +400,11 @@
   }
 
   .hero-panel {
-    padding: 2rem !important;
+    padding: 1.55rem !important;
   }
 
   .cookiejar-hero-card {
-    padding: 0.9rem !important;
+    padding: 1rem !important;
   }
 
   .cookiejar-embed-shell {
@@ -400,7 +413,7 @@
   }
 
   .stats-strip {
-    margin-top: 0.9rem;
+    margin-top: 1.15rem;
   }
 }
 
@@ -429,6 +442,18 @@
 .stat-card,
 .footer-grid > .glass-panel {
   border-radius: 1.8rem !important;
+}
+
+.hero-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.95rem;
+}
+
+.skills-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .cookiejar-hero-top {
@@ -924,6 +949,7 @@
 @media (max-width: 768px) {
   .hero-title {
     line-height: 1;
+    max-width: none;
   }
 
   .portfolio-nav {

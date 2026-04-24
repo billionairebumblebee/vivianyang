@@ -278,22 +278,18 @@ export default function PortfolioPage() {
               ))}
             </div>
 
-            <div className="mt-5 flex flex-wrap gap-2">
-              <a className="primary-chip" href="https://www.linkedin.com/in/viviany31" target="_blank" rel="noreferrer">LinkedIn</a>
-              <a className="secondary-chip" href="mailto:vivian_yang@berkeley.edu">Contact</a>
-              <a className="secondary-chip" href="#featured">Project gallery</a>
-            </div>
           </div>
 
           <div className="hero-side-stack">
             <aside className="glass-panel skills-panel rounded-[1.4rem] p-5 md:p-6">
-              <div className="eyebrow mb-3">Top skills</div>
-              <div className="quick-stack space-y-3">
+              <div className="eyebrow mb-2">Top skills</div>
+              <h2 className="skills-title">Top skills</h2>
+              <div className="quick-stack skills-stack mt-4">
                 {proofBullets.map((item) => (
                   <div key={item} className="quick-item">{item}</div>
                 ))}
               </div>
-              <div className="mini-links mt-5">
+              <div className="mini-links mt-4">
                 <div><strong>School:</strong> UC Berkeley</div>
                 <div><strong>Major:</strong> Mechanical Engineering</div>
                 <div><strong>Instagram:</strong> @vivian.yan6</div>
