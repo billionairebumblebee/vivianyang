@@ -97,6 +97,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.85rem;
+  align-items: center;
 }
 
 .eyebrow {
@@ -933,9 +934,15 @@ section[id='featured'] > * {
   display: grid;
 }
 
+.chatbot-contact-form {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.chatbot-text-input,
 .chatbot-input {
   width: 100%;
-  min-height: 6.5rem;
+  min-height: 3.15rem;
   border-radius: 1rem;
   border: 1px solid var(--portfolio-border);
   background: rgba(255,255,255,0.45);
@@ -943,6 +950,10 @@ section[id='featured'] > * {
   padding: 0.9rem 1rem;
   resize: vertical;
   outline: none;
+}
+
+.chatbot-input {
+  min-height: 6.5rem;
 }
 
 .chatbot-button-row {
@@ -956,6 +967,7 @@ section[id='featured'] > * {
   gap: 0.75rem;
 }
 
+.chatbot-text-input:focus,
 .chatbot-input:focus {
   box-shadow: 0 0 0 3px rgba(210, 138, 87, 0.16);
 }

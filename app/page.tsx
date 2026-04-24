@@ -146,7 +146,9 @@ export default function PortfolioPage() {
   const [isChatOpen, setIsChatOpen] = useState(false);
   const [activeRole, setActiveRole] = useState<ChatRole | null>(null);
   const [currentStep, setCurrentStep] = useState(0);
-  const [leadInput, setLeadInput] = useState("");
+  const [leadName, setLeadName] = useState("");
+  const [leadBestContact, setLeadBestContact] = useState("");
+  const [leadMessage, setLeadMessage] = useState("");
   const [isBookedState, setIsBookedState] = useState(false);
   const [isSendingLead, setIsSendingLead] = useState(false);
   const [leadSaved, setLeadSaved] = useState(false);
@@ -164,8 +166,8 @@ export default function PortfolioPage() {
       text,
     }));
 
-    if (currentStep >= activeFlow.messages.length - 1 && leadInput.trim()) {
-      messages.push({ sender: "human", text: leadInput.trim() });
+    if (currentStep >= activeFlow.messages.length - 1 && (leadName.trim() || leadBestContact.trim() || leadMessage.trim())) {
+      messages.push({ sender: "human", text: `Name: ${leadName.trim() || "—"}\nBest contact: ${leadBestContact.trim() || "—"}\nMessage: ${leadMessage.trim() || "—"}` });
     }
 
     if (founderConnected) {
@@ -178,7 +180,7 @@ export default function PortfolioPage() {
     }
 
     return messages;
-  }, [activeFlow, currentStep, founderConnected, leadInput, leadSaved]);
+  }, [activeFlow, currentStep, founderConnected, leadBestContact, leadMessage, leadName, leadSaved]);
 
   useEffect(() => {
     const log = document.querySelector('.chatbot-log');
@@ -198,7 +200,9 @@ export default function PortfolioPage() {
   const startFlow = (role: ChatRole) => {
     setActiveRole(role);
     setCurrentStep(0);
-    setLeadInput("");
+    setLeadName("");
+    setLeadBestContact("");
+    setLeadMessage("");
     setLeadSaved(false);
     setFounderConnected(false);
     setIsBookedState(false);
@@ -213,21 +217,21 @@ export default function PortfolioPage() {
       return;
     }
 
-    if (!leadInput.trim() || isSendingLead) return;
+    if (!leadName.trim() || !leadBestContact.trim() || !leadMessage.trim() || isSendingLead) return;
 
     setIsSendingLead(true);
     try {
-      if (activeRole === "vc") {
-        await fetch("/api/portfolio/vc-alert", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            name: leadInput.trim(),
-            contact: leadInput.trim(),
-            interest: activeFlow.leadInterest,
-          }),
-        });
-      }
+      await fetch("/api/portfolio/contact-lead", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          role: activeRole,
+          interest: activeFlow.leadInterest,
+          name: leadName.trim(),
+          bestContact: leadBestContact.trim(),
+          message: leadMessage.trim(),
+        }),
+      });
       setFounderConnected(true);
       setLeadSaved(true);
     } finally {
@@ -449,18 +453,32 @@ export default function PortfolioPage() {
             {activeRole && !leadSaved && (
               <div className="chatbot-flow-controls mt-4 space-y-3">
                 {currentStep >= (activeFlow?.messages.length || 1) - 1 && (
-                  <textarea
-                    className="chatbot-input"
-                    placeholder={activeFlow?.leadPrompt}
-                    value={leadInput}
-                    onChange={(event) => setLeadInput(event.target.value)}
-                  />
+                  <div className="chatbot-contact-form">
+                    <input
+                      className="chatbot-text-input"
+                      placeholder="Name"
+                      value={leadName}
+                      onChange={(event) => setLeadName(event.target.value)}
+                    />
+                    <input
+                      className="chatbot-text-input"
+                      placeholder="Best contact"
+                      value={leadBestContact}
+                      onChange={(event) => setLeadBestContact(event.target.value)}
+                    />
+                    <textarea
+                      className="chatbot-input"
+                      placeholder="Message"
+                      value={leadMessage}
+                      onChange={(event) => setLeadMessage(event.target.value)}
+                    />
+                  </div>
                 )}
                 <div className="chatbot-button-row">
                   {currentStep < (activeFlow?.messages.length || 1) - 1 ? (
                     <button className="primary-chip" onClick={advanceFlow}>Next</button>
                   ) : (
-                    <button className="primary-chip" onClick={advanceFlow} disabled={!leadInput.trim() || isSendingLead}>
+                    <button className="primary-chip" onClick={advanceFlow} disabled={!leadName.trim() || !leadBestContact.trim() || !leadMessage.trim() || isSendingLead}>
                       {isSendingLead ? "Routing..." : "Submit"}
                     </button>
                   )}
