@@ -24,10 +24,10 @@
 
 .portfolio-shell {
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
   background: var(--portfolio-bg);
   color: var(--portfolio-text);
-  padding-bottom: 7rem;
+  padding-bottom: 5.5rem;
 }
 
 .portfolio-bg {
@@ -79,10 +79,10 @@
 }
 
 .hero-title {
-  font-size: clamp(2.35rem, 5vw, 4.1rem);
-  line-height: 0.98;
+  font-size: clamp(2.1rem, 3.6vw, 3.25rem);
+  line-height: 1.01;
   font-weight: 700;
-  max-width: 9.5ch;
+  max-width: 10.5ch;
 }
 
 .hero-copy,
@@ -94,7 +94,7 @@
 }
 
 .section-title {
-  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-size: clamp(1.45rem, 2.2vw, 2rem);
   line-height: 1.08;
   font-weight: 700;
 }
@@ -245,7 +245,7 @@
 }
 
 .stat-big {
-  font-size: 1.55rem;
+  font-size: 1.32rem;
   line-height: 1.08;
   font-weight: 700;
 }
@@ -260,6 +260,36 @@
 
 .hero-layout {
   align-items: start;
+}
+
+@media (min-width: 1024px) {
+  .hero-layout {
+    grid-template-columns: minmax(0, 1.02fr) minmax(320px, 0.82fr) !important;
+    gap: 1.15rem;
+  }
+
+  .hero-panel {
+    padding: 2.2rem !important;
+  }
+
+  .cookiejar-hero-card {
+    padding: 1rem !important;
+  }
+
+  .cookiejar-embed-shell {
+    aspect-ratio: 1 / 0.82;
+    max-height: 24rem;
+  }
+
+  .stats-strip {
+    margin-top: 1.1rem;
+  }
+
+  .project-gallery,
+  .story-grid,
+  .footer-grid {
+    gap: 1.1rem;
+  }
 }
 
 .hero-panel {
@@ -289,10 +319,10 @@
 .cookiejar-embed-shell {
   position: relative;
   width: 100%;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 1 / 0.88;
   min-height: 0;
-  max-height: 34rem;
-  border-radius: 1.7rem;
+  max-height: 24rem;
+  border-radius: 1.35rem;
   overflow: hidden;
   border: 1px solid var(--portfolio-border);
   background: radial-gradient(circle at top, rgba(255,255,255,0.22), rgba(61, 37, 25, 0.28) 55%, rgba(22, 14, 12, 0.72) 100%);
@@ -438,7 +468,7 @@
 }
 
 .project-visual-image {
-  aspect-ratio: 4 / 4.1;
+  aspect-ratio: 4 / 3.2;
 }
 
 .visual-feature-copy,
@@ -451,10 +481,14 @@
 }
 
 .project-visual-card {
-  border-radius: 1.55rem;
-  padding: 0.9rem;
+  border-radius: 1.35rem;
+  padding: 0.8rem;
   background: rgba(255,255,255,0.3);
   border: 1px solid var(--portfolio-border);
+}
+
+.project-visual-card .card-copy {
+  min-height: 5.3rem;
 }
 
 .hobby-pill-grid {
@@ -595,10 +629,14 @@
 .reel-frame {
   position: relative;
   width: 100%;
-  aspect-ratio: 9 / 16;
-  border-radius: 1.15rem;
+  aspect-ratio: 10 / 14;
+  border-radius: 1rem;
   overflow: hidden;
   background: linear-gradient(180deg, rgba(236, 207, 184, 0.6), rgba(201, 152, 116, 0.7));
+}
+
+.reels-section iframe {
+  min-height: 19rem;
 }
 
 .reel-frame iframe {
@@ -610,6 +648,9 @@
 .chatbot-log {
   display: grid;
   gap: 0.75rem;
+  max-height: 16rem;
+  overflow-y: auto;
+  padding-right: 0.2rem;
 }
 
 .chat-bubble {
@@ -660,9 +701,9 @@
 }
 
 .foozi-chat-panel {
-  width: min(26rem, calc(100vw - 1.5rem));
-  border-radius: 1.6rem;
-  padding: 1rem;
+  width: min(23rem, calc(100vw - 1.5rem));
+  border-radius: 1.35rem;
+  padding: 0.9rem;
   background: var(--portfolio-panel);
   border: 1px solid var(--portfolio-border);
   box-shadow: 0 24px 70px rgba(53, 30, 18, 0.24);

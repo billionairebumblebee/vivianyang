@@ -17,17 +17,17 @@ const proofStats = [
   {
     label: "Build speed",
     value: "14 days",
-    note: "from idea to Foozi as a working system",
+    note: "idea to working Foozi system",
   },
   {
     label: "Angle",
     value: "Founder + engineer",
-    note: "technical execution with product and distribution instinct",
+    note: "technical execution with product instinct",
   },
   {
     label: "Signal",
     value: "Shipped proof",
-    note: "AI systems, prototypes, portfolio, and content",
+    note: "AI systems, prototypes, and market-facing work",
   },
 ];
 
@@ -78,10 +78,10 @@ const reels = [
 ];
 
 const proofBullets = [
-  "Berkeley mechanical engineering student building like a founder, not just a student",
+  "Berkeley mechanical engineering student building like a founder",
   "Built Foozi, a multi-agent personal operating system, in about two weeks",
-  "Strong across software, hardware, prototyping, product, GTM, and creator-style distribution",
-  "Moves from idea to shipped visual proof unusually fast",
+  "Strong across software, hardware, prototyping, product, and GTM",
+  "Moves from idea to shipped proof unusually fast",
 ];
 
 const calendlyLink = "https://calendly.com/vivian-yang";
@@ -313,7 +313,7 @@ export default function PortfolioPage() {
           </div>
         </section>
 
-        <section className="stats-strip mt-6 grid gap-4 md:grid-cols-3">
+        <section className="stats-strip mt-5 grid gap-4 md:grid-cols-3">
           {proofStats.map((stat) => (
             <article key={stat.label} className="glass-panel stat-card rounded-[1.6rem] p-6">
               <div className="stat-label">{stat.label}</div>
@@ -323,7 +323,7 @@ export default function PortfolioPage() {
           ))}
         </section>
 
-        <section id="featured" className="mt-6 glass-panel rounded-[2rem] p-7 md:p-9">
+        <section id="featured" className="mt-5 glass-panel rounded-[2rem] p-6 md:p-7">
           <div className="section-top">
             <div>
               <div className="eyebrow mb-3">Project gallery</div>
@@ -344,7 +344,7 @@ export default function PortfolioPage() {
           </div>
         </section>
 
-        <section className="story-grid mt-6 grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
+        <section className="story-grid mt-5 grid gap-5 lg:grid-cols-[0.96fr_1.04fr]">
           <article className="glass-panel rounded-[2rem] p-7 md:p-8 hobbies-card">
             <div className="eyebrow mb-3">About me</div>
             <h2 className="section-title">Gaming, development, and building cute things that still go hard.</h2>
@@ -365,7 +365,7 @@ export default function PortfolioPage() {
                 <h2 className="section-title">Visual instinct and creator energy</h2>
               </div>
             </div>
-            <div className="mt-6 grid gap-6 lg:grid-cols-2">
+            <div className="mt-5 grid gap-5 lg:grid-cols-2">
               {reels.map((reel) => (
                 <article key={reel.href} className="reel-embed-card">
                   <div className="reel-frame">
@@ -384,7 +384,7 @@ export default function PortfolioPage() {
           </article>
         </section>
 
-        <section className="mt-6 footer-grid grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+        <section className="mt-5 footer-grid grid gap-5 lg:grid-cols-[1.08fr_0.92fr]">
           <article className="glass-panel rounded-[2rem] p-7 md:p-8">
             <div className="eyebrow mb-3">Best fit</div>
             <h2 className="section-title">YC, startups, and teams that move fast.</h2>
