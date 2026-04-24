@@ -84,7 +84,7 @@ const proofBullets = [
   "Fast execution across software, hardware, and interfaces",
 ];
 
-const calendlyLink = "https://calendly.com/vivian-yang";
+const calendlyLink = "https://calendly.com/vivian_yang-berkeley/";
 const cookieJarLink = "https://cookiejar-five.vercel.app/";
 
 const chatFlows = {
