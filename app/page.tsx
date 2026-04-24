@@ -78,10 +78,10 @@ const reels = [
 ];
 
 const proofBullets = [
-  "Berkeley mechanical engineering student building like a founder",
-  "Built Foozi, a multi-agent personal operating system, in about two weeks",
-  "Strong across software, hardware, prototyping, product, and GTM",
-  "Moves from idea to shipped proof unusually fast",
+  "AI systems and multi-agent product building",
+  "Mechanical engineering + physical prototyping",
+  "Product instinct, GTM taste, and founder velocity",
+  "Fast execution across software, hardware, and interfaces",
 ];
 
 const calendlyLink = "https://calendly.com/vivian-yang";
@@ -255,7 +255,7 @@ export default function PortfolioPage() {
           </div>
         </header>
 
-        <section className="hero-layout mt-4 grid gap-4 lg:grid-cols-[0.72fr_1.28fr] items-start">
+        <section className="hero-layout mt-4 grid gap-4 lg:grid-cols-[0.94fr_1.06fr] items-start">
           <div className="glass-panel hero-panel rounded-[1.4rem] p-5 md:p-6">
             <div className="hero-badge">✿ portfolio</div>
             <h1 className="hero-title mt-3">UC Berkeley engineer and founder, shipping technical systems with taste.</h1>
@@ -276,12 +276,27 @@ export default function PortfolioPage() {
             </div>
           </div>
 
-          <div className="cookiejar-column grid gap-4">
+          <div className="hero-side-stack grid gap-4">
+            <aside className="glass-panel skills-panel rounded-[1.4rem] p-5 md:p-6">
+              <div className="eyebrow mb-3">Top skills</div>
+              <div className="quick-stack space-y-3">
+                {proofBullets.map((item) => (
+                  <div key={item} className="quick-item">{item}</div>
+                ))}
+              </div>
+              <div className="mini-links mt-5">
+                <div><strong>School:</strong> UC Berkeley</div>
+                <div><strong>Major:</strong> Mechanical Engineering</div>
+                <div><strong>Instagram:</strong> @vivian.yan6</div>
+                <div className="soft-muted"><strong>TikTok:</strong> @vivibearreviews</div>
+              </div>
+            </aside>
+
             <article className="glass-panel cookiejar-hero-card rounded-[1.4rem] p-3 md:p-4">
               <div className="cookiejar-hero-top">
                 <div>
                   <div className="eyebrow">Cookie Jar</div>
-                  <h2 className="section-title mt-3">Interactive proof of range.</h2>
+                  <h2 className="section-title mt-2">Interactive proof of range.</h2>
                 </div>
                 <a className="secondary-chip" href={cookieJarLink} target="_blank" rel="noreferrer">Open full Cookie Jar</a>
               </div>
@@ -294,23 +309,6 @@ export default function PortfolioPage() {
                 />
               </div>
             </article>
-
-            <aside className="proof-column grid gap-4">
-              <div className="glass-panel rounded-[1.4rem] p-5">
-                <div className="eyebrow mb-4">Proof</div>
-                <div className="quick-stack space-y-3">
-                  {proofBullets.map((item) => (
-                    <div key={item} className="quick-item">{item}</div>
-                  ))}
-                </div>
-                <div className="mini-links mt-6">
-                  <div><strong>School:</strong> UC Berkeley</div>
-                  <div><strong>Major:</strong> Mechanical Engineering</div>
-                  <div><strong>Instagram:</strong> @vivian.yan6</div>
-                  <div className="soft-muted"><strong>TikTok:</strong> @vivibearreviews</div>
-                </div>
-              </div>
-            </aside>
           </div>
         </section>
 
@@ -345,21 +343,21 @@ export default function PortfolioPage() {
           </div>
         </section>
 
-        <section className="story-grid mt-5 grid gap-5 lg:grid-cols-[0.96fr_1.04fr]">
-          <article className="glass-panel rounded-[2rem] p-7 md:p-8 hobbies-card">
+        <section className="story-grid mt-5 grid gap-5 lg:grid-cols-[0.88fr_1.12fr]">
+          <article className="glass-panel rounded-[1.4rem] p-5 md:p-6 hobbies-card">
             <div className="eyebrow mb-3">About me</div>
             <h2 className="section-title">Gaming, development, and building cute things that still go hard.</h2>
-            <p className="section-copy mt-4">
+            <p className="section-copy mt-3">
               I like systems that feel alive. A lot of my work sits at the overlap of engineering, playful interfaces, visual identity, and late-night builder energy.
             </p>
-            <div className="hobby-pill-grid mt-6">
+            <div className="hobby-pill-grid mt-5">
               {hobbies.map((hobby) => (
                 <span key={hobby} className="hobby-pill">{hobby}</span>
               ))}
             </div>
           </article>
 
-          <article className="glass-panel rounded-[2rem] p-5 md:p-6 reels-section muted-section">
+          <article className="glass-panel rounded-[1.4rem] p-4 md:p-5 reels-section muted-section">
             <div className="section-top">
               <div>
                 <div className="eyebrow mb-3">Content</div>
