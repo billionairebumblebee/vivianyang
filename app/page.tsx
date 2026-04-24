@@ -255,7 +255,7 @@ export default function PortfolioPage() {
           </div>
         </header>
 
-        <section className="hero-layout mt-4 grid gap-4 lg:grid-cols-[0.94fr_1.06fr] items-start">
+        <section className="hero-layout hero-grid mt-4">
           <div className="glass-panel hero-panel rounded-[1.4rem] p-5 md:p-6">
             <div className="hero-badge">✿ portfolio</div>
             <h1 className="hero-title mt-3">UC Berkeley engineer and founder, shipping technical systems with taste.</h1>
@@ -276,7 +276,7 @@ export default function PortfolioPage() {
             </div>
           </div>
 
-          <div className="hero-side-stack grid gap-4">
+          <div className="hero-side-stack">
             <aside className="glass-panel skills-panel rounded-[1.4rem] p-5 md:p-6">
               <div className="eyebrow mb-3">Top skills</div>
               <div className="quick-stack space-y-3">
@@ -312,7 +312,7 @@ export default function PortfolioPage() {
           </div>
         </section>
 
-        <section className="stats-strip mt-5 grid gap-4 md:grid-cols-3">
+        <section className="stats-strip stats-grid mt-5">
           {proofStats.map((stat) => (
             <article key={stat.label} className="glass-panel stat-card rounded-[1.6rem] p-6">
               <div className="stat-label">{stat.label}</div>
@@ -329,7 +329,7 @@ export default function PortfolioPage() {
               <h2 className="section-title">A more visual snapshot of what I build</h2>
             </div>
           </div>
-          <div className="project-gallery mt-5 grid gap-4 lg:grid-cols-3">
+          <div className="project-gallery project-grid mt-5">
             {featuredProjects.map((project) => (
               <article key={project.title} className="project-visual-card">
                 <img src={project.image} alt={project.alt} className="project-visual-image" />
@@ -343,7 +343,7 @@ export default function PortfolioPage() {
           </div>
         </section>
 
-        <section className="story-grid mt-5 grid gap-5 lg:grid-cols-[0.88fr_1.12fr]">
+        <section className="story-grid story-layout mt-5">
           <article className="glass-panel rounded-[1.4rem] p-5 md:p-6 hobbies-card">
             <div className="eyebrow mb-3">About me</div>
             <h2 className="section-title">Gaming, development, and building cute things that still go hard.</h2>
@@ -364,7 +364,7 @@ export default function PortfolioPage() {
                 <h2 className="section-title">Visual instinct and creator energy</h2>
               </div>
             </div>
-            <div className="reels-grid mt-4 grid gap-4 lg:grid-cols-2">
+            <div className="reels-grid reels-layout mt-4">
               {reels.map((reel) => (
                 <article key={reel.href} className="reel-embed-card">
                   <div className="reel-frame">
@@ -383,7 +383,7 @@ export default function PortfolioPage() {
           </article>
         </section>
 
-        <section className="mt-5 footer-grid grid gap-5 lg:grid-cols-[1.08fr_0.92fr]">
+        <section className="mt-5 footer-grid footer-layout">
           <article className="glass-panel rounded-[2rem] p-7 md:p-8">
             <div className="eyebrow mb-3">Best fit</div>
             <h2 className="section-title">YC, startups, and teams that move fast.</h2>
