@@ -156,7 +156,7 @@ export default function PortfolioPage() {
 
   const chatMessages = useMemo<ChatMessage[]>(() => {
     if (!activeFlow) {
-      return [{ sender: "bot", text: "Hi, I’m Foozi. Are you a VC, recruiter, or just intrigued?" }];
+      return [{ sender: "bot", text: "Hi, I’m Foozi. Are you a VC, recruiter, or visitor?" }];
     }
 
     const messages: ChatMessage[] = activeFlow.messages.slice(0, currentStep + 1).map((text): ChatMessage => ({
@@ -179,6 +179,13 @@ export default function PortfolioPage() {
 
     return messages;
   }, [activeFlow, currentStep, founderConnected, leadInput, leadSaved]);
+
+  useEffect(() => {
+    const log = document.querySelector('.chatbot-log');
+    if (log) {
+      log.scrollTop = log.scrollHeight;
+    }
+  }, [chatMessages, isChatOpen]);
 
   const setTheme = (dark: boolean) => {
     setIsDark(dark);
@@ -441,7 +448,7 @@ export default function PortfolioPage() {
               <div className="chatbot-actions mt-4 flex flex-wrap gap-2">
                 <button className="chatbot-chip" onClick={() => startFlow("vc")}>VC</button>
                 <button className="chatbot-chip" onClick={() => startFlow("recruiter")}>Recruiter</button>
-                <button className="chatbot-chip" onClick={() => startFlow("intrigued")}>Just intrigued</button>
+                <button className="chatbot-chip" onClick={() => startFlow("intrigued")}>Visitor</button>
               </div>
             )}
 
@@ -471,16 +478,16 @@ export default function PortfolioPage() {
             {leadSaved && (
               <div className="chatbot-booking mt-4">
                 <a className="primary-chip" href={calendlyLink} target="_blank" rel="noreferrer" onClick={() => setIsBookedState(true)}>
-                  {activeFlow?.ctaLabel || "Book with Vivian"}
+                  Book Meeting
                 </a>
                 <a className="secondary-chip" href="mailto:vivian_yang@berkeley.edu?subject=Portfolio%20inbound" target="_blank" rel="noreferrer">
-                  Virtual business card
+                  vivian_yang@berkeley.edu
                 </a>
                 {isBookedState && <div className="chatbot-footer-note">Perfect. If you booked, Vivian will see it there too.</div>}
               </div>
             )}
 
-            <div className="chatbot-footer-note">Foozi qualifies intent, gives founder context, and routes the right people toward Vivian’s real contact options.</div>
+            <div className="chatbot-footer-note">Foozi routes serious people to Vivian’s real contact options.</div>
           </div>
         )}
       </div>
