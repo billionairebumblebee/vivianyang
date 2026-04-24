@@ -50,6 +50,30 @@
   box-shadow: var(--portfolio-shadow);
 }
 
+.portfolio-nav {
+  position: sticky;
+  top: 0.75rem;
+  z-index: 20;
+}
+
+.portfolio-nav-brand {
+  display: grid;
+  gap: 0.18rem;
+}
+
+.portfolio-nav-sub {
+  font-size: 0.86rem;
+  color: var(--portfolio-muted);
+}
+
+.portfolio-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0.95rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
 .eyebrow {
   font-size: 0.72rem;
   letter-spacing: 0.24em;
@@ -264,31 +288,40 @@
 
 @media (min-width: 1024px) {
   .hero-layout {
-    grid-template-columns: minmax(0, 1.02fr) minmax(320px, 0.82fr) !important;
-    gap: 1.15rem;
+    grid-template-columns: minmax(0, 1fr) minmax(300px, 0.78fr) !important;
+    gap: 1rem;
   }
 
   .hero-panel {
-    padding: 2.2rem !important;
+    padding: 1.8rem !important;
   }
 
   .cookiejar-hero-card {
-    padding: 1rem !important;
+    padding: 0.9rem !important;
   }
 
   .cookiejar-embed-shell {
-    aspect-ratio: 1 / 0.82;
-    max-height: 24rem;
+    aspect-ratio: 1 / 0.78;
+    max-height: 20rem;
   }
 
   .stats-strip {
-    margin-top: 1.1rem;
+    margin-top: 0.9rem;
   }
 
   .project-gallery,
   .story-grid,
-  .footer-grid {
-    gap: 1.1rem;
+  .footer-grid,
+  .reels-grid {
+    gap: 0.9rem;
+  }
+
+  .project-gallery {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .reels-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -468,7 +501,7 @@
 }
 
 .project-visual-image {
-  aspect-ratio: 4 / 3.2;
+  aspect-ratio: 4 / 2.6;
 }
 
 .visual-feature-copy,
@@ -481,14 +514,15 @@
 }
 
 .project-visual-card {
-  border-radius: 1.35rem;
-  padding: 0.8rem;
+  border-radius: 1.2rem;
+  padding: 0.72rem;
   background: rgba(255,255,255,0.3);
   border: 1px solid var(--portfolio-border);
 }
 
 .project-visual-card .card-copy {
-  min-height: 5.3rem;
+  min-height: 4.1rem;
+  line-height: 1.55;
 }
 
 .hobby-pill-grid {
@@ -629,14 +663,14 @@
 .reel-frame {
   position: relative;
   width: 100%;
-  aspect-ratio: 10 / 14;
-  border-radius: 1rem;
+  aspect-ratio: 10 / 11.8;
+  border-radius: 0.95rem;
   overflow: hidden;
   background: linear-gradient(180deg, rgba(236, 207, 184, 0.6), rgba(201, 152, 116, 0.7));
 }
 
 .reels-section iframe {
-  min-height: 19rem;
+  min-height: 14rem;
 }
 
 .reel-frame iframe {
@@ -791,7 +825,12 @@
   }
 
   .portfolio-nav {
-    border-radius: 1.3rem;
+    border-radius: 1.1rem;
+  }
+
+  .portfolio-nav-links {
+    justify-content: flex-start;
+    gap: 0.75rem;
   }
 
   .foozi-chat-widget {

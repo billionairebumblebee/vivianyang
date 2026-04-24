@@ -239,18 +239,19 @@ export default function PortfolioPage() {
     <main className="portfolio-shell min-h-screen">
       <div className="portfolio-bg" />
       <section className="portfolio-container mx-auto max-w-[1280px] px-5 py-6 md:px-8 md:py-8">
-        <header className="portfolio-nav glass-panel mb-6 flex items-center justify-between gap-4 rounded-[1.75rem] px-5 py-4">
-          <div>
+        <header className="portfolio-nav glass-panel mb-4 flex items-center justify-between gap-3 rounded-[1.2rem] px-4 py-3">
+          <div className="portfolio-nav-brand">
             <div className="eyebrow">Vivian Yang</div>
-            <div className="text-sm opacity-80">engineer, founder, creative technologist</div>
+            <div className="portfolio-nav-sub">Berkeley engineer · founder · builder</div>
           </div>
-          <div className="flex items-center gap-3">
+          <div className="portfolio-nav-links">
+            <a className="soft-link" href="#featured">Projects</a>
+            <a className="soft-link" href="mailto:vivian_yang@berkeley.edu">Email</a>
+            <a className="soft-link" href="https://www.linkedin.com/in/viviany31" target="_blank" rel="noreferrer">LinkedIn</a>
             <button id="theme-toggle" className="theme-toggle" aria-label="Toggle dark mode" onClick={() => setTheme(!isDark)}>
               <span className="theme-toggle__sun">☀️</span>
               <span className="theme-toggle__moon">🌙</span>
             </button>
-            <a className="soft-link" href="https://www.instagram.com/vivian.yan6/" target="_blank" rel="noreferrer">Instagram</a>
-            <a className="soft-link" href="https://www.linkedin.com/in/viviany31" target="_blank" rel="noreferrer">LinkedIn</a>
           </div>
         </header>
 
@@ -330,7 +331,7 @@ export default function PortfolioPage() {
               <h2 className="section-title">A more visual snapshot of what I build</h2>
             </div>
           </div>
-          <div className="project-gallery mt-6 grid gap-6 lg:grid-cols-3">
+          <div className="project-gallery mt-5 grid gap-4 lg:grid-cols-3">
             {featuredProjects.map((project) => (
               <article key={project.title} className="project-visual-card">
                 <img src={project.image} alt={project.alt} className="project-visual-image" />
@@ -365,7 +366,7 @@ export default function PortfolioPage() {
                 <h2 className="section-title">Visual instinct and creator energy</h2>
               </div>
             </div>
-            <div className="mt-5 grid gap-5 lg:grid-cols-2">
+            <div className="reels-grid mt-4 grid gap-4 lg:grid-cols-2">
               {reels.map((reel) => (
                 <article key={reel.href} className="reel-embed-card">
                   <div className="reel-frame">
