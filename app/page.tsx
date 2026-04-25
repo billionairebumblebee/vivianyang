@@ -95,7 +95,7 @@ const chatFlows = {
       "Vivian is a Berkeley mechanical engineering founder who built Foozi, a multi-agent operating system, and ships unusual proof fast.",
       "Her edge is the combo: engineering depth, product instinct, and real distribution energy in one person.",
       "If you want the quick read, I can give you founder context and hand you her booking link and contact card.",
-      "Drop your name, firm, and best contact and I’ll pass it along cleanly.",
+      "If this looks relevant, I’ll route you straight to her booking link and email.",
     ],
     founderIntro: "Here’s the founder context...",
     founderMessage: "Hi, I’m Vivian. I’m building AI-native systems that feel less like software tools and more like leverage. I care a lot about speed, product taste, and making technical systems actually useful to real people.",
@@ -111,7 +111,7 @@ const chatFlows = {
       "Vivian is a Berkeley mechanical engineering student who builds like a founder, not just a candidate.",
       "She ships across AI systems, product surfaces, prototyping, and fast execution with strong taste.",
       "She is especially strong in roles where initiative, technical depth, and communication all matter at once.",
-      "Send your name, team, and best contact and I’ll route you the clean next step.",
+      "If this looks like a fit, I’ll route you straight to her booking link and email.",
     ],
     founderIntro: "Here’s the founder context...",
     founderMessage: "Hi, I’m Vivian. The roles I’m best in are the ones where I can think technically, move quickly, and help shape the product instead of just taking tickets.",
@@ -127,7 +127,7 @@ const chatFlows = {
       "Vivian is a Berkeley engineer and founder building AI-native systems, product experiments, and memorable technical artifacts.",
       "The pattern is speed plus taste, not just isolated school projects.",
       "If you want the fast version, I can give you the founder summary and point you to the right next step.",
-      "Drop your name and best contact and I’ll route you cleanly.",
+      "If you want to keep talking, I’ll route you straight to her booking link and email.",
     ],
     founderIntro: "Here’s the founder context...",
     founderMessage: "Hi, I’m Vivian. I like building things that feel sharp, alive, and actually useful, whether that’s AI systems, prototypes, or product surfaces people remember.",
@@ -146,11 +146,7 @@ export default function PortfolioPage() {
   const [isChatOpen, setIsChatOpen] = useState(false);
   const [activeRole, setActiveRole] = useState<ChatRole | null>(null);
   const [currentStep, setCurrentStep] = useState(0);
-  const [leadName, setLeadName] = useState("");
-  const [leadBestContact, setLeadBestContact] = useState("");
-  const [leadMessage, setLeadMessage] = useState("");
   const [isBookedState, setIsBookedState] = useState(false);
-  const [isSendingLead, setIsSendingLead] = useState(false);
   const [leadSaved, setLeadSaved] = useState(false);
   const [founderConnected, setFounderConnected] = useState(false);
 
@@ -166,10 +162,6 @@ export default function PortfolioPage() {
       text,
     }));
 
-    if (currentStep >= activeFlow.messages.length - 1 && (leadName.trim() || leadBestContact.trim() || leadMessage.trim())) {
-      messages.push({ sender: "human", text: `Name: ${leadName.trim() || "—"}\nBest contact: ${leadBestContact.trim() || "—"}\nMessage: ${leadMessage.trim() || "—"}` });
-    }
-
     if (founderConnected) {
       messages.push({ sender: "bot", text: activeFlow.founderIntro });
       messages.push({ sender: "founder", text: activeFlow.founderMessage });
@@ -180,7 +172,7 @@ export default function PortfolioPage() {
     }
 
     return messages;
-  }, [activeFlow, currentStep, founderConnected, leadBestContact, leadMessage, leadName, leadSaved]);
+  }, [activeFlow, currentStep, founderConnected, leadSaved]);
 
   useEffect(() => {
     const log = document.querySelector('.chatbot-log');
@@ -200,9 +192,6 @@ export default function PortfolioPage() {
   const startFlow = (role: ChatRole) => {
     setActiveRole(role);
     setCurrentStep(0);
-    setLeadName("");
-    setLeadBestContact("");
-    setLeadMessage("");
     setLeadSaved(false);
     setFounderConnected(false);
     setIsBookedState(false);
@@ -217,26 +206,8 @@ export default function PortfolioPage() {
       return;
     }
 
-    if (!leadName.trim() || !leadBestContact.trim() || !leadMessage.trim() || isSendingLead) return;
-
-    setIsSendingLead(true);
-    try {
-      await fetch("/api/portfolio/contact-lead", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          role: activeRole,
-          interest: activeFlow.leadInterest,
-          name: leadName.trim(),
-          bestContact: leadBestContact.trim(),
-          message: leadMessage.trim(),
-        }),
-      });
-      setFounderConnected(true);
-      setLeadSaved(true);
-    } finally {
-      setIsSendingLead(false);
-    }
+    setFounderConnected(true);
+    setLeadSaved(true);
   };
 
   useEffect(() => {
@@ -430,7 +401,7 @@ export default function PortfolioPage() {
             <div className="foozi-chat-head">
               <div>
                 <div className="foozi-chat-title">Foozi</div>
-                <div className="foozi-chat-sub">tiny concierge, real filter</div>
+                <div className="foozi-chat-sub">Tiny concierge, Vivian’s personal assistant</div>
               </div>
               <button className="foozi-chat-close" aria-label="Close Foozi chat" onClick={() => setIsChatOpen(false)}>×</button>
             </div>
@@ -452,35 +423,11 @@ export default function PortfolioPage() {
 
             {activeRole && !leadSaved && (
               <div className="chatbot-flow-controls mt-4 space-y-3">
-                {currentStep >= (activeFlow?.messages.length || 1) - 1 && (
-                  <div className="chatbot-contact-form">
-                    <input
-                      className="chatbot-text-input"
-                      placeholder="Name"
-                      value={leadName}
-                      onChange={(event) => setLeadName(event.target.value)}
-                    />
-                    <input
-                      className="chatbot-text-input"
-                      placeholder="Best contact"
-                      value={leadBestContact}
-                      onChange={(event) => setLeadBestContact(event.target.value)}
-                    />
-                    <textarea
-                      className="chatbot-input"
-                      placeholder="Message"
-                      value={leadMessage}
-                      onChange={(event) => setLeadMessage(event.target.value)}
-                    />
-                  </div>
-                )}
                 <div className="chatbot-button-row">
                   {currentStep < (activeFlow?.messages.length || 1) - 1 ? (
                     <button className="primary-chip" onClick={advanceFlow}>Next</button>
                   ) : (
-                    <button className="primary-chip" onClick={advanceFlow} disabled={!leadName.trim() || !leadBestContact.trim() || !leadMessage.trim() || isSendingLead}>
-                      {isSendingLead ? "Routing..." : "Submit"}
-                    </button>
+                    <button className="primary-chip" onClick={advanceFlow}>See Vivian’s contact options</button>
                   )}
                   <button className="secondary-chip" onClick={() => startFlow(activeRole)}>Restart</button>
                 </div>
