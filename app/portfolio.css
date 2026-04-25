@@ -1,13 +1,13 @@
 :root {
-  --portfolio-bg: radial-gradient(circle at top left, #fff8f2 0%, #f7ecdf 34%, #f0e3d8 72%, #eadfd7 100%);
-  --portfolio-panel: linear-gradient(180deg, rgba(255, 255, 255, 0.56) 0%, rgba(255, 247, 241, 0.34) 100%);
-  --portfolio-border: rgba(196, 149, 112, 0.24);
+  --portfolio-bg: radial-gradient(circle at top left, #fffaf6 0%, #f9efe4 28%, #f2e4d9 64%, #eadfd7 100%);
+  --portfolio-panel: linear-gradient(180deg, rgba(255, 255, 255, 0.42) 0%, rgba(255, 247, 241, 0.2) 100%);
+  --portfolio-border: rgba(212, 171, 139, 0.34);
   --portfolio-text: #50382c;
   --portfolio-muted: #7d6559;
   --portfolio-accent: #d28a57;
   --portfolio-accent-strong: #a96035;
-  --portfolio-soft: rgba(255, 220, 204, 0.5);
-  --portfolio-shadow: 0 28px 90px rgba(127, 90, 61, 0.16);
+  --portfolio-soft: rgba(255, 220, 204, 0.4);
+  --portfolio-shadow: 0 32px 100px rgba(127, 90, 61, 0.18);
 }
 
 :root[data-theme="dark"] {
@@ -35,17 +35,18 @@
   inset: 0;
   pointer-events: none;
   background:
-    radial-gradient(circle at 10% 14%, rgba(255,255,255,0.9), transparent 24%),
-    radial-gradient(circle at 88% 12%, rgba(255, 206, 176, 0.5), transparent 24%),
-    radial-gradient(circle at 82% 78%, rgba(214, 164, 125, 0.24), transparent 20%),
-    radial-gradient(circle at 18% 84%, rgba(255, 214, 228, 0.26), transparent 16%),
-    linear-gradient(135deg, rgba(255,255,255,0.18), rgba(255,255,255,0));
+    radial-gradient(circle at 10% 14%, rgba(255,255,255,0.96), transparent 24%),
+    radial-gradient(circle at 88% 12%, rgba(255, 206, 176, 0.58), transparent 24%),
+    radial-gradient(circle at 82% 78%, rgba(214, 164, 125, 0.3), transparent 20%),
+    radial-gradient(circle at 18% 84%, rgba(255, 214, 228, 0.32), transparent 16%),
+    radial-gradient(circle at 54% 34%, rgba(255,255,255,0.22), transparent 28%),
+    linear-gradient(135deg, rgba(255,255,255,0.24), rgba(255,255,255,0.02));
 }
 
 .glass-panel {
   position: relative;
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(26px) saturate(140%);
+  -webkit-backdrop-filter: blur(26px) saturate(140%);
   background: var(--portfolio-panel);
   border: 1px solid var(--portfolio-border);
   box-shadow: var(--portfolio-shadow);
@@ -57,7 +58,7 @@
   inset: 0;
   border-radius: inherit;
   pointer-events: none;
-  background: linear-gradient(180deg, rgba(255,255,255,0.42) 0%, rgba(255,255,255,0.14) 30%, rgba(255,255,255,0.04) 100%);
+  background: linear-gradient(180deg, rgba(255,255,255,0.56) 0%, rgba(255,255,255,0.18) 28%, rgba(255,255,255,0.06) 100%);
 }
 
 .glass-panel::after {
@@ -66,8 +67,10 @@
   inset: 1px;
   border-radius: inherit;
   pointer-events: none;
-  background: radial-gradient(circle at top left, rgba(255,255,255,0.28), transparent 44%);
-  opacity: 0.9;
+  background:
+    radial-gradient(circle at top left, rgba(255,255,255,0.34), transparent 38%),
+    linear-gradient(135deg, rgba(255,255,255,0.08), transparent 48%);
+  opacity: 1;
 }
 
 :root[data-theme="dark"] .glass-panel::before {
