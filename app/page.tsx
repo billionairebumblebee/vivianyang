@@ -4,7 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import "./portfolio.css";
 
 const fooziImage = "/IMG_4043.JPG";
-const byogloImage = "/IMG_2146.jpg";
+const cloakImage = "/cloak-logo-black-icon-cropped.png";
 const oskiImage = "/IMG_8690.jpg";
 
 const heroFacts = [
@@ -47,11 +47,11 @@ const featuredProjects = [
     alt: "Oski can project work",
   },
   {
-    title: "ByoGlo",
-    meta: "product • packaging • pricing",
-    description: "Prototype and market-facing concept work with strong taste around packaging, positioning, and customer experience.",
-    image: byogloImage,
-    alt: "ByoGlo project work",
+    title: "Cloak",
+    meta: "stealth startup • privacy • product",
+    description: "Building a consumer privacy-defense product focused on stopping tracking, manipulation, and messy shopping flows.",
+    image: cloakImage,
+    alt: "Cloak logo",
   },
 ];
 
@@ -241,7 +241,7 @@ export default function PortfolioPage() {
         <section className="hero-layout hero-grid mt-4">
           <div className="glass-panel hero-panel rounded-[1.4rem] p-5 md:p-6">
             <div className="hero-badge">✿ portfolio</div>
-            <h1 className="hero-title mt-3">UC Berkeley engineer and founder, shipping technical systems with taste.</h1>
+            <h1 className="hero-title hero-title-strong mt-3">UC Berkeley <span>engineer and founder</span>, shipping technical systems with taste.</h1>
             <p className="hero-copy mt-3 max-w-xl">
               I build AI-native tools, hardware prototypes, product systems, and market-facing experiences that feel sharp, intentional, and shipped.
             </p>
@@ -274,7 +274,7 @@ export default function PortfolioPage() {
               <div className="cookiejar-hero-top">
                 <div>
                   <div className="eyebrow">Cookie Jar</div>
-                  <h2 className="section-title mt-2">Interactive proof of range.</h2>
+                  <h2 className="section-title mt-2">Click the cookies!</h2>
                 </div>
                 <a className="secondary-chip" href={cookieJarLink} target="_blank" rel="noreferrer">Open full Cookie Jar</a>
               </div>
@@ -322,10 +322,10 @@ export default function PortfolioPage() {
         </section>
 
         <section className="story-grid story-layout mt-5">
-          <article className="glass-panel rounded-[1.4rem] p-5 md:p-6 hobbies-card">
+          <article className="glass-panel rounded-[1.4rem] p-5 md:p-6 hobbies-card about-card">
             <div className="eyebrow mb-3">About me</div>
-            <h2 className="section-title">Gaming, development, and building cute things that still go hard.</h2>
-            <p className="section-copy mt-3">
+            <h2 className="section-title about-title">Gaming, development, and building cute things that still go hard.</h2>
+            <p className="section-copy about-copy mt-3">
               I like systems that feel alive. A lot of my work sits at the overlap of engineering, playful interfaces, visual identity, and late-night builder energy.
             </p>
             <div className="hobby-pill-grid mt-5">
