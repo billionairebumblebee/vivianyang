@@ -48,7 +48,7 @@ const proofStats = [
 
 const featuredProjects = [
   {
-    title: "Foozi / OpenClaw",
+    title: "OpenClaw & Hermes Agent Fleets",
     meta: "AI systems • product • execution",
     description: "Built a multi-agent personal operating system with workflow routing, memory, and a polished portfolio surface.",
     image: fooziImage,
