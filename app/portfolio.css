@@ -183,12 +183,12 @@
 }
 
 .hero-title-strong {
-  max-width: 12ch;
+  max-width: 13ch;
 }
 
 .hero-title-strong span {
-  display: inline-block;
-  font-size: 1.12em;
+  display: inline;
+  font-size: 1em;
 }
 
 .hero-copy,
@@ -512,6 +512,15 @@ section[id='featured'],
   padding-bottom: 2.4rem !important;
 }
 
+.best-fit-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100%;
+  padding-top: 2.1rem !important;
+  padding-bottom: 2.1rem !important;
+}
+
 .about-title {
   font-size: clamp(1.7rem, 2.5vw, 2.25rem);
   max-width: 16ch;
@@ -822,6 +831,30 @@ section[id='featured'] > * {
 .links-card > * {
   padding-left: 1.2rem !important;
   padding-right: 1.2rem !important;
+}
+
+.best-fit-card > * {
+  padding-left: 1.35rem !important;
+  padding-right: 1.35rem !important;
+}
+
+.best-fit-card .section-title,
+.best-fit-card .section-copy,
+.best-fit-card .eyebrow {
+  text-align: center;
+}
+
+.best-fit-card .section-title {
+  max-width: 16ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.best-fit-card .section-copy {
+  max-width: 28rem;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7;
 }
 
 .links-card .footer-button-stack {

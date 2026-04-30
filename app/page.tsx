@@ -256,7 +256,7 @@ export default function PortfolioPage() {
         <section className="hero-layout hero-grid mt-4">
           <div className="glass-panel hero-panel rounded-[1.4rem] p-5 md:p-6">
             <div className="hero-badge">✿ portfolio</div>
-            <h1 className="hero-title hero-title-strong mt-3">UC Berkeley <span>engineer and founder</span>, shipping technical systems with taste.</h1>
+            <h1 className="hero-title hero-title-strong mt-3">UC Berkeley <span>engineer and founder shipping technical systems with taste.</span></h1>
             <p className="hero-copy hero-copy-strong mt-3 max-w-2xl">
               I build AI-native tools, hardware prototypes, product systems, and market-facing experiences that feel sharp, intentional, and shipped.
             </p>
@@ -387,7 +387,7 @@ export default function PortfolioPage() {
         </section>
 
         <section className="mt-5 footer-grid footer-layout">
-          <article className="glass-panel rounded-[2rem] p-7 md:p-8">
+          <article className="glass-panel rounded-[2rem] p-7 md:p-8 best-fit-card">
             <div className="eyebrow mb-3">Best fit</div>
             <h2 className="section-title">YC, startups, and teams that move fast.</h2>
             <p className="section-copy mt-4">
