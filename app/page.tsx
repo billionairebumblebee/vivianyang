@@ -4,13 +4,34 @@ import { useEffect, useMemo, useState } from "react";
 import "./portfolio.css";
 
 const fooziImage = "/IMG_4043.JPG";
-const cloakImage = "/cloak-logo-black-icon-cropped.png";
+const cloakImage = "/cloak-logo.PNG";
 const oskiImage = "/IMG_8690.jpg";
 
 const heroFacts = [
   "⚙️ UC Berkeley Mechanical Engineering",
   "🧸 Founder, engineer, builder",
   "📈 Product, GTM, and creator instinct",
+];
+
+const heroMetrics = [
+  {
+    value: "2 weeks",
+    label: "to ship Foozi",
+  },
+  {
+    value: "software + hardware",
+    label: "full-stack builder range",
+  },
+  {
+    value: "founder mode",
+    label: "product, taste, and execution",
+  },
+];
+
+const heroNow = [
+  "Building Cloak, a privacy-defense startup for online shopping and beyond",
+  "Designing product systems that feel playful, sharp, and high-agency",
+  "Bridging engineering execution with founder storytelling and GTM instinct",
 ];
 
 const proofStats = [
@@ -242,7 +263,7 @@ export default function PortfolioPage() {
           <div className="glass-panel hero-panel rounded-[1.4rem] p-5 md:p-6">
             <div className="hero-badge">✿ portfolio</div>
             <h1 className="hero-title hero-title-strong mt-3">UC Berkeley <span>engineer and founder</span>, shipping technical systems with taste.</h1>
-            <p className="hero-copy mt-3 max-w-xl">
+            <p className="hero-copy hero-copy-strong mt-3 max-w-2xl">
               I build AI-native tools, hardware prototypes, product systems, and market-facing experiences that feel sharp, intentional, and shipped.
             </p>
 
@@ -250,6 +271,24 @@ export default function PortfolioPage() {
               {heroFacts.map((fact) => (
                 <span key={fact} className="fact-pill">{fact}</span>
               ))}
+            </div>
+
+            <div className="hero-metrics mt-5">
+              {heroMetrics.map((item) => (
+                <article key={item.label} className="hero-metric-card">
+                  <div className="hero-metric-value">{item.value}</div>
+                  <div className="hero-metric-label">{item.label}</div>
+                </article>
+              ))}
+            </div>
+
+            <div className="hero-now mt-5">
+              <div className="hero-now-title">Right now</div>
+              <div className="hero-now-list">
+                {heroNow.map((item) => (
+                  <div key={item} className="hero-now-item">{item}</div>
+                ))}
+              </div>
             </div>
           </div>
 
