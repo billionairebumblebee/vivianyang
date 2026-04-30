@@ -517,8 +517,6 @@ section[id='featured'],
   flex-direction: column;
   justify-content: center;
   min-height: 100%;
-  padding-top: 2.1rem !important;
-  padding-bottom: 2.1rem !important;
 }
 
 .about-title {
@@ -845,7 +843,7 @@ section[id='featured'] > * {
 }
 
 .best-fit-card .section-title {
-  max-width: 16ch;
+  max-width: 18ch;
   margin-left: auto;
   margin-right: auto;
 }

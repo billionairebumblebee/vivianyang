@@ -389,7 +389,7 @@ export default function PortfolioPage() {
         <section className="mt-5 footer-grid footer-layout">
           <article className="glass-panel rounded-[2rem] p-7 md:p-8 best-fit-card">
             <div className="eyebrow mb-3">Best fit</div>
-            <h2 className="section-title">YC, startups, and teams that move fast.</h2>
+            <h2 className="section-title">Startups and teams that move fast.</h2>
             <p className="section-copy mt-4">
               I do best where technical execution, product taste, and initiative all matter at the same time.
             </p>
