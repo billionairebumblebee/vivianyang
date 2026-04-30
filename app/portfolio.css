@@ -176,13 +176,14 @@
 
 .hero-title {
   font-size: clamp(2.7rem, 5.2vw, 5.2rem);
-  line-height: 0.92;
+  line-height: 0.95;
   font-weight: 700;
-  max-width: 10ch;
+  max-width: 11ch;
+  overflow: visible;
 }
 
 .hero-title-strong {
-  max-width: 11ch;
+  max-width: 12ch;
 }
 
 .hero-title-strong span {
@@ -232,32 +233,6 @@
   line-height: 1.45;
 }
 
-.hero-now {
-  max-width: 52rem;
-}
-
-.hero-now-title {
-  color: var(--portfolio-accent-strong);
-  font-size: 0.78rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  font-weight: 700;
-  margin-bottom: 0.8rem;
-  padding-left: 0.15rem;
-}
-
-.hero-now-list {
-  display: grid;
-  gap: 0.7rem;
-}
-
-.hero-now-item {
-  border-left: 3px solid rgba(210, 138, 87, 0.42);
-  padding: 0.2rem 0 0.2rem 0.95rem;
-  color: var(--portfolio-text);
-  font-size: 0.97rem;
-  line-height: 1.6;
-}
 
 .skills-title {
   color: var(--portfolio-text);
@@ -524,6 +499,17 @@ section[id='featured'],
 .about-card {
   justify-content: center;
   min-height: 100%;
+  padding-top: 2.4rem !important;
+  padding-bottom: 2.4rem !important;
+}
+
+.links-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100%;
+  padding-top: 2.4rem !important;
+  padding-bottom: 2.4rem !important;
 }
 
 .about-title {
@@ -622,7 +608,9 @@ section[id='featured'],
 .hero-panel {
   display: flex;
   flex-direction: column;
-  gap: 0.95rem;
+  justify-content: center;
+  gap: 1.15rem;
+  min-height: 100%;
 }
 
 .skills-panel {
@@ -829,6 +817,19 @@ section[id='featured'] > * {
 .about-card .hobby-pill-grid {
   padding-left: 1.45rem;
   padding-right: 1.45rem;
+}
+
+.links-card > * {
+  padding-left: 1.2rem !important;
+  padding-right: 1.2rem !important;
+}
+
+.links-card .footer-button-stack {
+  margin-top: 0.95rem;
+}
+
+.links-card .footer-verse {
+  margin-top: 1.25rem;
 }
 
 .skills-panel .mini-links,
@@ -1211,10 +1212,6 @@ section[id='featured'] > * {
 
   .hero-metrics {
     grid-template-columns: 1fr;
-  }
-
-  .hero-now-item {
-    font-size: 0.93rem;
   }
 
   .hero-grid,

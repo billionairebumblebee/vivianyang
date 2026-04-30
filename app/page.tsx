@@ -28,12 +28,6 @@ const heroMetrics = [
   },
 ];
 
-const heroNow = [
-  "Building Cloak, a privacy-defense startup for online shopping and beyond",
-  "Designing product systems that feel playful, sharp, and high-agency",
-  "Bridging engineering execution with founder storytelling and GTM instinct",
-];
-
 const proofStats = [
   {
     label: "Build speed",
@@ -282,14 +276,6 @@ export default function PortfolioPage() {
               ))}
             </div>
 
-            <div className="hero-now mt-5">
-              <div className="hero-now-title">Right now</div>
-              <div className="hero-now-list">
-                {heroNow.map((item) => (
-                  <div key={item} className="hero-now-item">{item}</div>
-                ))}
-              </div>
-            </div>
           </div>
 
           <div className="hero-side-stack">
@@ -409,7 +395,7 @@ export default function PortfolioPage() {
             </p>
           </article>
 
-          <article className="glass-panel rounded-[2rem] p-7 md:p-8">
+          <article className="glass-panel rounded-[2rem] p-7 md:p-8 links-card">
             <div className="eyebrow mb-3">Links</div>
             <div className="footer-button-stack">
               <a className="primary-chip" href={calendlyLink} target="_blank" rel="noreferrer">Book Meeting</a>
