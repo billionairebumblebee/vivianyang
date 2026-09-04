@@ -8,5 +8,5 @@ html, body {
 }
 
 body {
-  font-family: Inter, Arial, sans-serif;
+  font-family: var(--font-montserrat), Montserrat, Arial, sans-serif;
 }
