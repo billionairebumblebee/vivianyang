@@ -7,6 +7,19 @@ const email = "vivian_yang@berkeley.edu";
 const calendly = "https://calendly.com/vivian_yang-berkeley/";
 const cookieJar = "https://cookiejar-five.vercel.app/";
 
+const reels = [
+  {
+    title: "Vivian Builds featured reel one",
+    href: "https://www.instagram.com/reel/DEg3KbuxS1o/",
+    embed: "https://www.instagram.com/reel/DEg3KbuxS1o/embed",
+  },
+  {
+    title: "Vivian Builds featured reel two",
+    href: "https://www.instagram.com/reel/C_mJKXpSOV4/",
+    embed: "https://www.instagram.com/reel/C_mJKXpSOV4/embed",
+  },
+];
+
 const proof = [
   { value: "131", label: "Cloak installs" },
   { value: "5 months", label: "from build to support loop" },
@@ -34,12 +47,6 @@ const builds = [
     meta: "CAD · Arduino · 3D printing · IoT",
     copy: "A physical sorting system that joined mechanical design, electronics, and an approachable interaction layer.",
     image: "/IMG_8690.jpg",
-  },
-  {
-    index: "04",
-    title: "Combat Robot",
-    meta: "Mechanical design · fabrication",
-    copy: "A hands-on mechanical build developed through design, fabrication, testing, and iteration.",
   },
 ];
 
@@ -69,7 +76,7 @@ export default function PortfolioPage() {
         <div className="nav-links">
           <a href="#cloak">Cloak</a>
           <a href="#builds">Builds</a>
-          <a href="#story">Story</a>
+          <a href="#cookie-jar">Cookie Jar</a>
           <button onClick={toggleTheme} aria-label={isDark ? "Use light theme" : "Use dark theme"}>{isDark ? "Light" : "Dark"}</button>
           <a className="nav-cta" href={`mailto:${email}`}>Contact ↗</a>
         </div>
@@ -96,6 +103,11 @@ export default function PortfolioPage() {
 
       <section className="proof-grid" aria-label="Founder proof">
         {proof.map((item) => <article className="proof-card glass" key={item.label}><strong>{item.value}</strong><span>{item.label}</span></article>)}
+      </section>
+
+      <section id="cookie-jar" className="cookie-section cookie-section-featured glass">
+        <div className="cookie-copy"><p className="eyebrow">Interactive portfolio</p><h2>Play before you scroll.</h2><p>Drag a cookie. Tap to flip it. Every interaction keeps the original sound design moving through the circle of fifths.</p><a className="button secondary" href={cookieJar} target="_blank" rel="noreferrer">Open full Cookie Jar ↗</a></div>
+        <div className="cookie-frame"><iframe src={cookieJar} title="Vivian Yang Cookie Jar" loading="eager" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" /></div>
       </section>
 
       <section id="cloak" className="cloak-section section-space">
@@ -131,16 +143,14 @@ export default function PortfolioPage() {
           <div className="creator-links"><a href="https://www.instagram.com/vivianbuilds/" target="_blank" rel="noreferrer">Instagram · @vivianbuilds ↗</a><a href="https://www.tiktok.com/@vivianbuilds" target="_blank" rel="noreferrer">TikTok · @vivianbuilds ↗</a><span>Consumer storytelling</span><span>Organic distribution</span></div>
         </article>
         <article className="pcg-card glass"><p className="eyebrow">Operating range</p><h3>Piedmont Consulting Group</h3><p className="role">Consultant</p><p>Advised startup projects across product, GTM, onboarding, UX, and operations.</p></article>
+        <div className="reels-grid" aria-label="Featured Instagram videos">
+          {reels.map((reel) => <article className="reel-card glass" key={reel.href}><div className="reel-frame"><iframe src={reel.embed} title={reel.title} loading="lazy" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen /></div><a href={reel.href} target="_blank" rel="noreferrer">Watch on Instagram ↗</a></article>)}
+        </div>
       </section>
 
       <section id="story" className="story-section section-space">
         <article className="story-card glass"><p className="eyebrow">04 · Founder story</p><h2>Direct enough to ask. Resourceful enough to find a way.</h2><p>The Berkeley polo story is a small but accurate preview of how I operate: I go to the source, make the ask, and keep moving.</p><span className="story-hook">Ask me how I got the polo ↗</span></article>
         <article className="operating-card glass"><p className="eyebrow">Operating system</p><h3>AI-native, not AI-delegated.</h3><p>I use coding agents to move unusually fast, but specifications, product judgment, debugging, testing, and final decisions stay mine.</p><details><summary>One small easter egg</summary><p>12B lifetime Codex tokens. Useful as a measure of reps—not a substitute for shipped products.</p></details></article>
-      </section>
-
-      <section className="cookie-section glass">
-        <div className="cookie-copy"><p className="eyebrow">A playful index</p><h2>The Cookie Jar</h2><p>Drag a cookie. Click to flip it. The notes move through a circle-of-fifths progression as you explore.</p><a className="button secondary" href={cookieJar} target="_blank" rel="noreferrer">Open full jar ↗</a></div>
-        <div className="cookie-frame"><iframe src={cookieJar} title="Vivian Yang Cookie Jar" loading="lazy" allow="autoplay" /></div>
       </section>
 
       <section className="credentials section-space">
