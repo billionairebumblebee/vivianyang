@@ -137,7 +137,7 @@ export default function PortfolioPage() {
         <div className="section-heading"><div><p className="eyebrow">02 · Selected builds</p><h2>A small set of things worth remembering.</h2></div><p>Software, hardware, and product experiments—selected for ownership and evidence, not chronology.</p></div>
         <div className="build-grid">
           {builds.map((build) => <article className={`build-card glass ${build.featured ? "featured" : ""}`} key={build.title}>
-            {build.image && <img src={build.image} alt="Oski Sorting Trash Can team with prototype" />}
+            {build.image && <img className="build-image-contain" src={build.image} alt="Oski Sorting Trash Can team with prototype" />}
             <div className="build-body"><span className="build-index">{build.index}</span><p className="mini-label">{build.meta}</p><h3>{build.title}</h3><p>{build.copy}</p></div>
           </article>)}
         </div>

@@ -441,6 +441,14 @@ button {
   height: 18rem;
   object-fit: cover;
 }
+
+.build-card img.build-image-contain {
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  background: rgba(255, 250, 246, 0.32);
+}
 .build-body {
   display: flex;
   flex-direction: column;
