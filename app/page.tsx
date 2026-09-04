@@ -128,7 +128,7 @@ export default function PortfolioPage() {
       <section className="distribution section-space">
         <article className="creator-card glass">
           <div><p className="eyebrow">03 · Distribution proof</p><h2>2M+ organic views.</h2><p>I grew a consumer content channel organically—proof that I can find a message, earn attention, and learn from real audiences.</p></div>
-          <div className="creator-links"><a href="https://www.instagram.com/vivian.yan6/" target="_blank" rel="noreferrer">Instagram ↗</a><span>Consumer storytelling</span><span>Organic distribution</span></div>
+          <div className="creator-links"><a href="https://www.instagram.com/vivianbuilds/" target="_blank" rel="noreferrer">Instagram · @vivianbuilds ↗</a><a href="https://www.tiktok.com/@vivianbuilds" target="_blank" rel="noreferrer">TikTok · @vivianbuilds ↗</a><span>Consumer storytelling</span><span>Organic distribution</span></div>
         </article>
         <article className="pcg-card glass"><p className="eyebrow">Operating range</p><h3>Piedmont Consulting Group</h3><p className="role">Consultant</p><p>Advised startup projects across product, GTM, onboarding, UX, and operations.</p></article>
       </section>
