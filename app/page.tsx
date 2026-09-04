@@ -77,8 +77,9 @@ export default function PortfolioPage() {
           <a href="#cloak">Cloak</a>
           <a href="#builds">Builds</a>
           <a href="#cookie-jar">Cookie Jar</a>
-          <button onClick={toggleTheme} aria-label={isDark ? "Use light theme" : "Use dark theme"}>{isDark ? "Light" : "Dark"}</button>
-          <a className="nav-cta" href={`mailto:${email}`}>Contact ↗</a>
+          <button className="theme-toggle" onClick={toggleTheme} aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}><span aria-hidden="true">{isDark ? "☀" : "☾"}</span>{isDark ? "Light mode" : "Dark mode"}</button>
+          <a className="nav-connect" href="https://www.linkedin.com/in/viviany31" target="_blank" rel="noreferrer">Connect</a>
+          <a className="nav-cta" href={calendly} target="_blank" rel="noreferrer">Book a call</a>
         </div>
       </nav>
 
@@ -91,7 +92,7 @@ export default function PortfolioPage() {
           </p>
           <div className="hero-actions">
             <a className="button primary" href="https://cloak.build/" target="_blank" rel="noreferrer">Explore Cloak ↗</a>
-            <a className="button secondary" href={calendly} target="_blank" rel="noreferrer">Meet Vivian</a>
+            <a className="button secondary" href={calendly} target="_blank" rel="noreferrer">Book a call</a>
           </div>
           <p className="founder-status"><span /> Building while enrolled at UC Berkeley · prepared to take leave for the company</p>
         </div>
@@ -147,7 +148,6 @@ export default function PortfolioPage() {
           <div><p className="eyebrow">03 · Distribution proof</p><h2>2M+ organic views.</h2><p>I grew a consumer content channel organically—proof that I can find a message, earn attention, and learn from real audiences.</p></div>
           <div className="creator-links"><a href="https://www.instagram.com/vivianbuilds/" target="_blank" rel="noreferrer">Instagram · @vivianbuilds ↗</a><a href="https://www.tiktok.com/@vivianbuilds" target="_blank" rel="noreferrer">TikTok · @vivianbuilds ↗</a><span>Consumer storytelling</span><span>Organic distribution</span></div>
         </article>
-        <article className="pcg-card glass"><p className="eyebrow">Operating range</p><h3>Piedmont Consulting Group</h3><p className="role">Consultant</p><p>Advised startup projects across product, GTM, onboarding, UX, and operations.</p></article>
         <div className="reels-grid" aria-label="Featured Instagram videos">
           {reels.map((reel) => <article className="reel-card glass" key={reel.href}><div className="reel-frame"><iframe src={reel.embed} title={reel.title} loading="lazy" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen /></div><a href={reel.href} target="_blank" rel="noreferrer">Watch on Instagram ↗</a></article>)}
         </div>
@@ -155,16 +155,10 @@ export default function PortfolioPage() {
 
       <section id="story" className="story-section section-space">
         <article className="story-card glass"><p className="eyebrow">04 · Founder story</p><h2>Direct enough to ask. Resourceful enough to find a way.</h2><p>The Berkeley polo story is a small but accurate preview of how I operate: I go to the source, make the ask, and keep moving.</p><span className="story-hook">Ask me how I got the polo ↗</span></article>
-        <article className="operating-card glass"><p className="eyebrow">Operating system</p><h3>AI-native, not AI-delegated.</h3><p>I use coding agents to move unusually fast, but specifications, product judgment, debugging, testing, and final decisions stay mine.</p><div className="operating-stats"><strong>13.2B lifetime tokens</strong><span>789.8M peak · 66-day streak</span></div></article>
+        <article className="student-card glass"><p className="eyebrow">Berkeley, beyond class</p><h3>A technical student who shows up.</h3><div className="activity-list"><div><strong>UC Berkeley</strong><span>Mechanical Engineering</span></div><div><strong>Piedmont Consulting Group</strong><span>Consultant · product, GTM, onboarding, and UX</span></div><div><strong>Founder Summit · SkyDeck ACE</strong><span>Selected founder programs</span></div></div><p className="student-note">Earlier: Berkeley Lab technical programs · DECA placement</p></article>
       </section>
 
-      <section className="credentials section-space">
-        <div><p className="eyebrow">Education</p><h3>UC Berkeley</h3><p>Mechanical Engineering</p></div>
-        <div><p className="eyebrow">Programs</p><h3>Founder Summit · SkyDeck ACE</h3><p>Selected founder programs</p></div>
-        <div><p className="eyebrow">Earlier awards</p><h3>Berkeley Lab selectivity · DECA placement</h3><p>Selective technical programs and competitive placement</p></div>
-      </section>
-
-      <footer className="footer glass"><div><p className="eyebrow">Build something consequential</p><h2>Talk with Vivian.</h2></div><div className="footer-actions"><a href={`mailto:${email}`}>{email}</a><a href="https://www.linkedin.com/in/viviany31" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="https://github.com/billionairebumblebee" target="_blank" rel="noreferrer">GitHub ↗</a></div></footer>
+      <footer className="footer glass"><div className="footer-copy"><p className="eyebrow">Build something consequential</p><h2>Talk with Vivian.</h2><blockquote>“Let all that you do be done in love.” <cite>1 Corinthians 16:14</cite></blockquote></div><div className="footer-cta-group"><a className="button primary" href={calendly} target="_blank" rel="noreferrer">Book a call</a><a className="button secondary" href="https://www.linkedin.com/in/viviany31" target="_blank" rel="noreferrer">Connect on LinkedIn ↗</a><div className="footer-actions"><a href={`mailto:${email}`}>{email}</a><a href="https://github.com/billionairebumblebee" target="_blank" rel="noreferrer">GitHub ↗</a><a href="https://www.instagram.com/vivianbuilds/" target="_blank" rel="noreferrer">Instagram ↗</a></div></div></footer>
     </main>
   );
 }
