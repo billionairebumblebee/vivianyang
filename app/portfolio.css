@@ -266,6 +266,65 @@ button {
   font-size: 0.78rem;
   line-height: 1.45;
 }
+
+.codex-proof {
+  display: grid;
+  grid-template-columns: minmax(250px, 0.68fr) minmax(0, 1.32fr);
+  gap: clamp(1.5rem, 3vw, 3rem);
+  align-items: center;
+  margin-top: clamp(1.15rem, 2vw, 1.75rem);
+  padding: clamp(1.4rem, 3vw, 2.5rem);
+  border-radius: 1.8rem;
+}
+
+.codex-proof-copy h2 {
+  margin: 0.8rem 0 1rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.2rem, 4vw, 4rem);
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+}
+
+.codex-proof-copy > p:last-of-type {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.codex-proof-notes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-top: 1.35rem;
+}
+
+.codex-proof-notes span {
+  padding: 0.55rem 0.7rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--accent-deep);
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.codex-proof-image {
+  margin: 0;
+}
+
+.codex-proof-image img {
+  display: block;
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1.25rem;
+  box-shadow: 0 18px 50px rgba(40, 25, 20, 0.18);
+}
+
+.codex-proof-image figcaption {
+  margin-top: 0.55rem;
+  color: var(--muted);
+  font-size: 0.68rem;
+  text-align: right;
+}
 .section-space {
   padding: clamp(5rem, 9vw, 9rem) clamp(0.25rem, 1vw, 1rem);
 }
@@ -489,6 +548,25 @@ button {
   color: var(--muted);
   line-height: 1.65;
 }
+
+.operating-stats {
+  display: grid;
+  gap: 0.3rem;
+  margin-top: auto;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--line);
+}
+
+.operating-stats strong {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.35rem;
+  letter-spacing: -0.03em;
+}
+
+.operating-stats span {
+  color: var(--muted);
+  font-size: 0.75rem;
+}
 .cookie-section {
   display: grid;
   grid-template-columns: minmax(250px, 0.55fr) minmax(0, 1.45fr);
@@ -560,7 +638,8 @@ button {
   }
   .hero,
   .cloak-section,
-  .cookie-section {
+  .cookie-section,
+  .codex-proof {
     grid-template-columns: 1fr;
   }
   .hero {
@@ -831,6 +910,14 @@ button {
 
   .proof-card {
     padding: 1.15rem;
+  }
+
+  .codex-proof {
+    padding: 1.25rem;
+  }
+
+  .codex-proof-copy h2 {
+    font-size: clamp(2.25rem, 12vw, 3.2rem);
   }
 
   .section-space {

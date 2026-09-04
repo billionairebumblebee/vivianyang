@@ -105,8 +105,13 @@ export default function PortfolioPage() {
         {proof.map((item) => <article className="proof-card glass" key={item.label}><strong>{item.value}</strong><span>{item.label}</span></article>)}
       </section>
 
+      <section className="codex-proof glass" aria-labelledby="codex-proof-title">
+        <div className="codex-proof-copy"><p className="eyebrow">AI-native operating proof</p><h2 id="codex-proof-title">13.2B lifetime Codex tokens.</h2><p>A public record of the reps behind rapid specification, implementation, debugging, testing, and QA—not a substitute for shipped products, but part of how I ship them.</p><div className="codex-proof-notes"><span>789.8M peak tokens</span><span>66-day streak</span><span>1h 56m longest chat</span></div></div>
+        <figure className="codex-proof-image"><img src="/codex-stats-sep-2026.png" alt="Codex usage dashboard showing 13.2 billion lifetime tokens, 789.8 million peak tokens, a 1 hour 56 minute longest chat, and a 66 day streak" /><figcaption>Codex usage · September 2026</figcaption></figure>
+      </section>
+
       <section id="cookie-jar" className="cookie-section cookie-section-featured glass">
-        <div className="cookie-copy"><p className="eyebrow">Interactive portfolio</p><h2>Play before you scroll.</h2><p>Drag a cookie. Tap to flip it. Every interaction keeps the original sound design moving through the circle of fifths.</p><a className="button secondary" href={cookieJar} target="_blank" rel="noreferrer">Open full Cookie Jar ↗</a></div>
+        <div className="cookie-copy"><p className="eyebrow">Interactive portfolio</p><h2>The Cookie Jar.</h2><p>An interactive index of what I’ve built, won, and learned. Drag the cookies, flip them, and listen—the notes follow the circle of fifths.</p><a className="button secondary" href={cookieJar} target="_blank" rel="noreferrer">Open full Cookie Jar ↗</a></div>
         <div className="cookie-frame"><iframe src={cookieJar} title="Vivian Yang Cookie Jar" loading="eager" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" /></div>
       </section>
 
@@ -150,7 +155,7 @@ export default function PortfolioPage() {
 
       <section id="story" className="story-section section-space">
         <article className="story-card glass"><p className="eyebrow">04 · Founder story</p><h2>Direct enough to ask. Resourceful enough to find a way.</h2><p>The Berkeley polo story is a small but accurate preview of how I operate: I go to the source, make the ask, and keep moving.</p><span className="story-hook">Ask me how I got the polo ↗</span></article>
-        <article className="operating-card glass"><p className="eyebrow">Operating system</p><h3>AI-native, not AI-delegated.</h3><p>I use coding agents to move unusually fast, but specifications, product judgment, debugging, testing, and final decisions stay mine.</p><details><summary>One small easter egg</summary><p>12B lifetime Codex tokens. Useful as a measure of reps—not a substitute for shipped products.</p></details></article>
+        <article className="operating-card glass"><p className="eyebrow">Operating system</p><h3>AI-native, not AI-delegated.</h3><p>I use coding agents to move unusually fast, but specifications, product judgment, debugging, testing, and final decisions stay mine.</p><div className="operating-stats"><strong>13.2B lifetime tokens</strong><span>789.8M peak · 66-day streak</span></div></article>
       </section>
 
       <section className="credentials section-space">
