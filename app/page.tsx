@@ -22,7 +22,7 @@ const reels = [
 
 const proof = [
   { value: "131", label: "Cloak installs" },
-  { value: "5 months", label: "from build to support loop" },
+  { value: "5 months", label: "to ship Cloak end to end" },
   { value: "2M+", label: "organic creator views" },
   { value: "1st place", label: "Simular sponsor prize" },
 ];
@@ -39,13 +39,13 @@ const builds = [
     index: "02",
     title: "DopaMINE",
     meta: "Independent product build",
-    copy: "A selected product experiment shaped through rapid prototyping and direct iteration.",
+    copy: "An independent product experiment built through rapid prototyping, testing, and iteration.",
   },
   {
     index: "03",
     title: "Oski Sorting Trash Can",
     meta: "CAD · Arduino · 3D printing · IoT",
-    copy: "A physical sorting system that joined mechanical design, electronics, and an approachable interaction layer.",
+    copy: "Designed and built an automated sorting trash can using CAD, Arduino, 3D printing, and IoT systems.",
     image: "/IMG_8690.jpg",
   },
 ];
@@ -107,34 +107,34 @@ export default function PortfolioPage() {
       </section>
 
       <section className="codex-proof glass" aria-labelledby="codex-proof-title">
-        <div className="codex-proof-copy"><p className="eyebrow">AI-native operating proof</p><h2 id="codex-proof-title">13.2B lifetime Codex tokens.</h2><p>A public record of the reps behind rapid specification, implementation, debugging, testing, and QA—not a substitute for shipped products, but part of how I ship them.</p><div className="codex-proof-notes"><span>789.8M peak tokens</span><span>66-day streak</span><span>1h 56m longest chat</span></div></div>
+        <div className="codex-proof-copy"><p className="eyebrow">AI-native execution</p><h2 id="codex-proof-title">13.2B lifetime Codex tokens.</h2><p>The operating system behind my speed: I define the product, direct implementation, debug failures, test edge cases, and own the final result.</p><div className="codex-proof-notes"><span>789.8M peak tokens</span><span>66-day streak</span><span>1h 56m longest chat</span></div></div>
         <figure className="codex-proof-image"><img src="/codex-stats-sep-2026.png" alt="Codex usage dashboard showing 13.2 billion lifetime tokens, 789.8 million peak tokens, a 1 hour 56 minute longest chat, and a 66 day streak" /><figcaption>Codex usage · September 2026</figcaption></figure>
       </section>
 
       <section id="cookie-jar" className="cookie-section cookie-section-featured glass">
-        <div className="cookie-copy"><p className="eyebrow">Interactive portfolio</p><h2>The Cookie Jar.</h2><p>An interactive index of what I’ve built, won, and learned. Drag the cookies, flip them, and listen—the notes follow the circle of fifths.</p><a className="button secondary" href={cookieJar} target="_blank" rel="noreferrer">Open full Cookie Jar ↗</a></div>
+        <div className="cookie-copy"><p className="eyebrow">Interactive portfolio</p><h2>The Cookie Jar.</h2><p>Explore the work through a tactile, musical interface. Drag each cookie, flip it for the story, and hear the notes move through the circle of fifths.</p><a className="button secondary" href={cookieJar} target="_blank" rel="noreferrer">Open full Cookie Jar ↗</a></div>
         <div className="cookie-frame"><iframe src={cookieJar} title="Vivian Yang Cookie Jar" loading="eager" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" /></div>
       </section>
 
       <section id="cloak" className="cloak-section section-space">
         <div className="section-intro">
-          <p className="eyebrow">01 · Founder thesis</p>
-          <h2>Privacy people can see—and eventually carry everywhere.</h2>
-          <p>Cloak started as a browser wedge: make invisible tracking legible, give users useful control, and show what changed.</p>
+          <p className="eyebrow">01 · Product thesis</p>
+          <h2>Make invisible tracking visible—and controllable.</h2>
+          <p>Cloak begins in the browser, where users can see what changed, understand their tracking state, and take meaningful control.</p>
         </div>
         <article className="cloak-detail glass">
-          <div className="cloak-detail-head"><div><p className="mini-label">Cloak · Founder & CEO</p><h3>Shipped, operated, and owned end to end.</h3></div><a href="https://cloak.build/" target="_blank" rel="noreferrer">Live product ↗</a></div>
+          <div className="cloak-detail-head"><div><p className="mini-label">Cloak · Founder & CEO</p><h3>I built and operate Cloak end to end.</h3></div><a href="https://cloak.build/" target="_blank" rel="noreferrer">Live product ↗</a></div>
           <ul>
             <li>Built and shipped Chrome and Safari privacy products, the public website, subscription checkout, activation system, and support loop in five months while enrolled at UC Berkeley.</li>
             <li>Define product specifications and direct AI coding agents through implementation, debugging, testing, and QA; own all product and technical decisions.</li>
             <li>Built protections for selected tracker requests, recognizable URL identifiers, readable tracking state, and fingerprinting surfaces, with local session receipts showing users what changed.</li>
-            <li>Developing Cloak from a browser wedge into a consumer privacy carrier spanning identity compartments and privacy-first mobile infrastructure.</li>
+            <li>Expanding Cloak from browser privacy products into a consumer privacy carrier spanning identity compartments and privacy-first mobile infrastructure.</li>
           </ul>
         </article>
       </section>
 
       <section id="builds" className="builds-section section-space">
-        <div className="section-heading"><div><p className="eyebrow">02 · Selected builds</p><h2>A small set of things worth remembering.</h2></div><p>Software, hardware, and product experiments—selected for ownership and evidence, not chronology.</p></div>
+        <div className="section-heading"><div><p className="eyebrow">02 · Selected work</p><h2>Selected projects.</h2></div><p>Three projects that demonstrate speed, range, and ownership across software and hardware.</p></div>
         <div className="build-grid">
           {builds.map((build) => <article className={`build-card glass ${build.featured ? "featured" : ""}`} key={build.title}>
             {build.image && <img className="build-image-contain" src={build.image} alt="Oski Sorting Trash Can team with prototype" />}
@@ -145,7 +145,7 @@ export default function PortfolioPage() {
 
       <section className="distribution section-space">
         <article className="creator-card glass">
-          <div><p className="eyebrow">03 · Distribution proof</p><h2>2M+ organic views.</h2><p>I grew a consumer content channel organically—proof that I can find a message, earn attention, and learn from real audiences.</p></div>
+          <div><p className="eyebrow">03 · Distribution</p><h2>2M+ organic views.</h2><p>I grew @vivianbuilds without paid distribution—evidence that I can shape a message, earn attention, and learn from real audiences.</p></div>
           <div className="creator-links"><a href="https://www.instagram.com/vivianbuilds/" target="_blank" rel="noreferrer">Instagram · @vivianbuilds ↗</a><a href="https://www.tiktok.com/@vivianbuilds" target="_blank" rel="noreferrer">TikTok · @vivianbuilds ↗</a><span>Consumer storytelling</span><span>Organic distribution</span></div>
         </article>
         <div className="reels-grid" aria-label="Featured Instagram videos">
@@ -154,8 +154,8 @@ export default function PortfolioPage() {
       </section>
 
       <section id="story" className="story-section section-space">
-        <article className="story-card glass"><p className="eyebrow">04 · Founder story</p><h2>Direct enough to ask. Resourceful enough to find a way.</h2><p>The Berkeley polo story is a small but accurate preview of how I operate: I go to the source, make the ask, and keep moving.</p><span className="story-hook">Ask me how I got the polo ↗</span></article>
-        <article className="student-card glass"><p className="eyebrow">Berkeley, beyond class</p><h3>A technical student who shows up.</h3><div className="activity-list"><div><strong>UC Berkeley</strong><span>Mechanical Engineering</span></div><div><strong>Piedmont Consulting Group</strong><span>Consultant · product, GTM, onboarding, and UX</span></div><div><strong>Founder Summit · SkyDeck ACE</strong><span>Selected founder programs</span></div></div><p className="student-note">Earlier: Berkeley Lab technical programs · DECA placement</p></article>
+        <article className="story-card glass"><p className="eyebrow">04 · How I operate</p><h2>Ask directly. Find a way. Keep moving.</h2><p>The Berkeley polo story captures how I work: I go to the source, make the ask, and turn uncertainty into forward motion.</p><span className="story-hook">Ask me how I got the polo ↗</span></article>
+        <article className="student-card glass"><p className="eyebrow">Berkeley, beyond class</p><h3>Engineering, consulting, and founder programs.</h3><div className="activity-list"><div><strong>UC Berkeley</strong><span>Mechanical Engineering</span></div><div><strong>Piedmont Consulting Group</strong><span>Consultant · product, GTM, onboarding, and UX</span></div><div><strong>Founder Summit · SkyDeck ACE</strong><span>Selected founder programs</span></div></div><p className="student-note">Earlier recognition: Berkeley Lab technical programs · DECA placement</p></article>
       </section>
 
       <footer className="footer glass"><div className="footer-copy"><p className="eyebrow">Build something consequential</p><h2>Talk with Vivian.</h2><blockquote>“Let all that you do be done in love.” <cite>1 Corinthians 16:14</cite></blockquote></div><div className="footer-cta-group"><a className="button primary" href={calendly} target="_blank" rel="noreferrer">Book a call</a><a className="button secondary" href="https://www.linkedin.com/in/viviany31" target="_blank" rel="noreferrer">Connect on LinkedIn ↗</a><div className="footer-actions"><a href={`mailto:${email}`}>{email}</a><a href="https://github.com/billionairebumblebee" target="_blank" rel="noreferrer">GitHub ↗</a><a href="https://www.instagram.com/vivianbuilds/" target="_blank" rel="noreferrer">Instagram ↗</a></div></div></footer>
