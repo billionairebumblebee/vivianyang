@@ -128,7 +128,7 @@ export default function PortfolioPage() {
       <section id="top" className="hero glass">
         <div className="hero-main">
           <p className="eyebrow">Solo founder · Consumer identity defense</p>
-          <h1>Building the consumer <em>privacy carrier.</em></h1>
+          <h1>Building the consumer <em>privacy layer.</em></h1>
           <p className="hero-lede">
             I’m Vivian Yang, founder and CEO of Cloak. We’re beginning with Chrome and Safari privacy products and building toward identity compartments and privacy-first mobile infrastructure.
           </p>
@@ -170,7 +170,7 @@ export default function PortfolioPage() {
             <li>Built and shipped Chrome and Safari privacy products, the public website, subscription checkout, activation system, and support loop in five months while enrolled at UC Berkeley.</li>
             <li>Define product specifications and direct AI coding agents through implementation, debugging, testing, and QA; own all product and technical decisions.</li>
             <li>Built protections for selected tracker requests, recognizable URL identifiers, readable tracking state, and fingerprinting surfaces, with local session receipts showing users what changed.</li>
-            <li>Expanding Cloak from browser privacy products into a consumer privacy carrier spanning identity compartments and privacy-first mobile infrastructure.</li>
+            <li>Expanding Cloak from browser privacy products into a consumer privacy layer spanning identity compartments and privacy-first mobile infrastructure.</li>
           </ul>
         </article>
       </section>
