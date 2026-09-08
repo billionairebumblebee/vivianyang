@@ -30,19 +30,69 @@ const proof = [
 const builds = [
   {
     index: "01",
-    title: "STING",
-    meta: "Solo build · AI agent · 24 hours",
-    copy: "Built solo in 24 hours and awarded Simular’s first-place sponsor prize at the 2026 Cal AI Hackathon.",
-    featured: true,
+    title: "Cloak",
+    meta: "Consumer privacy · Chrome and Safari",
+    copy: "A consumer identity-defense company that blocks selected trackers, cleans supported links, reduces recognizable browser signals, and shows users what changed.",
+    href: "https://www.cloak.build/",
+    linkLabel: "Visit Cloak",
   },
   {
     index: "02",
+    title: "STING",
+    meta: "Scam defense · Solo build · 24 hours",
+    copy: "A scam-intelligence product for suspicious calls, links, and messages. Built solo in 24 hours and awarded Simular’s first-place sponsor prize at the 2026 Cal AI Hackathon.",
+    href: "https://cloak-sting-hackathon-2026.vercel.app/",
+    linkLabel: "Try STING",
+    featured: true,
+  },
+  {
+    index: "03",
+    title: "Skein",
+    meta: "AI video editor · Creator control",
+    copy: "Turns one authentic take into multiple publish-ready clips while keeping source ownership, edit approval, and human likeness under the creator’s control.",
+    href: "https://skein-peach.vercel.app/",
+    linkLabel: "Explore Skein",
+  },
+  {
+    index: "04",
+    title: "Field Office",
+    meta: "AI operations · Service businesses",
+    copy: "An approval-first operating system that helps owner-operated service businesses manage leads, calls, scheduling, jobs, invoices, dispatch, and back-office decisions.",
+    href: "https://field-office-eta.vercel.app/",
+    linkLabel: "Open Field Office",
+  },
+  {
+    index: "05",
+    title: "Interaction",
+    meta: "Social product · Real-world plans",
+    copy: "An invite-only Bay Area product that forms a small group around one actual plan using availability, budget, location, and the people members want to meet.",
+    href: "https://interaction-omega.vercel.app/",
+    linkLabel: "Visit Interaction",
+  },
+  {
+    index: "06",
+    title: "Norman’s Decisions",
+    meta: "Civic simulation · Policy tradeoffs",
+    copy: "An interactive Bay Area policy game that asks players to allocate limited resources across competing priorities and confront the consequences of each choice.",
+    href: "https://normans-decisions.vercel.app/",
+    linkLabel: "Play Norman’s Decisions",
+  },
+  {
+    index: "07",
+    title: "Cookie Jar",
+    meta: "Interactive portfolio · Musical UI",
+    copy: "A draggable, flippable portfolio that turns project stories into a tactile interface, with every interaction mapped through the circle of fifths.",
+    href: "https://cookiejar-five.vercel.app/",
+    linkLabel: "Open Cookie Jar",
+  },
+  {
+    index: "08",
     title: "DopaMINE",
     meta: "Independent product build",
     copy: "An independent product experiment built through rapid prototyping, testing, and iteration.",
   },
   {
-    index: "03",
+    index: "09",
     title: "Oski Sorting Trash Can",
     meta: "CAD · Arduino · 3D printing · IoT",
     copy: "Designed and built an automated sorting trash can using CAD, Arduino, 3D printing, and IoT systems.",
@@ -75,7 +125,7 @@ export default function PortfolioPage() {
         <a className="brand" href="#top">Vivian Yang</a>
         <div className="nav-links">
           <a href="#cloak">Cloak</a>
-          <a href="#builds">Builds</a>
+          <a href="#builds">Projects</a>
           <a href="#cookie-jar">Cookie Jar</a>
           <button className="theme-toggle" onClick={toggleTheme} aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}><span aria-hidden="true">{isDark ? "☀" : "☾"}</span>{isDark ? "Light mode" : "Dark mode"}</button>
           <a className="nav-connect" href="https://www.linkedin.com/in/viviany31" target="_blank" rel="noreferrer">Connect</a>
@@ -134,11 +184,11 @@ export default function PortfolioPage() {
       </section>
 
       <section id="builds" className="builds-section section-space">
-        <div className="section-heading"><div><p className="eyebrow">02 · Selected work</p><h2>Selected projects.</h2></div><p>Three projects that demonstrate speed, range, and ownership across software and hardware.</p></div>
+        <div className="section-heading"><div><p className="eyebrow">02 · Selected work</p><h2>Selected projects.</h2></div><p>Seven live products plus independent software and hardware builds—each selected for ownership, range, or execution speed.</p></div>
         <div className="build-grid">
           {builds.map((build) => <article className={`build-card glass ${build.featured ? "featured" : ""}`} key={build.title}>
             {build.image && <img className="build-image-contain" src={build.image} alt="Oski Sorting Trash Can team with prototype" />}
-            <div className="build-body"><span className="build-index">{build.index}</span><p className="mini-label">{build.meta}</p><h3>{build.title}</h3><p>{build.copy}</p></div>
+            <div className="build-body"><span className="build-index">{build.index}</span><p className="mini-label">{build.meta}</p><h3>{build.title}</h3><p className="build-copy">{build.copy}</p>{build.href && <a className="build-link" href={build.href} target="_blank" rel="noreferrer">{build.linkLabel} ↗</a>}</div>
           </article>)}
         </div>
       </section>
