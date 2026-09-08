@@ -30,14 +30,6 @@ const proof = [
 const builds = [
   {
     index: "01",
-    title: "Cloak",
-    meta: "Consumer privacy · Chrome and Safari",
-    copy: "A consumer identity-defense company that blocks selected trackers, cleans supported links, reduces recognizable browser signals, and shows users what changed.",
-    href: "https://www.cloak.build/",
-    linkLabel: "Visit Cloak",
-  },
-  {
-    index: "02",
     title: "STING",
     meta: "Scam defense · Solo build · 24 hours",
     copy: "A scam-intelligence product for suspicious calls, links, and messages. Built solo in 24 hours and awarded Simular’s first-place sponsor prize at the 2026 Cal AI Hackathon.",
@@ -46,7 +38,7 @@ const builds = [
     featured: true,
   },
   {
-    index: "03",
+    index: "02",
     title: "Skein",
     meta: "AI video editor · Creator control",
     copy: "Turns one authentic take into multiple publish-ready clips while keeping source ownership, edit approval, and human likeness under the creator’s control.",
@@ -54,7 +46,7 @@ const builds = [
     linkLabel: "Explore Skein",
   },
   {
-    index: "04",
+    index: "03",
     title: "Field Office",
     meta: "AI operations · Service businesses",
     copy: "An approval-first operating system that helps owner-operated service businesses manage leads, calls, scheduling, jobs, invoices, dispatch, and back-office decisions.",
@@ -62,7 +54,7 @@ const builds = [
     linkLabel: "Open Field Office",
   },
   {
-    index: "05",
+    index: "04",
     title: "Interaction",
     meta: "Social product · Real-world plans",
     copy: "An invite-only Bay Area product that forms a small group around one actual plan using availability, budget, location, and the people members want to meet.",
@@ -70,15 +62,7 @@ const builds = [
     linkLabel: "Visit Interaction",
   },
   {
-    index: "06",
-    title: "Norman’s Decisions",
-    meta: "Civic simulation · Policy tradeoffs",
-    copy: "An interactive Bay Area policy game that asks players to allocate limited resources across competing priorities and confront the consequences of each choice.",
-    href: "https://normans-decisions.vercel.app/",
-    linkLabel: "Play Norman’s Decisions",
-  },
-  {
-    index: "07",
+    index: "05",
     title: "Cookie Jar",
     meta: "Interactive portfolio · Musical UI",
     copy: "A draggable, flippable portfolio that turns project stories into a tactile interface, with every interaction mapped through the circle of fifths.",
@@ -86,13 +70,21 @@ const builds = [
     linkLabel: "Open Cookie Jar",
   },
   {
-    index: "08",
+    index: "06",
+    title: "ByoGlo",
+    meta: "Biodegradable skincare · High-school venture",
+    copy: "Co-created a biodegradable pimple-patch business in high school and independently coded its entire customer-facing website.",
+    href: "https://byoglo.neocities.org/",
+    linkLabel: "Visit ByoGlo",
+  },
+  {
+    index: "07",
     title: "DopaMINE",
     meta: "Independent product build",
     copy: "An independent product experiment built through rapid prototyping, testing, and iteration.",
   },
   {
-    index: "09",
+    index: "08",
     title: "Oski Sorting Trash Can",
     meta: "CAD · Arduino · 3D printing · IoT",
     copy: "Designed and built an automated sorting trash can using CAD, Arduino, 3D printing, and IoT systems.",
@@ -184,7 +176,7 @@ export default function PortfolioPage() {
       </section>
 
       <section id="builds" className="builds-section section-space">
-        <div className="section-heading"><div><p className="eyebrow">02 · Selected work</p><h2>Selected projects.</h2></div><p>Seven live products plus independent software and hardware builds—each selected for ownership, range, or execution speed.</p></div>
+        <div className="section-heading"><div><p className="eyebrow">02 · Selected work</p><h2>Selected projects.</h2></div><p>Six live products plus independent software and hardware builds—each selected for ownership, range, or execution speed.</p></div>
         <div className="build-grid">
           {builds.map((build) => <article className={`build-card glass ${build.featured ? "featured" : ""}`} key={build.title}>
             {build.image && <img className="build-image-contain" src={build.image} alt="Oski Sorting Trash Can team with prototype" />}

@@ -27,7 +27,7 @@
 - **Skein:** AI video editor that turns one authentic take into multiple clips while preserving creator ownership, approval, and control of likeness.
 - **Field Office:** Approval-first operating system for owner-operated service businesses spanning leads, calls, scheduling, jobs, invoices, dispatch, and operations.
 - **Interaction:** Invite-only Bay Area product that forms small groups around specific real-world plans using availability, budget, location, and social preferences.
-- **Norman's Decisions:** Interactive civic-policy game about allocating limited resources across competing Bay Area priorities and consequences.
+- **ByoGlo:** Biodegradable pimple-patch business co-created in high school; Vivian independently coded the entire customer-facing website.
 - **DopaMINE:** Independent product experiment built through rapid prototyping, testing, and iteration.
 - **Oski Sorting Trash Can:** Automated sorting system built with CAD, Arduino, 3D printing, and IoT.
 - **Cookie Jar:** Interactive, draggable, flippable portfolio with sound mapped through the circle of fifths.
@@ -51,7 +51,7 @@ Vivian is unusually high-agency and combines founder-level ownership, consumer p
 - Skein: https://skein-peach.vercel.app/
 - Field Office: https://field-office-eta.vercel.app/
 - Interaction: https://interaction-omega.vercel.app/
-- Norman's Decisions: https://normans-decisions.vercel.app/
+- ByoGlo: https://byoglo.neocities.org/
 - LinkedIn: https://www.linkedin.com/in/viviany31
 - GitHub: https://github.com/billionairebumblebee
 - Instagram: https://www.instagram.com/vivianbuilds/
