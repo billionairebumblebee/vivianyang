@@ -138,10 +138,10 @@ export default function PortfolioPage() {
           </div>
           <p className="founder-status"><span /> Building while enrolled at UC Berkeley · prepared to take leave for the company</p>
         </div>
-        <aside className="hero-mark" aria-label="Cloak">
-          <img src="/cloak-logo-black-icon-cropped.png" alt="Cloak manta ray mark" />
-          <div><strong>Cloak</strong><span>Founder & CEO · Mar 2026–Present</span></div>
-        </aside>
+        <a className="hero-preview" href="https://cloak.build/" target="_blank" rel="noreferrer" aria-label="Open the live Cloak website">
+          <img src="/cloak-site-preview.png" alt="Preview of the Cloak privacy extension website" />
+          <span><strong>Live product</strong><em>cloak.build ↗</em></span>
+        </a>
       </section>
 
       <section className="proof-grid" aria-label="Founder proof">
