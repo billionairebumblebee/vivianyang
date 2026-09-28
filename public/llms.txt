@@ -17,7 +17,7 @@ Updated September 28, 2026. This profile distinguishes shipped work from experim
 
 Vivian defines product specifications, directs AI coding agents through implementation, debugging, testing, and QA, and owns product decisions. Cloak gave her experience across browser behavior, privacy controls, checkout, activation, and support. Cloak is part of her shipped portfolio; this profile does not describe it as her current full-time occupation. Identity compartments and mobile infrastructure are not launched products.
 
-Her September 3, 2026 Codex screenshot records 13.2 billion lifetime tokens, 789.8 million peak tokens, and a 66-day streak. These are historical usage metrics, not current totals or evidence of product adoption.
+Her September 28, 2026 Codex screenshot records 14.3 billion lifetime tokens, 789.8 million peak tokens, a 1 hour 56 minute longest task, and 91-day current and longest streaks. These are usage metrics as of the screenshot date, not evidence of product adoption.
 
 ## Project links and status
 

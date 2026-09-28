@@ -198,8 +198,8 @@ export default function PortfolioPage() {
       </section>
 
       <section className="codex-proof glass" aria-labelledby="codex-proof-title">
-        <div className="codex-proof-copy"><p className="eyebrow">How I build with AI</p><h2 id="codex-proof-title">13.2B lifetime Codex tokens.</h2><p>I define specifications, direct implementation, debug failures, and test edge cases. This usage snapshot documents the tools behind the work; the projects above show what I built with them.</p><div className="codex-proof-notes"><span>789.8M peak tokens</span><span>66-day streak at capture</span></div></div>
-        <figure className="codex-proof-image"><img src="/codex-stats-sep-2026.png" alt="September 3 Codex usage snapshot showing 13.2 billion lifetime tokens and a 66 day streak" loading="lazy" /><figcaption>Historical usage snapshot · September 3, 2026</figcaption></figure>
+        <div className="codex-proof-copy"><p className="eyebrow">How I build with AI</p><h2 id="codex-proof-title">14.3B lifetime Codex tokens.</h2><p>I define specifications, direct implementation, debug failures, and test edge cases. This usage snapshot documents the tools behind the work; the projects above show what I built with them.</p><div className="codex-proof-notes"><span>789.8M peak tokens</span><span>91-day streak at capture</span></div></div>
+        <figure className="codex-proof-image"><img src="/codex-stats-sep-28-2026.png" alt="September 28 Codex usage snapshot showing 14.3 billion lifetime tokens, 789.8 million peak tokens, a 1 hour 56 minute longest task, and 91 day current and longest streaks" loading="lazy" /><figcaption>Usage snapshot · September 28, 2026</figcaption></figure>
       </section>
 
       <section id="story" className="story-section section-space">
