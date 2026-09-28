@@ -1310,3 +1310,62 @@ button {
     width: 100%;
   }
 }
+
+/* Keep the four opening highlights together without shrinking mobile text. */
+.hero {
+  min-height: auto;
+  padding: 1.5rem;
+  gap: 1.5rem;
+}
+.hero h1 {
+  max-width: 24ch;
+  font-size: clamp(2rem, 3.2vw, 3rem);
+  line-height: 1.02;
+  margin: 0.6rem 0;
+}
+.hero-lede { font-size: 0.95rem; line-height: 1.5; }
+.hero-actions { margin-top: 0.85rem; }
+.recruiter-links { margin-top: 0.75rem; }
+.hero-preview { justify-self: center; width: min(100%, 360px); }
+.proof-card { min-height: auto; padding: 0.75rem 1rem; gap: 0.15rem; }
+.proof-card strong { font-size: 1.85rem; }
+.codex-proof { margin-top: 0.75rem; padding: 1rem 1.5rem; gap: 1rem; }
+.codex-proof-copy h2 { font-size: clamp(1.9rem, 3vw, 2.6rem); margin: 0.45rem 0; }
+.codex-proof-copy > p:last-of-type { font-size: 0.9rem; line-height: 1.5; }
+.codex-proof-notes { margin-top: 0.6rem; }
+.codex-proof-notes span { padding: 0.35rem 0.6rem; }
+.cookie-section-featured { margin-top: 0.75rem; }
+.cookie-copy h2 { font-size: 2.3rem; margin: 0.5rem 0; }
+.cookie-copy > p { line-height: 1.5; }
+
+@media (min-width: 901px) {
+  .site-shell { padding-top: 0.65rem; }
+  .site-nav { padding: 0.5rem 1rem; }
+  .hero {
+    grid-template-columns: minmax(0, 1fr) 285px;
+    margin-top: 0.75rem;
+    padding: 1rem 1.5rem;
+  }
+  .hero-preview { width: 245px; border-radius: 1rem; }
+  .hero h1 { max-width: none; font-size: 2.35rem; }
+  .hero-preview { width: 210px; }
+  .hero-preview > span { padding: 0.55rem 0.7rem; font-size: 0.65rem; }
+  .hero-actions .button { min-height: 2.4rem; padding: 0.5rem 0.85rem; }
+  .proof-grid { margin-top: 0.75rem; }
+  .codex-proof { grid-template-columns: minmax(0, 1fr) 200px; }
+  .codex-proof-image img { border-radius: 0.8rem; }
+  .codex-proof-image figcaption { margin-top: 0.25rem; font-size: 0.65rem; }
+  .cookie-section {
+    grid-template-columns: minmax(230px, 0.5fr) minmax(0, 1.5fr);
+    padding: 0.75rem 1rem;
+    gap: 1rem;
+  }
+  .cookie-copy { padding: 0.5rem; }
+  .cookie-copy > p { font-size: 0.9rem; margin: 0.5rem 0 0.75rem; }
+  .cookie-frame { height: clamp(220px, 26vh, 280px); }
+}
+
+@media (max-width: 900px) {
+  .codex-proof { grid-template-columns: minmax(0, 1fr); }
+  .codex-proof-image { width: min(100%, 460px); justify-self: center; }
+}

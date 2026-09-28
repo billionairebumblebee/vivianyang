@@ -131,14 +131,13 @@ export default function PortfolioPage() {
           <p className="eyebrow">UC Berkeley · Mechanical Engineering</p>
           <h1>From an idea to <em>something you can use.</em></h1>
           <p className="hero-lede">
-            I’m Vivian Yang. I build consumer software and physical prototypes, lead AI product consulting, and create content that reaches real audiences. My work connects engineering, product judgment, and hands-on execution.
+            I’m Vivian Yang—Berkeley engineer, Cloak founder, and builder across consumer software, AI products, and physical prototypes.
           </p>
           <div className="hero-actions">
             <a className="button primary" href="#builds">Explore my work ↓</a>
             <a className="button secondary" href={resume}>Request résumé ↗</a>
           </div>
           <div className="recruiter-links" aria-label="Recruiter links"><a href="https://www.linkedin.com/in/viviany31" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="https://github.com/billionairebumblebee" target="_blank" rel="noreferrer">GitHub ↗</a><a href={`mailto:${email}`}>Email me ↗</a></div>
-          <p className="founder-status"><span /> Completing my Berkeley Mechanical Engineering degree while building across disciplines.</p>
         </div>
         <a className="hero-preview" href="https://cloak.build/" target="_blank" rel="noreferrer" aria-label="Open the live Cloak website">
           <img src="/cloak-site-preview.png" alt="Preview of the Cloak privacy extension website" />
@@ -150,14 +149,19 @@ export default function PortfolioPage() {
         {proof.map((item) => <article className="proof-card glass" key={item.label}><strong>{item.value}</strong><span>{item.label}</span></article>)}
       </section>
 
-      <section id="experience" className="experience-grid" aria-label="Consulting and engineering experience">
-        <article className="student-card glass"><p className="eyebrow">AI product consulting · Piedmont Consulting Group</p><h3>Orcana AI</h3><p>Co-leading a client engagement and managing a six-person Berkeley consulting team across MVP development, pharma segmentation, onboarding, competitive research, and go-to-market strategy.</p><p className="student-note">Total client project value: $3,000 · Engagement in progress</p></article>
-        <article className="student-card glass"><p className="eyebrow">Engineering beyond the screen</p><h3>Code, research, and physical prototypes.</h3><p>My work spans browser software, Berkeley Lab workflow automation and data science projects, and a team-built sorting-trash-can prototype at Berkeley.</p><a className="build-link" href="#builds">See selected projects ↓</a></article>
+      <section className="codex-proof glass" aria-labelledby="codex-proof-title">
+        <div className="codex-proof-copy"><p className="eyebrow">How I build with AI</p><h2 id="codex-proof-title">14.3B lifetime Codex tokens.</h2><p>I define the specs, direct implementation, debug, and test.</p><div className="codex-proof-notes"><span>789.8M peak tokens</span><span>91-day streak at capture</span></div></div>
+        <figure className="codex-proof-image"><a href="/codex-stats-sep-28-2026.png" target="_blank" rel="noreferrer" aria-label="View full-size Codex stats"><img src="/codex-stats-sep-28-2026.png" alt="September 28 Codex usage snapshot showing 14.3 billion lifetime tokens, 789.8 million peak tokens, a 1 hour 56 minute longest task, and 91 day current and longest streaks" /></a><figcaption>September 28, 2026 · View full size ↗</figcaption></figure>
       </section>
 
       <section id="cookie-jar" className="cookie-section cookie-section-featured glass">
-        <div className="cookie-copy"><p className="eyebrow">Interactive portfolio</p><h2>The Cookie Jar.</h2><p>Explore the work through a tactile, musical interface. Drag each cookie, flip it for the story, and hear the notes move through the circle of fifths.</p><a className="button secondary" href={cookieJar} target="_blank" rel="noreferrer">Open full Cookie Jar ↗</a></div>
+        <div className="cookie-copy"><p className="eyebrow">Interactive portfolio</p><h2>The Cookie Jar.</h2><p>Drag a cookie. Flip it for the story. Play through the circle of fifths.</p><a className="button secondary" href={cookieJar} target="_blank" rel="noreferrer">Open full Cookie Jar ↗</a></div>
         <div className="cookie-frame"><iframe src={cookieJar} title="Vivian Yang Cookie Jar" loading="eager" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" /></div>
+      </section>
+
+      <section id="experience" className="experience-grid" aria-label="Consulting and engineering experience">
+        <article className="student-card glass"><p className="eyebrow">AI product consulting · Piedmont Consulting Group</p><h3>Orcana AI</h3><p>Co-leading a client engagement and managing a six-person Berkeley consulting team across MVP development, pharma segmentation, onboarding, competitive research, and go-to-market strategy.</p><p className="student-note">Total client project value: $3,000 · Engagement in progress</p></article>
+        <article className="student-card glass"><p className="eyebrow">Engineering beyond the screen</p><h3>Code, research, and physical prototypes.</h3><p>My work spans browser software, Berkeley Lab workflow automation and data science projects, and a team-built sorting-trash-can prototype at Berkeley.</p><a className="build-link" href="#builds">See selected projects ↓</a></article>
       </section>
 
       <section id="cloak" className="cloak-section section-space">
@@ -195,11 +199,6 @@ export default function PortfolioPage() {
         <div className="reels-grid" aria-label="Featured Instagram videos">
           {reels.map((reel) => <article className="reel-card glass" key={reel.href}><div className="reel-frame"><iframe src={reel.embed} title={reel.title} loading="lazy" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen /></div><a href={reel.href} target="_blank" rel="noreferrer">Watch on Instagram ↗</a></article>)}
         </div>
-      </section>
-
-      <section className="codex-proof glass" aria-labelledby="codex-proof-title">
-        <div className="codex-proof-copy"><p className="eyebrow">How I build with AI</p><h2 id="codex-proof-title">14.3B lifetime Codex tokens.</h2><p>I define specifications, direct implementation, debug failures, and test edge cases. This usage snapshot documents the tools behind the work; the projects above show what I built with them.</p><div className="codex-proof-notes"><span>789.8M peak tokens</span><span>91-day streak at capture</span></div></div>
-        <figure className="codex-proof-image"><img src="/codex-stats-sep-28-2026.png" alt="September 28 Codex usage snapshot showing 14.3 billion lifetime tokens, 789.8 million peak tokens, a 1 hour 56 minute longest task, and 91 day current and longest streaks" loading="lazy" /><figcaption>Usage snapshot · September 28, 2026</figcaption></figure>
       </section>
 
       <section id="story" className="story-section section-space">
