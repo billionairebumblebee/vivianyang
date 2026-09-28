@@ -3,8 +3,10 @@ import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata = {
-  title: "Vivian Yang — Founder of Cloak",
-  description: "Solo founder of Cloak, building consumer identity defense across browser privacy and privacy-first mobile infrastructure.",
+  metadataBase: new URL("https://vivianyang.vercel.app"),
+  alternates: { canonical: "/" },
+  title: "Vivian Yang — Berkeley Engineer & Product Builder",
+  description: "UC Berkeley Mechanical Engineering student building across consumer software, AI product consulting, hardware prototypes, and creator distribution. Explore Cloak, STING, and selected work.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

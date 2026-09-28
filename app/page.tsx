@@ -6,15 +6,16 @@ import "./portfolio.css";
 const email = "vivian_yang@berkeley.edu";
 const calendly = "https://calendly.com/vivian_yang-berkeley/";
 const cookieJar = "https://cookiejar-five.vercel.app/";
+const resume = `mailto:${email}?subject=Request%20for%20Vivian%20Yang%27s%20resume`;
 
 const reels = [
   {
-    title: "Vivian Builds featured reel one",
+    title: "Featured reel by @vivian.yan6 — one",
     href: "https://www.instagram.com/reel/DEg3KbuxS1o/",
     embed: "https://www.instagram.com/reel/DEg3KbuxS1o/embed",
   },
   {
-    title: "Vivian Builds featured reel two",
+    title: "Featured reel by @vivian.yan6 — two",
     href: "https://www.instagram.com/reel/C_mJKXpSOV4/",
     embed: "https://www.instagram.com/reel/C_mJKXpSOV4/embed",
   },
@@ -22,7 +23,7 @@ const reels = [
 
 const proof = [
   { value: "131", label: "Cloak installs" },
-  { value: "5 months", label: "to ship Cloak end to end" },
+  { value: "24 hours", label: "STING · solo hackathon build" },
   { value: "2M+", label: "organic creator views" },
   { value: "1st place", label: "Simular sponsor prize" },
 ];
@@ -31,7 +32,7 @@ const builds = [
   {
     index: "01",
     title: "STING",
-    meta: "Scam defense · Solo build · 24 hours",
+    meta: "Hackathon prototype · Solo build · 24 hours",
     copy: "A scam-intelligence product for suspicious calls, links, and messages. Built solo in 24 hours and awarded Simular’s first-place sponsor prize at the 2026 Cal AI Hackathon.",
     href: "https://cloak-sting-hackathon-2026.vercel.app/",
     linkLabel: "Try STING",
@@ -40,24 +41,24 @@ const builds = [
   {
     index: "02",
     title: "Skein",
-    meta: "AI video editor · Creator control",
-    copy: "Turns one authentic take into multiple publish-ready clips while keeping source ownership, edit approval, and human likeness under the creator’s control.",
+    meta: "AI video editing · Prototype",
+    copy: "Explores turning one authentic take into multiple clips, with creator approval and control of source material and likeness built into the workflow.",
     href: "https://skein-peach.vercel.app/",
     linkLabel: "Explore Skein",
   },
   {
     index: "03",
     title: "Field Office",
-    meta: "AI operations · Service businesses",
-    copy: "An approval-first operating system that helps owner-operated service businesses manage leads, calls, scheduling, jobs, invoices, dispatch, and back-office decisions.",
+    meta: "AI operations · MVP experiment",
+    copy: "An MVP exploring approval-based workflows for service businesses, from lead intake and scheduling to jobs, invoicing, and dispatch.",
     href: "https://field-office-eta.vercel.app/",
     linkLabel: "Open Field Office",
   },
   {
     index: "04",
     title: "Interaction",
-    meta: "Social product · Real-world plans",
-    copy: "An invite-only Bay Area product that forms a small group around one actual plan using availability, budget, location, and the people members want to meet.",
+    meta: "Community product · Experiment",
+    copy: "A social product experiment around small-group plans in the Bay Area, exploring how availability, budget, location, and shared interests can help people meet.",
     href: "https://interaction-omega.vercel.app/",
     linkLabel: "Visit Interaction",
   },
@@ -86,8 +87,8 @@ const builds = [
   {
     index: "08",
     title: "Oski Sorting Trash Can",
-    meta: "CAD · Arduino · 3D printing · IoT",
-    copy: "Designed and built an automated sorting trash can using CAD, Arduino, 3D printing, and IoT systems.",
+    meta: "Team hardware prototype · CAD · Arduino",
+    copy: "Worked with a Berkeley PREP team to design and build a sorting-trash-can prototype using CAD, Arduino, and 3D printing.",
     image: "/IMG_8690.jpg",
   },
 ];
@@ -116,41 +117,42 @@ export default function PortfolioPage() {
       <nav className="site-nav glass" aria-label="Primary navigation">
         <a className="brand" href="#top">Vivian Yang</a>
         <div className="nav-links">
-          <a href="#cloak">Cloak</a>
+          <a href="#experience">Experience</a>
           <a href="#builds">Projects</a>
           <a href="#cookie-jar">Cookie Jar</a>
           <button className="theme-toggle" onClick={toggleTheme} aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}><span aria-hidden="true">{isDark ? "☀" : "☾"}</span>{isDark ? "Light mode" : "Dark mode"}</button>
-          <a className="nav-connect" href="https://www.linkedin.com/in/viviany31" target="_blank" rel="noreferrer">Connect</a>
+          <a className="nav-connect" href="https://www.linkedin.com/in/viviany31" target="_blank" rel="noreferrer">LinkedIn ↗</a>
           <a className="nav-cta" href={calendly} target="_blank" rel="noreferrer">Book a call</a>
         </div>
       </nav>
 
       <section id="top" className="hero glass">
         <div className="hero-main">
-          <p className="eyebrow">Solo founder · Consumer identity defense</p>
-          <h1>Building the consumer <em>privacy layer.</em></h1>
+          <p className="eyebrow">UC Berkeley · Mechanical Engineering</p>
+          <h1>From an idea to <em>something you can use.</em></h1>
           <p className="hero-lede">
-            I’m Vivian Yang, founder and CEO of Cloak. We’re beginning with Chrome and Safari privacy products and building toward identity compartments and privacy-first mobile infrastructure.
+            I’m Vivian Yang. I build consumer software and physical prototypes, lead AI product consulting, and create content that reaches real audiences. My work connects engineering, product judgment, and hands-on execution.
           </p>
           <div className="hero-actions">
-            <a className="button primary" href="https://cloak.build/" target="_blank" rel="noreferrer">Explore Cloak ↗</a>
-            <a className="button secondary" href={calendly} target="_blank" rel="noreferrer">Book a call</a>
+            <a className="button primary" href="#builds">Explore my work ↓</a>
+            <a className="button secondary" href={resume}>Request résumé ↗</a>
           </div>
-          <p className="founder-status"><span /> Building while enrolled at UC Berkeley · prepared to take leave for the company</p>
+          <div className="recruiter-links" aria-label="Recruiter links"><a href="https://www.linkedin.com/in/viviany31" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="https://github.com/billionairebumblebee" target="_blank" rel="noreferrer">GitHub ↗</a><a href={`mailto:${email}`}>Email me ↗</a></div>
+          <p className="founder-status"><span /> Completing my Berkeley Mechanical Engineering degree while building across disciplines.</p>
         </div>
         <a className="hero-preview" href="https://cloak.build/" target="_blank" rel="noreferrer" aria-label="Open the live Cloak website">
           <img src="/cloak-site-preview.png" alt="Preview of the Cloak privacy extension website" />
-          <span><strong>Live product</strong><em>cloak.build ↗</em></span>
+          <span><strong>Cloak · Shipped work</strong><em>cloak.build ↗</em></span>
         </a>
       </section>
 
-      <section className="proof-grid" aria-label="Founder proof">
+      <section className="proof-grid" aria-label="Selected results">
         {proof.map((item) => <article className="proof-card glass" key={item.label}><strong>{item.value}</strong><span>{item.label}</span></article>)}
       </section>
 
-      <section className="codex-proof glass" aria-labelledby="codex-proof-title">
-        <div className="codex-proof-copy"><p className="eyebrow">AI-native execution</p><h2 id="codex-proof-title">13.2B lifetime Codex tokens.</h2><p>The operating system behind my speed: I define the product, direct implementation, debug failures, test edge cases, and own the final result.</p><div className="codex-proof-notes"><span>789.8M peak tokens</span><span>66-day streak</span><span>1h 56m longest chat</span></div></div>
-        <figure className="codex-proof-image"><img src="/codex-stats-sep-2026.png" alt="Codex usage dashboard showing 13.2 billion lifetime tokens, 789.8 million peak tokens, a 1 hour 56 minute longest chat, and a 66 day streak" /><figcaption>Codex usage · September 2026</figcaption></figure>
+      <section id="experience" className="experience-grid" aria-label="Consulting and engineering experience">
+        <article className="student-card glass"><p className="eyebrow">AI product consulting · Piedmont Consulting Group</p><h3>Orcana AI</h3><p>Co-leading a client engagement and managing a six-person Berkeley consulting team across MVP development, pharma segmentation, onboarding, competitive research, and go-to-market strategy.</p><p className="student-note">Total client project value: $3,000 · Engagement in progress</p></article>
+        <article className="student-card glass"><p className="eyebrow">Engineering beyond the screen</p><h3>Code, research, and physical prototypes.</h3><p>My work spans browser software, Berkeley Lab workflow automation and data science projects, and a team-built sorting-trash-can prototype at Berkeley.</p><a className="build-link" href="#builds">See selected projects ↓</a></article>
       </section>
 
       <section id="cookie-jar" className="cookie-section cookie-section-featured glass">
@@ -160,23 +162,23 @@ export default function PortfolioPage() {
 
       <section id="cloak" className="cloak-section section-space">
         <div className="section-intro">
-          <p className="eyebrow">01 · Product thesis</p>
+          <p className="eyebrow">01 · Shipped software</p>
           <h2>Make invisible tracking visible—and controllable.</h2>
-          <p>Cloak begins in the browser, where users can see what changed, understand their tracking state, and take meaningful control.</p>
+          <p>Cloak is my browser privacy project: an exercise in taking a consumer product through implementation, distribution, activation, and support. It reached 131 installs.</p>
         </div>
         <article className="cloak-detail glass">
-          <div className="cloak-detail-head"><div><p className="mini-label">Cloak · Founder & CEO</p><h3>I built and operate Cloak end to end.</h3></div><a href="https://cloak.build/" target="_blank" rel="noreferrer">Live product ↗</a></div>
+          <div className="cloak-detail-head"><div><p className="mini-label">Cloak · Founder & builder</p><h3>From browser protection to checkout and support.</h3></div><a href="https://cloak.build/" target="_blank" rel="noreferrer">Visit Cloak ↗</a></div>
           <ul>
             <li>Built and shipped Chrome and Safari privacy products, the public website, subscription checkout, activation system, and support loop in five months while enrolled at UC Berkeley.</li>
-            <li>Define product specifications and direct AI coding agents through implementation, debugging, testing, and QA; own all product and technical decisions.</li>
+            <li>Defined product specifications and directed AI coding agents through implementation, debugging, testing, and QA, with responsibility for product and technical decisions.</li>
             <li>Built protections for selected tracker requests, recognizable URL identifiers, readable tracking state, and fingerprinting surfaces, with local session receipts showing users what changed.</li>
-            <li>Expanding Cloak from browser privacy products into a consumer privacy layer spanning identity compartments and privacy-first mobile infrastructure.</li>
+            <li>The work gave me hands-on experience with the systems around a product: browser behavior, billing, activation, and user-facing explanations.</li>
           </ul>
         </article>
       </section>
 
       <section id="builds" className="builds-section section-space">
-        <div className="section-heading"><div><p className="eyebrow">02 · Selected work</p><h2>Selected projects.</h2></div><p>Six live products plus independent software and hardware builds—each selected for ownership, range, or execution speed.</p></div>
+        <div className="section-heading"><div><p className="eyebrow">02 · Selected work</p><h2>Selected projects.</h2></div><p>Shipped websites, software experiments, and hardware prototypes—work spanning product design, implementation, and testing.</p></div>
         <div className="build-grid">
           {builds.map((build) => <article className={`build-card glass ${build.featured ? "featured" : ""}`} key={build.title}>
             {build.image && <img className="build-image-contain" src={build.image} alt="Oski Sorting Trash Can team with prototype" />}
@@ -187,12 +189,17 @@ export default function PortfolioPage() {
 
       <section className="distribution section-space">
         <article className="creator-card glass">
-          <div><p className="eyebrow">03 · Distribution</p><h2>2M+ organic views.</h2><p>I grew @vivianbuilds without paid distribution—evidence that I can shape a message, earn attention, and learn from real audiences.</p></div>
-          <div className="creator-links"><a href="https://www.instagram.com/vivianbuilds/" target="_blank" rel="noreferrer">Instagram · @vivianbuilds ↗</a><a href="https://www.tiktok.com/@vivianbuilds" target="_blank" rel="noreferrer">TikTok · @vivianbuilds ↗</a><span>Consumer storytelling</span><span>Organic distribution</span></div>
+          <div><p className="eyebrow">03 · Distribution</p><h2>2M+ organic views.</h2><p>My student and lifestyle content on @vivian.yan6 reached more than two million organic views. The reels below are from that account. I now share my building work on @vivianbuilds.</p></div>
+          <div className="creator-links"><a href="https://www.instagram.com/vivian.yan6/" target="_blank" rel="noreferrer">Featured reels · @vivian.yan6 ↗</a><a href="https://www.instagram.com/vivianbuilds/" target="_blank" rel="noreferrer">Building now · @vivianbuilds ↗</a><a href="https://www.tiktok.com/@vivianbuilds" target="_blank" rel="noreferrer">TikTok · @vivianbuilds ↗</a></div>
         </article>
         <div className="reels-grid" aria-label="Featured Instagram videos">
           {reels.map((reel) => <article className="reel-card glass" key={reel.href}><div className="reel-frame"><iframe src={reel.embed} title={reel.title} loading="lazy" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen /></div><a href={reel.href} target="_blank" rel="noreferrer">Watch on Instagram ↗</a></article>)}
         </div>
+      </section>
+
+      <section className="codex-proof glass" aria-labelledby="codex-proof-title">
+        <div className="codex-proof-copy"><p className="eyebrow">How I build with AI</p><h2 id="codex-proof-title">13.2B lifetime Codex tokens.</h2><p>I define specifications, direct implementation, debug failures, and test edge cases. This usage snapshot documents the tools behind the work; the projects above show what I built with them.</p><div className="codex-proof-notes"><span>789.8M peak tokens</span><span>66-day streak at capture</span></div></div>
+        <figure className="codex-proof-image"><img src="/codex-stats-sep-2026.png" alt="September 3 Codex usage snapshot showing 13.2 billion lifetime tokens and a 66 day streak" loading="lazy" /><figcaption>Historical usage snapshot · September 3, 2026</figcaption></figure>
       </section>
 
       <section id="story" className="story-section section-space">
