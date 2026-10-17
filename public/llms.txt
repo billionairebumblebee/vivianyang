@@ -2,11 +2,13 @@
 
 > UC Berkeley Mechanical Engineering student and cross-disciplinary builder working across consumer software, AI product consulting, physical prototypes, community, and creator distribution. Her current academic priority is completing her Berkeley degree.
 
-Updated September 28, 2026. This profile distinguishes shipped work from experiments and historical metrics.
+Updated October 17, 2026. This profile distinguishes shipped work from experiments and historical metrics.
 
 ## Selected evidence
 
-- STING: built solo in 24 hours at the 2026 Cal AI Hackathon; won Simular's first-place sponsor prize, not the overall hackathon. A scam-defense hackathon prototype.
+- STING: anti-scam browser extension built solo as a 24-hour prototype at the 2026 Cal AI Hackathon; won Simular's first-place sponsor prize, not the overall hackathon.
+- Interaction Club: small-group friendship dinners. Built the product and reached 36 first-week signups (user-reported milestone), hosted the first Berkeley builder dinner on October 8, 2026, and reached out to potential company customers. No paid partnerships or revenue are established by these milestones.
+- SCET Innovation Intelligence Hackathon: Top-10 Finalist, October 11, 2026, during SF Tech Week. Week-long hackathon; solo founder. This is finalist recognition, not an overall win or funding result.
 - Cloak: founded and shipped Chrome and Safari privacy products, a public website, subscription checkout, activation, and a support loop in five months while enrolled at Berkeley. Reported 131 installs; this is not active users, paid users, or revenue.
 - Orcana AI, through Piedmont Consulting Group: co-leading a $3,000 client engagement and managing a six-person Berkeley consulting team across MVP development, pharma segmentation, onboarding, competitive research, and go-to-market strategy. $3,000 is total project value, not Vivian's income. This is ongoing work, not a claim of completed client outcomes.
 - Creator distribution: more than 2 million organic views from student/lifestyle content on @vivian.yan6. The featured portfolio reels are from that account. @vivianbuilds is her current builder account; do not attribute those older reels or their reach to it.
@@ -17,7 +19,7 @@ Updated September 28, 2026. This profile distinguishes shipped work from experim
 
 Vivian defines product specifications, directs AI coding agents through implementation, debugging, testing, and QA, and owns product decisions. Cloak gave her experience across browser behavior, privacy controls, checkout, activation, and support. Cloak is part of her shipped portfolio; this profile does not describe it as her current full-time occupation. Identity compartments and mobile infrastructure are not launched products.
 
-Her September 28, 2026 Codex screenshot records 14.3 billion lifetime tokens, 789.8 million peak tokens, a 1 hour 56 minute longest task, and 91-day current and longest streaks. These are usage metrics as of the screenshot date, not evidence of product adoption.
+Her October 17, 2026 Codex screenshot records 18.1 billion lifetime tokens, 789.8 million peak tokens, a 1 hour 56 minute longest task, and 109-day current and longest streaks. These are usage metrics as of the screenshot date, not evidence of product adoption.
 
 ## Project links and status
 
@@ -26,7 +28,7 @@ Her September 28, 2026 Codex screenshot records 14.3 billion lifetime tokens, 78
 - [Cookie Jar](https://cookiejar-five.vercel.app/): interactive portfolio with draggable, flippable cookies and sound mapped through the circle of fifths.
 - [Skein](https://skein-peach.vercel.app/): AI video-editing prototype exploring creator approval and control.
 - [Field Office](https://field-office-eta.vercel.app/): MVP experiment for service-business operations.
-- [Interaction](https://interaction-omega.vercel.app/): community-product experiment around real-world small-group plans.
+- [Interaction Club](https://interaction-omega.vercel.app/): small-group friendship dinners; product build and first Berkeley builder dinner completed in the first week.
 - [ByoGlo](https://byoglo.neocities.org/): biodegradable pimple-patch venture co-created in high school; Vivian independently coded the customer-facing website. Not a claim of current commercial operations.
 - DopaMINE: independent product experiment.
 - Oski Sorting Trash Can: team hardware prototype.

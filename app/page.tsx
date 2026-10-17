@@ -5,7 +5,7 @@ import "./portfolio.css";
 
 const email = "vivian_yang@berkeley.edu";
 const calendly = "https://calendly.com/vivian_yang-berkeley/";
-const cookieJar = "https://cookiejar-five.vercel.app/";
+const cookieJar = process.env.NEXT_PUBLIC_COOKIE_JAR_URL || "https://cookiejar-five.vercel.app/";
 const resume = `mailto:${email}?subject=Request%20for%20Vivian%20Yang%27s%20resume`;
 
 const reels = [
@@ -33,7 +33,7 @@ const builds = [
     index: "01",
     title: "STING",
     meta: "Hackathon prototype · Solo build · 24 hours",
-    copy: "A scam-intelligence product for suspicious calls, links, and messages. Built solo in 24 hours and awarded Simular’s first-place sponsor prize at the 2026 Cal AI Hackathon.",
+    copy: "Anti-scam browser extension. Built solo as a 24-hour prototype. 1st Place · Simular Sponsor Prize · Cal AI Hackathon 2026.",
     href: "https://cloak-sting-hackathon-2026.vercel.app/",
     linkLabel: "Try STING",
     featured: true,
@@ -56,14 +56,20 @@ const builds = [
   },
   {
     index: "04",
-    title: "Interaction",
-    meta: "Community product · Experiment",
-    copy: "A social product experiment around small-group plans in the Bay Area, exploring how availability, budget, location, and shared interests can help people meet.",
+    title: "Interaction Club",
+    meta: "Built in 1 week · 36 first-week signups",
+    copy: "Small-group friendship dinners. Built the product, reached 36 signups in the first week, and hosted the first Berkeley builder dinner on October 8, 2026. Outreach to potential company customers followed.",
     href: "https://interaction-omega.vercel.app/",
-    linkLabel: "Visit Interaction",
+    linkLabel: "Visit Interaction Club",
   },
   {
     index: "05",
+    title: "SCET Innovation Intelligence Hackathon",
+    meta: "Top-10 Finalist · Week-long Hackathon · Solo Founder",
+    copy: "Named a top-10 finalist on October 11, 2026, in the SCET Innovation Intelligence Hackathon during SF Tech Week.",
+  },
+  {
+    index: "06",
     title: "Cookie Jar",
     meta: "Interactive portfolio · Musical UI",
     copy: "A draggable, flippable portfolio that turns project stories into a tactile interface, with every interaction mapped through the circle of fifths.",
@@ -71,7 +77,7 @@ const builds = [
     linkLabel: "Open Cookie Jar",
   },
   {
-    index: "06",
+    index: "07",
     title: "ByoGlo",
     meta: "Biodegradable skincare · High-school venture",
     copy: "Co-created a biodegradable pimple-patch business in high school and independently coded its entire customer-facing website.",
@@ -79,13 +85,13 @@ const builds = [
     linkLabel: "Visit ByoGlo",
   },
   {
-    index: "07",
+    index: "08",
     title: "DopaMINE",
     meta: "Independent product build",
     copy: "An independent product experiment built through rapid prototyping, testing, and iteration.",
   },
   {
-    index: "08",
+    index: "09",
     title: "Oski Sorting Trash Can",
     meta: "Team hardware prototype · CAD · Arduino",
     copy: "Worked with a Berkeley PREP team to design and build a sorting-trash-can prototype using CAD, Arduino, and 3D printing.",
@@ -150,8 +156,8 @@ export default function PortfolioPage() {
       </section>
 
       <section className="codex-proof glass" aria-labelledby="codex-proof-title">
-        <div className="codex-proof-copy"><p className="eyebrow">How I build with AI</p><h2 id="codex-proof-title">14.3B lifetime Codex tokens.</h2><p>I define the specs, direct implementation, debug, and test.</p><div className="codex-proof-notes"><span>789.8M peak tokens</span><span>91-day streak at capture</span></div></div>
-        <figure className="codex-proof-image"><a href="/codex-stats-sep-28-2026.png" target="_blank" rel="noreferrer" aria-label="View full-size Codex stats"><img src="/codex-stats-sep-28-2026.png" alt="September 28 Codex usage snapshot showing 14.3 billion lifetime tokens, 789.8 million peak tokens, a 1 hour 56 minute longest task, and 91 day current and longest streaks" /></a><figcaption>September 28, 2026 · View full size ↗</figcaption></figure>
+        <div className="codex-proof-copy"><p className="eyebrow">How I build with AI</p><h2 id="codex-proof-title">18.1B lifetime Codex tokens.</h2><p>I define the specs, direct implementation, debug, and test.</p><div className="codex-proof-notes"><span>789.8M peak tokens</span><span>109-day streak at capture</span></div></div>
+        <figure className="codex-proof-image"><a href="/codex-stats-oct-17-2026.jpg" target="_blank" rel="noreferrer" aria-label="View full-size Codex stats"><img src="/codex-stats-oct-17-2026.jpg" alt="October 17 Codex usage snapshot showing 18.1 billion lifetime tokens, 789.8 million peak tokens, a 1 hour 56 minute longest task, and 109 day current and longest streaks" /></a><figcaption>October 17, 2026 · View full size ↗</figcaption></figure>
       </section>
 
       <section id="cookie-jar" className="cookie-section cookie-section-featured glass">
