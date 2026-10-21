@@ -2,9 +2,11 @@
 
 import { useEffect, useState } from "react";
 import "./portfolio.css";
+import PlatformIcon from "./PlatformIcon";
+import { founderDescription, founderLinks } from "./identity";
 
 const email = "vivian_yang@berkeley.edu";
-const calendly = "https://calendly.com/vivian_yang-berkeley/";
+const calendly = "https://calendly.com/vivian_yang-berkeley";
 const cookieJar = process.env.NEXT_PUBLIC_COOKIE_JAR_URL || "https://cookiejar-five.vercel.app/";
 const resume = `mailto:${email}?subject=Request%20for%20Vivian%20Yang%27s%20resume`;
 
@@ -127,7 +129,7 @@ export default function PortfolioPage() {
           <a href="#builds">Projects</a>
           <a href="#cookie-jar">Cookie Jar</a>
           <button className="theme-toggle" onClick={toggleTheme} aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}><span aria-hidden="true">{isDark ? "☀" : "☾"}</span>{isDark ? "Light mode" : "Dark mode"}</button>
-          <a className="nav-connect" href="https://www.linkedin.com/in/viviany31" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+          <a className="nav-connect social-inline" href="https://www.linkedin.com/in/vivianbuilds/" target="_blank" rel="noreferrer"><PlatformIcon name="linkedin" />LinkedIn ↗</a>
           <a className="nav-cta" href={calendly} target="_blank" rel="noreferrer">Book a call</a>
         </div>
       </nav>
@@ -143,7 +145,7 @@ export default function PortfolioPage() {
             <a className="button primary" href="#builds">Explore my work ↓</a>
             <a className="button secondary" href={resume}>Request résumé ↗</a>
           </div>
-          <div className="recruiter-links" aria-label="Recruiter links"><a href="https://www.linkedin.com/in/viviany31" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="https://github.com/billionairebumblebee" target="_blank" rel="noreferrer">GitHub ↗</a><a href={`mailto:${email}`}>Email me ↗</a></div>
+          <div className="recruiter-links" aria-label="Recruiter links"><a className="social-inline" href="https://www.linkedin.com/in/vivianbuilds/" target="_blank" rel="noreferrer"><PlatformIcon name="linkedin" />LinkedIn ↗</a><a className="social-inline" href="https://github.com/billionairebumblebee" target="_blank" rel="noreferrer"><PlatformIcon name="github" />GitHub ↗</a><a href={`mailto:${email}`}>Email me ↗</a></div>
         </div>
         <a className="hero-preview" href="https://cloak.build/" target="_blank" rel="noreferrer" aria-label="Open the live Cloak website">
           <img src="/cloak-site-preview.png" alt="Preview of the Cloak privacy extension website" />
@@ -218,7 +220,7 @@ export default function PortfolioPage() {
       <section className="distribution section-space">
         <article className="creator-card glass">
           <div><p className="eyebrow">03 · Distribution</p><h2>2M+ organic views.</h2><p>My student and lifestyle content on @vivian.yan6 reached more than two million organic views. The reels below are from that account. I now share my building work on @vivianbuilds.</p></div>
-          <div className="creator-links"><a href="https://www.instagram.com/vivian.yan6/" target="_blank" rel="noreferrer">Featured reels · @vivian.yan6 ↗</a><a href="https://www.instagram.com/vivianbuilds/" target="_blank" rel="noreferrer">Building now · @vivianbuilds ↗</a><a href="https://www.tiktok.com/@vivianbuilds" target="_blank" rel="noreferrer">TikTok · @vivianbuilds ↗</a></div>
+          <div className="creator-links"><a className="social-inline" href="https://www.instagram.com/vivian.yan6/" target="_blank" rel="noreferrer"><PlatformIcon name="instagram" />Featured reels · @vivian.yan6 ↗</a><a className="social-inline" href="https://www.instagram.com/vivianbuilds/" target="_blank" rel="noreferrer"><PlatformIcon name="instagram" />Building now · @vivianbuilds ↗</a><a className="social-inline" href="https://www.tiktok.com/@vivianbuilds" target="_blank" rel="noreferrer"><PlatformIcon name="tiktok" />TikTok · @vivianbuilds ↗</a></div>
         </article>
         <div className="reels-grid" aria-label="Featured Instagram videos">
           {reels.map((reel) => <article className="reel-card glass" key={reel.href}><div className="reel-frame"><iframe src={reel.embed} title={reel.title} loading="lazy" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen /></div><a href={reel.href} target="_blank" rel="noreferrer">Watch on Instagram ↗</a></article>)}
@@ -230,7 +232,12 @@ export default function PortfolioPage() {
         <article className="student-card glass"><p className="eyebrow">Berkeley, beyond class</p><h3>Engineering, consulting, and founder programs.</h3><div className="activity-list"><div><strong>UC Berkeley</strong><span>Mechanical Engineering</span></div><div><strong>Piedmont Consulting Group</strong><span>Consultant · product, GTM, onboarding, and UX</span></div><div><strong>Founder Summit · SkyDeck ACE</strong><span>Selected founder programs</span></div></div><p className="student-note">Earlier recognition: Berkeley Lab technical programs · DECA placement</p></article>
       </section>
 
-      <footer className="footer glass"><div className="footer-copy"><p className="eyebrow">Build something consequential</p><h2>Talk with Vivian.</h2><blockquote>“Let all that you do be done in love.” <cite>1 Corinthians 16:14</cite></blockquote></div><div className="footer-cta-group"><a className="button primary" href={calendly} target="_blank" rel="noreferrer">Book a call</a><a className="button secondary" href="https://www.linkedin.com/in/viviany31" target="_blank" rel="noreferrer">Connect on LinkedIn ↗</a><div className="footer-actions"><a href={`mailto:${email}`}>{email}</a><a href="https://github.com/billionairebumblebee" target="_blank" rel="noreferrer">GitHub ↗</a><a href="https://www.instagram.com/vivianbuilds/" target="_blank" rel="noreferrer">Instagram ↗</a></div></div></footer>
+      <footer id="contact" className="footer founder-footer glass" aria-labelledby="founder-title">
+        <div className="footer-copy"><p className="eyebrow">About & contact · Vivian Builds</p><h2 id="founder-title">Talk with Vivian.</h2><p className="founder-bio">{founderDescription}</p><a className="founder-email" href={`mailto:${email}`}>{email}</a><blockquote>“Let all that you do be done in love.” <cite>1 Corinthians 16:14</cite></blockquote></div>
+        <nav className="founder-link-grid" aria-label="Vivian Yang’s official profiles and booking">
+          {founderLinks.map(link => <a key={link.icon} href={link.href} target="_blank" rel="noreferrer" className={`founder-profile-link ${link.icon === "calendly" ? "founder-booking" : ""}`}><PlatformIcon name={link.icon} /><span>{link.label}</span><span aria-hidden="true">↗</span></a>)}
+        </nav>
+      </footer>
     </main>
   );
 }

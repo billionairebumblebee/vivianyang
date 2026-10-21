@@ -1346,6 +1346,20 @@ button {
   .interaction-showcase { grid-template-columns: minmax(0, 1fr); }
 }
 
+.platform-icon { width: 1.15rem; height: 1.15rem; flex: 0 0 auto; }
+.social-inline { display: inline-flex; align-items: center; gap: 0.4rem; }
+.founder-footer { display: grid; grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.3fr); gap: 2rem; scroll-margin-top: 6rem; }
+.founder-bio { max-width: 36ch; color: var(--muted); line-height: 1.65; }
+.founder-email { font-size: 0.85rem; text-decoration: underline; text-underline-offset: 4px; overflow-wrap: anywhere; }
+.founder-link-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.5rem; }
+.founder-profile-link { display: flex; align-items: center; gap: 0.65rem; min-height: 3rem; padding: 0.7rem 0.8rem; border: 1px solid var(--line); border-radius: 0.8rem; font-size: 0.78rem; line-height: 1.4; }
+.founder-profile-link > span:first-of-type { flex: 1; min-width: 0; overflow-wrap: anywhere; }
+.founder-profile-link:hover { background: var(--panel-strong); }
+.founder-profile-link:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+.founder-profile-link.founder-booking { background: var(--accent); color: #fff9f4; font-weight: 700; }
+@media (max-width: 900px) { .founder-footer { grid-template-columns: minmax(0, 1fr); gap: 1.25rem; } }
+@media (max-width: 620px) { .founder-link-grid { grid-template-columns: minmax(0, 1fr); } }
+
 /* Keep the four opening highlights together without shrinking mobile text. */
 .hero {
   min-height: auto;
