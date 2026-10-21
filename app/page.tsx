@@ -170,6 +170,24 @@ export default function PortfolioPage() {
         <article className="student-card glass"><p className="eyebrow">Engineering beyond the screen</p><h3>Code, research, and physical prototypes.</h3><p>My work spans browser software, Berkeley Lab workflow automation and data science projects, and a team-built sorting-trash-can prototype at Berkeley.</p><a className="build-link" href="#builds">See selected projects ↓</a></article>
       </section>
 
+      <section id="interaction-club" className="interaction-showcase glass" aria-labelledby="interaction-title">
+        <div className="interaction-copy">
+          <p className="eyebrow">Interaction Club · Product & community</p>
+          <h2 id="interaction-title">Built the product.<br /><em>Set the table.</em></h2>
+          <p>Small-group friendship dinners that turn meeting new people into an actual plan. I built the product, brought in the first signups, and hosted the first Berkeley builder dinner—all in one week.</p>
+          <dl className="interaction-milestones">
+            <div><dt>1 week</dt><dd>From build to first dinner</dd></div>
+            <div><dt>36</dt><dd>First-week signups</dd></div>
+            <div><dt>Oct 8</dt><dd>First Berkeley dinner · 2026</dd></div>
+          </dl>
+          <a className="button primary" href="https://interaction-omega.vercel.app/" target="_blank" rel="noreferrer">Explore Interaction Club ↗</a>
+        </div>
+        <a className="interaction-preview" href="https://interaction-omega.vercel.app/" target="_blank" rel="noreferrer" aria-label="Visit Interaction Club">
+          <img src="/interaction-club-preview.jpg" alt="Interaction Club homepage with the headline We want you at our table and a playful invitation envelope" width={1280} height={837} loading="lazy" />
+          <span>Meet new people over dinner <span aria-hidden="true">↗</span></span>
+        </a>
+      </section>
+
       <section id="cloak" className="cloak-section section-space">
         <div className="section-intro">
           <p className="eyebrow">01 · Shipped software</p>
