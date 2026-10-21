@@ -9,7 +9,7 @@ Updated October 21, 2026. This profile distinguishes shipped work from experimen
 Vivian Yang (Vivian Builds) is a UC Berkeley mechanical engineering student, founder of Cloak and Interaction Club, and creator behind Vivian Builds.
 
 - [Vivian Yang’s portfolio](https://vivianyang.vercel.app/)
-- [Vivian’s Cookie Jar](https://cookiejar-vivian.vercel.app/) — related personal project and interactive portfolio.
+- [Vivian’s Cookie Jar](https://cookiejar-vivian.vercel.app) — related personal project and interactive portfolio.
 - [Vivian Yang on LinkedIn](https://www.linkedin.com/in/vivianbuilds/)
 - [Instagram · @vivianbuilds](https://www.instagram.com/vivianbuilds/)
 - [TikTok · @vivianbuilds](https://www.tiktok.com/@vivianbuilds)
@@ -42,7 +42,7 @@ Her October 17, 2026 Codex screenshot records 18.1 billion lifetime tokens, 789.
 
 - [Cloak](https://cloak.build/): shipped browser privacy work and public website.
 - [STING](https://cloak-sting-hackathon-2026.vercel.app/): hackathon prototype; solo build and sponsor-category winner.
-- [Cookie Jar](https://cookiejar-vivian.vercel.app/): interactive portfolio with draggable, flippable cookies and sound mapped through the circle of fifths.
+- [Cookie Jar](https://cookiejar-vivian.vercel.app): interactive portfolio with draggable, flippable cookies and sound mapped through the circle of fifths.
 - [Skein](https://skein-peach.vercel.app/): AI video-editing prototype exploring creator approval and control.
 - [Field Office](https://field-office-eta.vercel.app/): MVP experiment for service-business operations.
 - [Interaction Club](https://interaction-omega.vercel.app/): small-group friendship dinners; product build and first Berkeley builder dinner completed in the first week.

@@ -2,7 +2,7 @@ export const founderDescription = "UC Berkeley mechanical engineering student, f
 
 export const founderLinks = [
   { icon: "website", label: "Vivian Yang’s portfolio", href: "https://vivianyang.vercel.app/" },
-  { icon: "cookie", label: "Vivian’s Cookie Jar", href: "https://cookiejar-vivian.vercel.app/" },
+  { icon: "cookie", label: "Vivian’s Cookie Jar", href: "https://cookiejar-vivian.vercel.app" },
   { icon: "linkedin", label: "Vivian Yang on LinkedIn", href: "https://www.linkedin.com/in/vivianbuilds/" },
   { icon: "instagram", label: "Instagram · @vivianbuilds", href: "https://www.instagram.com/vivianbuilds/" },
   { icon: "tiktok", label: "TikTok · @vivianbuilds", href: "https://www.tiktok.com/@vivianbuilds" },
