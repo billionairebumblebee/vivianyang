@@ -7,7 +7,7 @@ import { founderDescription, founderLinks } from "./identity";
 
 const email = "vivian_yang@berkeley.edu";
 const calendly = "https://calendly.com/vivian_yang-berkeley";
-const cookieJar = process.env.NEXT_PUBLIC_COOKIE_JAR_URL || "https://cookiejar-five.vercel.app/";
+const cookieJar = process.env.NEXT_PUBLIC_COOKIE_JAR_URL || "https://cookiejar-vivian.vercel.app/";
 const resume = `mailto:${email}?subject=Request%20for%20Vivian%20Yang%27s%20resume`;
 
 const reels = [
@@ -75,7 +75,7 @@ const builds = [
     title: "Cookie Jar",
     meta: "Interactive portfolio · Musical UI",
     copy: "A draggable, flippable portfolio that turns project stories into a tactile interface, with every interaction mapped through the circle of fifths.",
-    href: "https://cookiejar-five.vercel.app/",
+    href: "https://cookiejar-vivian.vercel.app/",
     linkLabel: "Open Cookie Jar",
   },
   {

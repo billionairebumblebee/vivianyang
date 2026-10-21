@@ -2,6 +2,7 @@ export const founderDescription = "UC Berkeley mechanical engineering student, f
 
 export const founderLinks = [
   { icon: "website", label: "Vivian Yang’s portfolio", href: "https://vivianyang.vercel.app/" },
+  { icon: "cookie", label: "Vivian’s Cookie Jar", href: "https://cookiejar-vivian.vercel.app/" },
   { icon: "linkedin", label: "Vivian Yang on LinkedIn", href: "https://www.linkedin.com/in/vivianbuilds/" },
   { icon: "instagram", label: "Instagram · @vivianbuilds", href: "https://www.instagram.com/vivianbuilds/" },
   { icon: "tiktok", label: "TikTok · @vivianbuilds", href: "https://www.tiktok.com/@vivianbuilds" },
@@ -31,7 +32,7 @@ export const profileSchema = {
       alternateName: "Vivian Builds",
       url: "https://vivianyang.vercel.app/",
       description: founderDescription,
-      sameAs: founderLinks.filter(link => link.icon !== "website" && link.icon !== "calendly").map(link => link.href),
+      sameAs: founderLinks.filter(link => link.icon !== "website" && link.icon !== "calendly" && link.icon !== "cookie").map(link => link.href),
     },
   ],
 };

@@ -1,6 +1,7 @@
 // Monochrome platform marks inherit the portfolio palette.
 export default function PlatformIcon({ name }: { name: string }) {
   const paths: Record<string, string> = {
+    cookie: "M13 2a4 4 0 0 0 5 5 4 4 0 0 0 4 5 10 10 0 1 1-9-10ZM7 7a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Zm-1 7a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Zm6-3a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Zm3 5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Z",
     linkedin: "M5 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4ZM3 9h4v12H3V9Zm6 0h4v1.7c.8-1.2 1.8-2 3.7-2 3.5 0 4.3 2.2 4.3 5.4V21h-4v-6.2c0-1.6-.3-2.8-1.9-2.8-1.8 0-2.1 1.4-2.1 3V21H9V9Z",
     x: "M18.9 2H22l-6.8 7.8L23 22h-6.3l-4.9-7.4L5.3 22H2l8.3-9.5L1 2h6.5l4.4 6.7L18.9 2ZM17.8 20h1.7L6.4 4H4.6l13.2 16Z",
     facebook: "M14 22v-9h3l.5-4H14V6.5c0-1.2.4-2 2-2h2V1.1C17.4 1 16.2 1 15 1c-3 0-5 1.8-5 5v3H7v4h3v9h4Z",
