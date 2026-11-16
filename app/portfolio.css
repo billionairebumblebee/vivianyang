@@ -1418,3 +1418,18 @@ button {
   .codex-proof { grid-template-columns: minmax(0, 1fr); }
   .codex-proof-image { width: min(100%, 460px); justify-self: center; }
 }
+
+.build-card img.build-image-preview {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: contain;
+  background: rgba(255, 250, 246, 0.32);
+}
+
+.build-card img.build-image-preview[src$=".svg"],
+.build-card img.build-image-preview[src$=".png"] {
+  box-sizing: border-box;
+  padding: 1.5rem;
+}

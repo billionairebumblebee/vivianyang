@@ -34,6 +34,8 @@ const builds = [
   {
     index: "01",
     title: "STING",
+    image: "/projects/sting.svg",
+    imageAlt: "STING logo",
     meta: "Hackathon prototype · Solo build · 24 hours",
     copy: "Anti-scam browser extension. Built solo as a 24-hour prototype. 1st Place · Simular Sponsor Prize · Cal AI Hackathon 2026.",
     href: "https://cloak-sting.vercel.app/",
@@ -43,6 +45,8 @@ const builds = [
   {
     index: "02",
     title: "Skein",
+    image: "/projects/skein.png",
+    imageAlt: "Skein logo",
     meta: "AI video editing · Prototype",
     copy: "Explores turning one authentic take into multiple clips, with creator approval and control of source material and likeness built into the workflow.",
     href: "https://skein-peach.vercel.app/",
@@ -51,6 +55,8 @@ const builds = [
   {
     index: "03",
     title: "Money Meow",
+    image: "/projects/richard.svg",
+    imageAlt: "Richard, the tuxedo cat from Money Meow",
     meta: "Personal finance · Hackathon prototype",
     copy: "A personal finance prototype for exploring budgeting, investment scenarios, and how trading strategies would have performed on historical data.",
     href: "https://money-meow.vercel.app/",
@@ -59,6 +65,8 @@ const builds = [
   {
     index: "04",
     title: "CareSide",
+    image: "/projects/richard.svg",
+    imageAlt: "Richard, the tuxedo cat in CareSide",
     meta: "Hospital companion · Hackathon prototype",
     copy: "A prototype that organizes information from a fictional hospital visit so patients can follow their care and prepare questions for their care team.",
     href: "https://careside.vercel.app/",
@@ -67,6 +75,8 @@ const builds = [
   {
     index: "05",
     title: "Interaction Club",
+    image: "/projects/interaction-club.png",
+    imageAlt: "Interaction Club balloon wordmark",
     meta: "Built in 1 week · 36 first-week signups",
     copy: "Small-group friendship dinners. Built the product, reached 36 signups in the first week, and hosted the first Berkeley builder dinner on October 8, 2026. Outreach to potential company customers followed.",
     href: "https://www.interaction.club/",
@@ -75,6 +85,8 @@ const builds = [
   {
     index: "06",
     title: "SCET Innovation Intelligence Hackathon",
+    image: "/projects/scet-innovation-intelligence.jpg",
+    imageAlt: "Vivian pitching Interaction Club at the SCET Innovation Intelligence Hackathon",
     meta: "Top-10 Finalist · Week-long Hackathon · Solo Founder",
     copy: "Named a top-10 finalist on October 11, 2026, in the SCET Innovation Intelligence Hackathon during SF Tech Week.",
   },
@@ -106,10 +118,13 @@ const builds = [
     meta: "Team hardware prototype · CAD · Arduino",
     copy: "Worked with a Berkeley PREP team to design and build a sorting-trash-can prototype using CAD, Arduino, and 3D printing.",
     image: "/IMG_8690.jpg",
+    imageAlt: "Oski Sorting Trash Can team with prototype",
   },
   {
     index: "11",
     title: "Animal Jam Values",
+    image: "/projects/animal-jam-values.jpg",
+    imageAlt: "Animal Jam Values homepage and trade calculator",
     meta: "Fan project · Trading tools",
     copy: "An unofficial Animal Jam item catalog and trade calculator that helps players compare offers using estimated item values.",
     href: "https://animal-jam-values.vercel.app/",
@@ -227,7 +242,7 @@ export default function PortfolioPage() {
         <div className="section-heading"><div><p className="eyebrow">02 · Selected work</p><h2>Selected projects.</h2></div><p>Shipped websites, software experiments, and hardware prototypes—work spanning product design, implementation, and testing.</p></div>
         <div className="build-grid">
           {builds.map((build) => <article className={`build-card glass ${build.featured ? "featured" : ""}`} key={build.title}>
-            {build.image && <img className="build-image-contain" src={build.image} alt="Oski Sorting Trash Can team with prototype" />}
+            {build.image && <img className={build.image.startsWith("/projects/") ? "build-image-preview" : "build-image-contain"} src={build.image} alt={build.imageAlt} loading="lazy" />}
             <div className="build-body"><span className="build-index">{build.index}</span><p className="mini-label">{build.meta}</p><h3>{build.title}</h3><p className="build-copy">{build.copy}</p>{build.href && <a className="build-link" href={build.href} target="_blank" rel="noreferrer">{build.linkLabel} ↗</a>}</div>
           </article>)}
         </div>
