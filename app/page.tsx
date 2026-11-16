@@ -129,7 +129,7 @@ export default function PortfolioPage() {
   return <main className="studio">
     <nav className="navigation" aria-label="Main navigation">
       <a className="wordmark" href="#top">vy<span>✳</span></a>
-      <div><a href="#work">Startups</a><a href="#creator">Creator</a><a href="#builds">Builder</a></div>
+      <div><a href="#work">Entrepreneur</a><a href="#creator">Creator</a><a href="#builds">Builder</a></div>
       <a href="#contact">Say hello ↗</a>
     </nav>
     <header id="top" className="opening">
