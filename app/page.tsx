@@ -1,9 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./portfolio.css";
-import PlatformIcon from "./PlatformIcon";
-import { founderDescription, founderLinks } from "./identity";
 
 const email = "vivian_yang@berkeley.edu";
 const calendly = "https://calendly.com/vivian_yang-berkeley";
@@ -12,22 +10,15 @@ const resume = `mailto:${email}?subject=Request%20for%20Vivian%20Yang%27s%20resu
 
 const reels = [
   {
-    title: "Featured reel by @vivian.yan6 — one",
+    title: "LEGO shopping reel by Vivian Yang",
     href: "https://www.instagram.com/reel/DEg3KbuxS1o/",
     embed: "https://www.instagram.com/reel/DEg3KbuxS1o/embed",
   },
   {
-    title: "Featured reel by @vivian.yan6 — two",
-    href: "https://www.instagram.com/reel/C_mJKXpSOV4/",
-    embed: "https://www.instagram.com/reel/C_mJKXpSOV4/embed",
+    title: "rom&nd beauty haul by Vivian Yang",
+    href: "https://www.instagram.com/reel/DfF9u1WSqO4/",
+    embed: "https://www.instagram.com/reel/DfF9u1WSqO4/embed",
   },
-];
-
-const proof = [
-  { value: "131", label: "Cloak installs" },
-  { value: "24 hours", label: "STING · solo hackathon build" },
-  { value: "2M+", label: "organic creator views" },
-  { value: "1st place", label: "Simular sponsor prize" },
 ];
 
 const builds = [
@@ -64,19 +55,19 @@ const builds = [
   },
   {
     index: "04",
-    title: "CareSide",
-    image: "/projects/richard.svg",
-    imageAlt: "Richard, the tuxedo cat in CareSide",
-    meta: "Hospital companion · Hackathon prototype",
-    copy: "A prototype that organizes information from a fictional hospital visit so patients can follow their care and prepare questions for their care team.",
-    href: "https://careside.vercel.app/",
-    linkLabel: "Explore CareSide",
+    title: "ByoGlo",
+    image: "/projects/byoglo.jpg",
+    imageAlt: "ByoGlo skincare homepage with the Be Your Own Glow headline",
+    meta: "Biodegradable skincare · High-school venture",
+    copy: "Co-created a biodegradable pimple-patch business in high school and independently coded its entire customer-facing website.",
+    href: "https://byoglo.neocities.org/",
+    linkLabel: "Visit ByoGlo",
   },
   {
     index: "05",
     title: "Interaction Club",
     image: "/projects/interaction-club.png",
-    imageAlt: "Interaction Club balloon wordmark",
+    imageAlt: "Interaction Club balloon wordmark and pink button",
     meta: "Built in 1 week · 36 first-week signups",
     copy: "Small-group friendship dinners. Built the product, reached 36 signups in the first week, and hosted the first Berkeley builder dinner on October 8, 2026. Outreach to potential company customers followed.",
     href: "https://www.interaction.club/",
@@ -100,11 +91,11 @@ const builds = [
   },
   {
     index: "08",
-    title: "ByoGlo",
-    meta: "Biodegradable skincare · High-school venture",
-    copy: "Co-created a biodegradable pimple-patch business in high school and independently coded its entire customer-facing website.",
-    href: "https://byoglo.neocities.org/",
-    linkLabel: "Visit ByoGlo",
+    title: "CareSide",
+    meta: "Hospital companion · Hackathon prototype",
+    copy: "A prototype that organizes information from a fictional hospital visit so patients can follow their care and prepare questions for their care team.",
+    href: "https://careside.vercel.app/",
+    linkLabel: "Explore CareSide",
   },
   {
     index: "09",
@@ -132,143 +123,59 @@ const builds = [
   },
 ];
 
+
 export default function PortfolioPage() {
-  const [isDark, setIsDark] = useState(false);
-
-  useEffect(() => {
-    const dark = window.localStorage.getItem("vivian-portfolio-theme") === "dark";
-    document.documentElement.dataset.theme = dark ? "dark" : "light";
-    setIsDark(dark);
-  }, []);
-
-  const toggleTheme = () => {
-    const next = !isDark;
-    setIsDark(next);
-    document.documentElement.dataset.theme = next ? "dark" : "light";
-    window.localStorage.setItem("vivian-portfolio-theme", next ? "dark" : "light");
-  };
-
-  return (
-    <main className="site-shell">
-      <div className="ambient ambient-one" />
-      <div className="ambient ambient-two" />
-
-      <nav className="site-nav glass" aria-label="Primary navigation">
-        <a className="brand" href="#top">Vivian Yang</a>
-        <div className="nav-links">
-          <a href="#experience">Experience</a>
-          <a href="#builds">Projects</a>
-          <a href="#cookie-jar">Cookie Jar</a>
-          <button className="theme-toggle" onClick={toggleTheme} aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}><span aria-hidden="true">{isDark ? "☀" : "☾"}</span>{isDark ? "Light mode" : "Dark mode"}</button>
-          <a className="nav-connect social-inline" href="https://www.linkedin.com/in/vivianbuilds/" target="_blank" rel="noreferrer"><PlatformIcon name="linkedin" />LinkedIn ↗</a>
-          <a className="nav-cta" href={calendly} target="_blank" rel="noreferrer">Book a call</a>
-        </div>
-      </nav>
-
-      <section id="top" className="hero glass">
-        <div className="hero-main">
-          <p className="eyebrow">UC Berkeley · Mechanical Engineering</p>
-          <h1>From an idea to <em>something you can use.</em></h1>
-          <p className="hero-lede">
-            I’m Vivian Yang—Berkeley engineer, Cloak founder, and builder across consumer software, AI products, and physical prototypes.
-          </p>
-          <div className="hero-actions">
-            <a className="button primary" href="#builds">Explore my work ↓</a>
-            <a className="button secondary" href={resume}>Request résumé ↗</a>
-          </div>
-          <div className="recruiter-links" aria-label="Recruiter links"><a className="social-inline" href="https://www.linkedin.com/in/vivianbuilds/" target="_blank" rel="noreferrer"><PlatformIcon name="linkedin" />LinkedIn ↗</a><a className="social-inline" href="https://github.com/billionairebumblebee" target="_blank" rel="noreferrer"><PlatformIcon name="github" />GitHub ↗</a><a href={`mailto:${email}`}>Email me ↗</a></div>
-        </div>
-        <a className="hero-preview" href="https://cloak.build/" target="_blank" rel="noreferrer" aria-label="Open the live Cloak website">
-          <img src="/cloak-site-preview.png" alt="Preview of the Cloak privacy extension website" />
-          <span><strong>Cloak · Shipped work</strong><em>cloak.build ↗</em></span>
-        </a>
-      </section>
-
-      <section className="proof-grid" aria-label="Selected results">
-        {proof.map((item) => <article className="proof-card glass" key={item.label}><strong>{item.value}</strong><span>{item.label}</span></article>)}
-      </section>
-
-      <section className="codex-proof glass" aria-labelledby="codex-proof-title">
-        <div className="codex-proof-copy"><p className="eyebrow">How I build with AI</p><h2 id="codex-proof-title">18.1B lifetime Codex tokens.</h2><p>I define the specs, direct implementation, debug, and test.</p><div className="codex-proof-notes"><span>789.8M peak tokens</span><span>109-day streak at capture</span></div></div>
-        <figure className="codex-proof-image"><a href="/codex-stats-oct-17-2026.jpg" target="_blank" rel="noreferrer" aria-label="View full-size Codex stats"><img src="/codex-stats-oct-17-2026.jpg" alt="October 17 Codex usage snapshot showing 18.1 billion lifetime tokens, 789.8 million peak tokens, a 1 hour 56 minute longest task, and 109 day current and longest streaks" /></a><figcaption>October 17, 2026 · View full size ↗</figcaption></figure>
-      </section>
-
-      <section id="cookie-jar" className="cookie-section cookie-section-featured glass">
-        <div className="cookie-copy"><p className="eyebrow">Interactive portfolio</p><h2>The Cookie Jar.</h2><p>Drag a cookie. Flip it for the story. Play through the circle of fifths.</p><a className="button secondary" href={cookieJar} target="_blank" rel="noreferrer">Open full Cookie Jar ↗</a></div>
-        <div className="cookie-frame"><iframe src={cookieJar} title="Vivian Yang Cookie Jar" loading="eager" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" /></div>
-      </section>
-
-      <section id="experience" className="experience-grid" aria-label="Consulting and engineering experience">
-        <article className="student-card glass"><p className="eyebrow">AI product consulting · Piedmont Consulting Group</p><h3>Orcana AI</h3><p>Co-leading a client engagement and managing a six-person Berkeley consulting team across MVP development, pharma segmentation, onboarding, competitive research, and go-to-market strategy.</p><p className="student-note">Total client project value: $3,000 · Engagement in progress</p></article>
-        <article className="student-card glass"><p className="eyebrow">Engineering beyond the screen</p><h3>Code, research, and physical prototypes.</h3><p>My work spans browser software, Berkeley Lab workflow automation and data science projects, and a team-built sorting-trash-can prototype at Berkeley.</p><a className="build-link" href="#builds">See selected projects ↓</a></article>
-      </section>
-
-      <section id="interaction-club" className="interaction-showcase glass" aria-labelledby="interaction-title">
-        <div className="interaction-copy">
-          <p className="eyebrow">Interaction Club · Product & community</p>
-          <h2 id="interaction-title">Built the product.<br /><em>Set the table.</em></h2>
-          <p>Small-group friendship dinners that turn meeting new people into an actual plan. I built the product, brought in the first signups, and hosted the first Berkeley builder dinner—all in one week.</p>
-          <dl className="interaction-milestones">
-            <div><dt>1 week</dt><dd>From build to first dinner</dd></div>
-            <div><dt>36</dt><dd>First-week signups</dd></div>
-            <div><dt>Oct 8</dt><dd>First Berkeley dinner · 2026</dd></div>
-          </dl>
-          <a className="button primary" href="https://www.interaction.club/" target="_blank" rel="noreferrer">Explore Interaction Club ↗</a>
-        </div>
-        <a className="interaction-preview" href="https://www.interaction.club/" target="_blank" rel="noreferrer" aria-label="Visit Interaction Club">
-          <img src="/interaction-club-preview.jpg" alt="Interaction Club homepage with the headline We want you at our table and a playful invitation envelope" width={1280} height={837} loading="lazy" />
-          <span>Meet new people over dinner <span aria-hidden="true">↗</span></span>
-        </a>
-      </section>
-
-      <section id="cloak" className="cloak-section section-space">
-        <div className="section-intro">
-          <p className="eyebrow">01 · Shipped software</p>
-          <h2>Make invisible tracking visible—and controllable.</h2>
-          <p>Cloak is my browser privacy project: an exercise in taking a consumer product through implementation, distribution, activation, and support. It reached 131 installs.</p>
-        </div>
-        <article className="cloak-detail glass">
-          <div className="cloak-detail-head"><div><p className="mini-label">Cloak · Founder & builder</p><h3>From browser protection to checkout and support.</h3></div><a href="https://cloak.build/" target="_blank" rel="noreferrer">Visit Cloak ↗</a></div>
-          <ul>
-            <li>Built and shipped Chrome and Safari privacy products, the public website, subscription checkout, activation system, and support loop in five months while enrolled at UC Berkeley.</li>
-            <li>Defined product specifications and directed AI coding agents through implementation, debugging, testing, and QA, with responsibility for product and technical decisions.</li>
-            <li>Built protections for selected tracker requests, recognizable URL identifiers, readable tracking state, and fingerprinting surfaces, with local session receipts showing users what changed.</li>
-            <li>The work gave me hands-on experience with the systems around a product: browser behavior, billing, activation, and user-facing explanations.</li>
-          </ul>
-        </article>
-      </section>
-
-      <section id="builds" className="builds-section section-space">
-        <div className="section-heading"><div><p className="eyebrow">02 · Selected work</p><h2>Selected projects.</h2></div><p>Shipped websites, software experiments, and hardware prototypes—work spanning product design, implementation, and testing.</p></div>
-        <div className="build-grid">
-          {builds.map((build) => <article className={`build-card glass ${build.featured ? "featured" : ""}`} key={build.title}>
-            {build.image && <img className={build.image.startsWith("/projects/") ? "build-image-preview" : "build-image-contain"} src={build.image} alt={build.imageAlt} loading="lazy" />}
-            <div className="build-body"><span className="build-index">{build.index}</span><p className="mini-label">{build.meta}</p><h3>{build.title}</h3><p className="build-copy">{build.copy}</p>{build.href && <a className="build-link" href={build.href} target="_blank" rel="noreferrer">{build.linkLabel} ↗</a>}</div>
-          </article>)}
-        </div>
-      </section>
-
-      <section className="distribution section-space">
-        <article className="creator-card glass">
-          <div><p className="eyebrow">03 · Distribution</p><h2>2M+ organic views.</h2><p>My student and lifestyle content on @vivian.yan6 reached more than two million organic views. The reels below are from that account. I now share my building work on @vivianbuilds.</p></div>
-          <div className="creator-links"><a className="social-inline" href="https://www.instagram.com/vivian.yan6/" target="_blank" rel="noreferrer"><PlatformIcon name="instagram" />Featured reels · @vivian.yan6 ↗</a><a className="social-inline" href="https://www.instagram.com/vivianbuilds/" target="_blank" rel="noreferrer"><PlatformIcon name="instagram" />Building now · @vivianbuilds ↗</a><a className="social-inline" href="https://www.tiktok.com/@vivianbuilds" target="_blank" rel="noreferrer"><PlatformIcon name="tiktok" />TikTok · @vivianbuilds ↗</a></div>
-        </article>
-        <div className="reels-grid" aria-label="Featured Instagram videos">
-          {reels.map((reel) => <article className="reel-card glass" key={reel.href}><div className="reel-frame"><iframe src={reel.embed} title={reel.title} loading="lazy" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen /></div><a href={reel.href} target="_blank" rel="noreferrer">Watch on Instagram ↗</a></article>)}
-        </div>
-      </section>
-
-      <section id="story" className="story-section section-space">
-        <article className="story-card glass"><p className="eyebrow">04 · How I operate</p><h2>Ask directly. Find a way. Keep moving.</h2><p>The Berkeley polo story captures how I work: I go to the source, make the ask, and turn uncertainty into forward motion.</p><span className="story-hook">Ask me how I got the polo ↗</span></article>
-        <article className="student-card glass"><p className="eyebrow">Berkeley, beyond class</p><h3>Engineering, consulting, and founder programs.</h3><div className="activity-list"><div><strong>UC Berkeley</strong><span>Mechanical Engineering</span></div><div><strong>Piedmont Consulting Group</strong><span>Consultant · product, GTM, onboarding, and UX</span></div><div><strong>Founder Summit · SkyDeck ACE</strong><span>Selected founder programs</span></div></div><p className="student-note">Earlier recognition: Berkeley Lab technical programs · DECA placement</p></article>
-      </section>
-
-      <footer id="contact" className="footer founder-footer glass" aria-labelledby="founder-title">
-        <div className="footer-copy"><p className="eyebrow">About & contact · Vivian Builds</p><h2 id="founder-title">Talk with Vivian.</h2><p className="founder-bio">{founderDescription}</p><a className="founder-email" href={`mailto:${email}`}>{email}</a><blockquote>“Let all that you do be done in love.” <cite>1 Corinthians 16:14</cite></blockquote></div>
-        <nav className="founder-link-grid" aria-label="Vivian Yang’s official profiles and booking">
-          {founderLinks.map(link => <a key={link.icon} href={link.href} target="_blank" rel="noreferrer" className={`founder-profile-link ${link.icon === "calendly" ? "founder-booking" : ""}`}><PlatformIcon name={link.icon} /><span>{link.label}</span><span aria-hidden="true">↗</span></a>)}
-        </nav>
-      </footer>
-    </main>
-  );
+  const [showCookieJar, setShowCookieJar] = useState(false);
+  return <main className="studio">
+    <nav className="navigation" aria-label="Main navigation">
+      <a className="wordmark" href="#top">vy<span>✳</span></a>
+      <div><a href="#work">Projects</a><a href="#creator">Creator</a><a href="#in-public">In public</a></div>
+      <a href="#contact">Say hello ↗</a>
+    </nav>
+    <header id="top" className="opening">
+      <div className="opening-label"><span>Engineer. Founder. Digital creator.</span><span>Berkeley, California</span></div>
+      <h1>VIVIAN<span>YANG<i aria-hidden="true">✳</i></span></h1>
+      <div className="opening-bottom"><p>I build products, make videos,<br />and bring people together.</p><a href="#work">Come see what I’m making ↓</a></div>
+      <div className="opening-collage">
+        <a className="collage-pitch" href="#in-public"><img src="/projects/scet-innovation-intelligence.jpg" alt="Vivian presenting Interaction Club at Berkeley" /><span>Ideas out in the world ↗</span></a>
+        <a className="collage-invite" href="https://www.interaction.club/" target="_blank" rel="noreferrer"><img src="/projects/interaction-club.png" alt="Interaction Club logo with pink button" /><p>You’re invited.</p><span>Good company starts here ↗</span></a>
+        <a className="collage-cat" href="https://money-meow.vercel.app/" target="_blank" rel="noreferrer"><img src="/projects/richard.svg" alt="Richard, Money Meow’s tuxedo cat" /><span>Meet my finance guy ↗</span></a>
+      </div>
+    </header>
+    <section id="work" className="work-section">
+      <div className="section-head"><p className="kicker">From idea to internet</p><h2>Things I’ve<br /><em>made happen.</em></h2><p>Software, small-group dinners, and experiments that became something you can use.</p></div>
+      <article className="feature cloak-feature">
+        <a className="feature-visual" href="https://cloak.build/" target="_blank" rel="noreferrer"><img src="/cloak-site-preview.png" alt="Cloak privacy product website" loading="lazy" /></a>
+        <div className="feature-info"><p className="kicker">Consumer software · Founder</p><h3>Cloak</h3><p>Making online tracking visible and controllable. I built the browser extensions and the systems around them—from the website to checkout, activation, and support.</p><div className="project-facts"><span><b>131</b> installs</span><span>Chrome + Safari</span></div><a className="text-link" href="https://cloak.build/" target="_blank" rel="noreferrer">Explore Cloak ↗</a><details><summary>Behind the build</summary><p>I defined the product, directed AI-assisted implementation, debugged, and tested browser protections. Shipping also meant handling billing, activation, and user support.</p></details></div>
+      </article>
+      <article className="feature interaction-feature">
+        <div className="feature-info"><p className="kicker">Product + community · Founder</p><h3>Interaction<br />Club</h3><p>Real plans. Your people. I built a product for small-group friendship dinners, brought in the first signups, and hosted our first Berkeley builder dinner.</p><div className="project-facts"><span><b>1 week</b> to first dinner</span><span><b>36</b> first-week signups</span></div><a className="text-link" href="https://www.interaction.club/" target="_blank" rel="noreferrer">You’re invited ↗</a></div>
+        <a className="feature-visual" href="https://www.interaction.club/" target="_blank" rel="noreferrer"><img src="/interaction-club-preview.jpg" alt="Interaction Club’s playful invitation website" loading="lazy" /></a>
+      </article>
+    </section>
+    <section id="creator" className="creator-section">
+      <div className="creator-heading"><p className="kicker">On the other side of the camera</p><h2>Made to<br /><em>be watched.</em></h2><p>Beauty reviews, PR unboxings, campus life, and the things I’m excited to share. I make the content and do my own marketing.</p><a className="text-link" href="https://www.instagram.com/vivian.yan6/" target="_blank" rel="noreferrer">@vivian.yan6 ↗</a><a className="text-link secondary-link" href="https://www.instagram.com/reel/C_mJKXpSOV4/" target="_blank" rel="noreferrer">Campus life ↗</a><div className="creator-stat"><strong>2M+</strong><span>organic views across my<br />student and lifestyle content</span></div></div>
+      <div className="video-gallery">{reels.map(reel => <article className="video-card" key={reel.href}><iframe src={reel.embed} title={reel.title} loading="lazy" allow="autoplay; encrypted-media; picture-in-picture" allowFullScreen /><a href={reel.href} target="_blank" rel="noreferrer">Watch on Instagram ↗</a></article>)}</div>
+    </section>
+    <section id="in-public" className="public-section">
+      <figure><img src="/projects/scet-innovation-intelligence.jpg" alt="Vivian pitching Interaction Club at the SCET Innovation Intelligence Hackathon" loading="lazy" /><figcaption>Pitching Interaction Club · SCET Innovation Intelligence Hackathon · Top-10 finalist</figcaption></figure>
+      <div><p className="kicker">Building in public</p><h2>Build it.<br />Share it.<br /><em>Keep going.</em></h2><p>I’m figuring things out in public—building products, sharing the process, and learning how to get people interested in what I make.</p><p>Follow the projects, experiments, and life around them.</p><a className="text-link" href="https://www.instagram.com/vivianbuilds/" target="_blank" rel="noreferrer">@vivianbuilds ↗</a><a className="text-link secondary-link" href="https://www.tiktok.com/@vivianbuilds" target="_blank" rel="noreferrer">On TikTok ↗</a></div>
+    </section>
+    <section id="builds" className="gallery-section">
+      <div className="section-head"><p className="kicker">The rest of the workshop</p><h2>A little curiosity.<br /><em>A lot of projects.</em></h2></div>
+      <div className="project-grid">{builds.filter(build => !["Interaction Club", "SCET Innovation Intelligence Hackathon"].includes(build.title)).map(build => <article className={`project ${build.image ? "" : "project-text"}`} key={build.title}>
+        {build.image && <div className="project-image"><img src={build.image} alt={build.imageAlt} loading="lazy" /></div>}
+        <div className="project-description"><p className="kicker">{build.meta}</p><h3>{build.title}</h3><p>{build.copy}</p>{build.href && <a className="text-link" href={build.href} target="_blank" rel="noreferrer">{build.linkLabel} ↗</a>}</div>
+      </article>)}</div>
+    </section>
+    <section id="cookie-jar" className="cookie-section">
+      <div><p className="kicker">Something to play with</p><h2>The Cookie Jar.</h2><p>A musical, interactive collection of my work. Drag a cookie, flip it, and explore.</p></div><button className="pill-button" onClick={() => setShowCookieJar(!showCookieJar)} aria-expanded={showCookieJar}>{showCookieJar ? "Close the jar −" : "Open the jar ↗"}</button>
+      {showCookieJar && <iframe src={cookieJar} title="Vivian’s interactive Cookie Jar" allow="autoplay" />}
+    </section>
+    <section id="experience" className="about-section">
+      <div><p className="kicker">A little more about me</p><h2>Engineering mind.<br /><em>Creative energy.</em></h2><p>I study mechanical engineering at UC Berkeley. My work moves between consumer software, physical prototypes, community, and content.</p><a className="text-link" href={resume}>Request my résumé ↗</a></div>
+      <div className="experience-list"><article><h3>Piedmont Consulting Group</h3><p>Co-leading a six-person Berkeley team on Orcana AI’s product, onboarding, research, and go-to-market work.</p></article><article><h3>Engineering beyond the screen</h3><p>Berkeley Lab technical programs, workflow automation, and a team-built sorting-trash-can prototype using CAD, Arduino, and 3D printing.</p></article><details><summary>How I build with AI ↗</summary><p>I define specs, direct implementation, debug, and test. My October 17, 2026 Codex snapshot recorded 18.1B lifetime tokens.</p><a className="text-link" href="/codex-stats-oct-17-2026.jpg" target="_blank" rel="noreferrer">View the snapshot ↗</a></details></div>
+    </section>
+    <footer id="contact"><p className="kicker">Projects, collaborations, or a good idea</p><a className="footer-title" href={`mailto:${email}`}>Let’s make<br /><em>something.</em> ↗</a><div className="footer-bottom"><a href={`mailto:${email}`}>{email}</a><div><a href="https://github.com/billionairebumblebee" target="_blank" rel="noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/vivianbuilds/" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href={calendly} target="_blank" rel="noreferrer">Book a call ↗</a></div></div><p className="footer-verse">“Let all that you do be done in love.” · 1 Corinthians 16:14</p></footer>
+  </main>;
 }

@@ -6,8 +6,8 @@ import { profileSchema } from "./identity";
 export const metadata = {
   metadataBase: new URL("https://vivianyang.vercel.app"),
   alternates: { canonical: "/" },
-  title: "Vivian Yang — Berkeley Engineer & Product Builder",
-  description: "UC Berkeley Mechanical Engineering student building across consumer software, AI product consulting, hardware prototypes, and creator distribution. Explore Cloak, STING, and selected work.",
+  title: "Vivian Yang — Engineer, Founder & Digital Creator",
+  description: "Vivian Yang builds products, makes videos, and brings people together. Explore Cloak, Interaction Club, beauty and lifestyle content, and building in public.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
