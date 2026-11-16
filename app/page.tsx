@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import "./portfolio.css";
 
 const email = "vivian_yang@berkeley.edu";
@@ -124,8 +123,9 @@ const builds = [
 ];
 
 
+const projectOrder = ["Skein", "Animal Jam Values", "Money Meow", "ByoGlo", "Oski Sorting Trash Can", "STING", "DopaMINE", "Cookie Jar", "CareSide"];
+
 export default function PortfolioPage() {
-  const [showCookieJar, setShowCookieJar] = useState(false);
   return <main className="studio">
     <nav className="navigation" aria-label="Main navigation">
       <a className="wordmark" href="#top">vy<span>✳</span></a>
@@ -134,8 +134,18 @@ export default function PortfolioPage() {
     </nav>
     <header id="top" className="opening">
       <div className="opening-label"><span>Engineer. Founder. Digital creator.</span><span>Berkeley, California</span></div>
-      <h1>VIVIAN<span>YANG<i aria-hidden="true">✳</i></span></h1>
-      <div className="opening-bottom"><p>I build products, make videos,<br />and bring people together.</p><a href="#work">Come see what I’m making ↓</a></div>
+      <div className="opening-stage">
+        <div className="opening-intro">
+          <h1>VIVIAN<span>YANG<i aria-hidden="true">✳</i></span></h1>
+          <div className="opening-bottom"><p>I build products, make videos,<br />and bring people together.</p><a href="#work">Come see what I’m making ↓</a></div>
+          <a className="token-note" href="/codex-stats-oct-17-2026.jpg" target="_blank" rel="noreferrer"><strong>18.1B</strong><span>Lifetime tokens<br /><small>Codex · October 17, 2026 snapshot ↗</small></span></a>
+        </div>
+        <div id="cookie-jar" className="hero-cookie">
+          <div className="cookie-caption"><span>The Cookie Jar</span><a href={cookieJar} target="_blank" rel="noreferrer">Open full experience ↗</a></div>
+          <iframe src={cookieJar} title="Vivian’s interactive Cookie Jar" allow="autoplay" />
+          <p>Drag a cookie. Flip it. Find something I made.</p>
+        </div>
+      </div>
       <div className="opening-collage">
         <a className="collage-pitch" href="#in-public"><img src="/projects/scet-innovation-intelligence.jpg" alt="Vivian presenting Interaction Club at Berkeley" /><span>Ideas out in the world ↗</span></a>
         <a className="collage-invite" href="https://www.interaction.club/" target="_blank" rel="noreferrer"><img src="/projects/interaction-club.png" alt="Interaction Club logo with pink button" /><p>You’re invited.</p><span>Good company starts here ↗</span></a>
@@ -163,14 +173,10 @@ export default function PortfolioPage() {
     </section>
     <section id="builds" className="gallery-section">
       <div className="section-head"><p className="kicker">The rest of the workshop</p><h2>A little curiosity.<br /><em>A lot of projects.</em></h2></div>
-      <div className="project-grid">{builds.filter(build => !["Interaction Club", "SCET Innovation Intelligence Hackathon"].includes(build.title)).map(build => <article className={`project ${build.image ? "" : "project-text"}`} key={build.title}>
+      <div className="project-grid">{projectOrder.map(title => builds.find(build => build.title === title)!).map(build => <article className={`project ${build.image ? "" : "project-text"}`} key={build.title}>
         {build.image && <div className="project-image"><img src={build.image} alt={build.imageAlt} loading="lazy" /></div>}
         <div className="project-description"><p className="kicker">{build.meta}</p><h3>{build.title}</h3><p>{build.copy}</p>{build.href && <a className="text-link" href={build.href} target="_blank" rel="noreferrer">{build.linkLabel} ↗</a>}</div>
       </article>)}</div>
-    </section>
-    <section id="cookie-jar" className="cookie-section">
-      <div><p className="kicker">Something to play with</p><h2>The Cookie Jar.</h2><p>A musical, interactive collection of my work. Drag a cookie, flip it, and explore.</p></div><button className="pill-button" onClick={() => setShowCookieJar(!showCookieJar)} aria-expanded={showCookieJar}>{showCookieJar ? "Close the jar −" : "Open the jar ↗"}</button>
-      {showCookieJar && <iframe src={cookieJar} title="Vivian’s interactive Cookie Jar" allow="autoplay" />}
     </section>
     <section id="experience" className="about-section">
       <div><p className="kicker">A little more about me</p><h2>Engineering mind.<br /><em>Creative energy.</em></h2><p>I study mechanical engineering at UC Berkeley. My work moves between consumer software, physical prototypes, community, and content.</p><a className="text-link" href={resume}>Request my résumé ↗</a></div>
