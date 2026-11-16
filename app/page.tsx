@@ -36,7 +36,7 @@ const builds = [
     title: "STING",
     meta: "Hackathon prototype · Solo build · 24 hours",
     copy: "Anti-scam browser extension. Built solo as a 24-hour prototype. 1st Place · Simular Sponsor Prize · Cal AI Hackathon 2026.",
-    href: "https://cloak-sting-hackathon-2026.vercel.app/",
+    href: "https://cloak-sting.vercel.app/",
     linkLabel: "Try STING",
     featured: true,
   },
@@ -50,28 +50,36 @@ const builds = [
   },
   {
     index: "03",
-    title: "Field Office",
-    meta: "AI operations · MVP experiment",
-    copy: "An MVP exploring approval-based workflows for service businesses, from lead intake and scheduling to jobs, invoicing, and dispatch.",
-    href: "https://field-office-eta.vercel.app/",
-    linkLabel: "Open Field Office",
+    title: "Money Meow",
+    meta: "Personal finance · Hackathon prototype",
+    copy: "A personal finance prototype for exploring budgeting, investment scenarios, and how trading strategies would have performed on historical data.",
+    href: "https://money-meow.vercel.app/",
+    linkLabel: "Explore Money Meow",
   },
   {
     index: "04",
-    title: "Interaction Club",
-    meta: "Built in 1 week · 36 first-week signups",
-    copy: "Small-group friendship dinners. Built the product, reached 36 signups in the first week, and hosted the first Berkeley builder dinner on October 8, 2026. Outreach to potential company customers followed.",
-    href: "https://interaction-omega.vercel.app/",
-    linkLabel: "Visit Interaction Club",
+    title: "CareSide",
+    meta: "Hospital companion · Hackathon prototype",
+    copy: "A prototype that organizes information from a fictional hospital visit so patients can follow their care and prepare questions for their care team.",
+    href: "https://careside.vercel.app/",
+    linkLabel: "Explore CareSide",
   },
   {
     index: "05",
+    title: "Interaction Club",
+    meta: "Built in 1 week · 36 first-week signups",
+    copy: "Small-group friendship dinners. Built the product, reached 36 signups in the first week, and hosted the first Berkeley builder dinner on October 8, 2026. Outreach to potential company customers followed.",
+    href: "https://www.interaction.club/",
+    linkLabel: "Visit Interaction Club",
+  },
+  {
+    index: "06",
     title: "SCET Innovation Intelligence Hackathon",
     meta: "Top-10 Finalist · Week-long Hackathon · Solo Founder",
     copy: "Named a top-10 finalist on October 11, 2026, in the SCET Innovation Intelligence Hackathon during SF Tech Week.",
   },
   {
-    index: "06",
+    index: "07",
     title: "Cookie Jar",
     meta: "Interactive portfolio · Musical UI",
     copy: "A draggable, flippable portfolio that turns project stories into a tactile interface, with every interaction mapped through the circle of fifths.",
@@ -79,7 +87,7 @@ const builds = [
     linkLabel: "Open Cookie Jar",
   },
   {
-    index: "07",
+    index: "08",
     title: "ByoGlo",
     meta: "Biodegradable skincare · High-school venture",
     copy: "Co-created a biodegradable pimple-patch business in high school and independently coded its entire customer-facing website.",
@@ -87,13 +95,13 @@ const builds = [
     linkLabel: "Visit ByoGlo",
   },
   {
-    index: "08",
+    index: "09",
     title: "DopaMINE",
     meta: "Independent product build",
     copy: "An independent product experiment built through rapid prototyping, testing, and iteration.",
   },
   {
-    index: "09",
+    index: "10",
     title: "Oski Sorting Trash Can",
     meta: "Team hardware prototype · CAD · Arduino",
     copy: "Worked with a Berkeley PREP team to design and build a sorting-trash-can prototype using CAD, Arduino, and 3D printing.",
@@ -182,9 +190,9 @@ export default function PortfolioPage() {
             <div><dt>36</dt><dd>First-week signups</dd></div>
             <div><dt>Oct 8</dt><dd>First Berkeley dinner · 2026</dd></div>
           </dl>
-          <a className="button primary" href="https://interaction-omega.vercel.app/" target="_blank" rel="noreferrer">Explore Interaction Club ↗</a>
+          <a className="button primary" href="https://www.interaction.club/" target="_blank" rel="noreferrer">Explore Interaction Club ↗</a>
         </div>
-        <a className="interaction-preview" href="https://interaction-omega.vercel.app/" target="_blank" rel="noreferrer" aria-label="Visit Interaction Club">
+        <a className="interaction-preview" href="https://www.interaction.club/" target="_blank" rel="noreferrer" aria-label="Visit Interaction Club">
           <img src="/interaction-club-preview.jpg" alt="Interaction Club homepage with the headline We want you at our table and a playful invitation envelope" width={1280} height={837} loading="lazy" />
           <span>Meet new people over dinner <span aria-hidden="true">↗</span></span>
         </a>

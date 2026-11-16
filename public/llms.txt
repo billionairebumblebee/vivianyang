@@ -41,11 +41,12 @@ Her October 17, 2026 Codex screenshot records 18.1 billion lifetime tokens, 789.
 ## Project links and status
 
 - [Cloak](https://cloak.build/): shipped browser privacy work and public website.
-- [STING](https://cloak-sting-hackathon-2026.vercel.app/): hackathon prototype; solo build and sponsor-category winner.
+- [STING](https://cloak-sting.vercel.app/): hackathon prototype; solo build and sponsor-category winner.
 - [Cookie Jar](https://cookiejar-vivian.vercel.app): interactive portfolio with draggable, flippable cookies and sound mapped through the circle of fifths.
 - [Skein](https://skein-peach.vercel.app/): AI video-editing prototype exploring creator approval and control.
-- [Field Office](https://field-office-eta.vercel.app/): MVP experiment for service-business operations.
-- [Interaction Club](https://interaction-omega.vercel.app/): small-group friendship dinners; product build and first Berkeley builder dinner completed in the first week.
+- [Money Meow](https://money-meow.vercel.app/): personal finance prototype for exploring budgets, investments, and historical trading scenarios.
+- [CareSide](https://careside.vercel.app/): hospital companion prototype that organizes information from a fictional visit and helps patients prepare questions.
+- [Interaction Club](https://www.interaction.club/): small-group friendship dinners; product build and first Berkeley builder dinner completed in the first week.
 - [ByoGlo](https://byoglo.neocities.org/): biodegradable pimple-patch venture co-created in high school; Vivian independently coded the customer-facing website. Not a claim of current commercial operations.
 - DopaMINE: independent product experiment.
 - Oski Sorting Trash Can: team hardware prototype.
