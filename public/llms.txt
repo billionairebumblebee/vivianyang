@@ -46,6 +46,7 @@ Her October 17, 2026 Codex screenshot records 18.1 billion lifetime tokens, 789.
 - [Skein](https://skein-peach.vercel.app/): AI video-editing prototype exploring creator approval and control.
 - [Money Meow](https://money-meow.vercel.app/): personal finance prototype for exploring budgets, investments, and historical trading scenarios.
 - [CareSide](https://careside.vercel.app/): hospital companion prototype that organizes information from a fictional visit and helps patients prepare questions.
+- [Animal Jam Values](https://animal-jam-values.vercel.app/): unofficial item catalog and trade calculator for comparing Animal Jam offers.
 - [Interaction Club](https://www.interaction.club/): small-group friendship dinners; product build and first Berkeley builder dinner completed in the first week.
 - [ByoGlo](https://byoglo.neocities.org/): biodegradable pimple-patch venture co-created in high school; Vivian independently coded the customer-facing website. Not a claim of current commercial operations.
 - DopaMINE: independent product experiment.

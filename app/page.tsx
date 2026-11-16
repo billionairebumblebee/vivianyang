@@ -107,6 +107,14 @@ const builds = [
     copy: "Worked with a Berkeley PREP team to design and build a sorting-trash-can prototype using CAD, Arduino, and 3D printing.",
     image: "/IMG_8690.jpg",
   },
+  {
+    index: "11",
+    title: "Animal Jam Values",
+    meta: "Fan project · Trading tools",
+    copy: "An unofficial Animal Jam item catalog and trade calculator that helps players compare offers using estimated item values.",
+    href: "https://animal-jam-values.vercel.app/",
+    linkLabel: "Explore Animal Jam Values",
+  },
 ];
 
 export default function PortfolioPage() {
