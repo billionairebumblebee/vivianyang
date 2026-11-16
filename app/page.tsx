@@ -129,7 +129,7 @@ export default function PortfolioPage() {
   return <main className="studio">
     <nav className="navigation" aria-label="Main navigation">
       <a className="wordmark" href="#top">vy<span>✳</span></a>
-      <div><a href="#work">Projects</a><a href="#creator">Creator</a><a href="#in-public">In public</a></div>
+      <div><a href="#work">Startups</a><a href="#creator">Creator</a><a href="#builds">Builder</a></div>
       <a href="#contact">Say hello ↗</a>
     </nav>
     <header id="top" className="opening">
@@ -153,15 +153,19 @@ export default function PortfolioPage() {
       </div>
     </header>
     <section id="work" className="work-section">
-      <div className="section-head"><p className="kicker">From idea to internet</p><h2>Things I’ve<br /><em>made happen.</em></h2><p>Software, small-group dinners, and experiments that became something you can use.</p></div>
+      <div className="section-head"><p className="kicker">Founder, from the first line of code</p><h2>Startups.</h2><p>From building the product to finding its first users. Here’s how far I’ve taken each.</p></div>
       <article className="feature cloak-feature">
         <a className="feature-visual" href="https://cloak.build/" target="_blank" rel="noreferrer"><img src="/cloak-site-preview.png" alt="Cloak privacy product website" loading="lazy" /></a>
-        <div className="feature-info"><p className="kicker">Consumer software · Founder</p><h3>Cloak</h3><p>Making online tracking visible and controllable. I built the browser extensions and the systems around them—from the website to checkout, activation, and support.</p><div className="project-facts"><span><b>131</b> installs</span><span>Chrome + Safari</span></div><a className="text-link" href="https://cloak.build/" target="_blank" rel="noreferrer">Explore Cloak ↗</a><details><summary>Behind the build</summary><p>I defined the product, directed AI-assisted implementation, debugged, and tested browser protections. Shipping also meant handling billing, activation, and user support.</p></details></div>
+        <div className="feature-info"><p className="kicker">Consumer software · Founder</p><h3>Cloak</h3><p>Consumer privacy, built from the ground up. I shipped a Chrome extension and built the website, free trial, checkout, activation, and support around it.</p><div className="project-facts"><span><b>131</b> reported Chrome installs<small>September 2026 snapshot</small></span><span><b>Shipped</b> Chrome Web Store</span></div><ol className="venture-milestones"><li>Interviewed shoppers and shaped the privacy product.</li><li>Launched Chrome; built the Safari version.</li><li>Built a complete trial-to-paid activation flow.</li></ol><a className="text-link" href="https://cloak.build/" target="_blank" rel="noreferrer">Explore Cloak ↗</a><details><summary>Behind the build</summary><p>I defined the product, directed AI-assisted implementation, debugged, and tested browser protections. Shipping also meant handling billing, activation, and user support.</p></details></div>
       </article>
       <article className="feature interaction-feature">
-        <div className="feature-info"><p className="kicker">Product + community · Founder</p><h3>Interaction<br />Club</h3><p>Real plans. Your people. I built a product for small-group friendship dinners, brought in the first signups, and hosted our first Berkeley builder dinner.</p><div className="project-facts"><span><b>1 week</b> to first dinner</span><span><b>36</b> first-week signups</span></div><a className="text-link" href="https://www.interaction.club/" target="_blank" rel="noreferrer">You’re invited ↗</a></div>
+        <div className="feature-info"><p className="kicker">Product + community · Founder</p><h3>Interaction<br />Club</h3><p>Turning “we should hang out” into an actual table of people. I built the signup and matching experience, recruited the community, and hosted the first Berkeley builder dinner myself.</p><div className="project-facts"><span><b>40+</b> community signups<small>Verified November 16, 2026</small></span><span><b>Top 10</b> SCET hackathon finalist</span></div><ol className="venture-milestones"><li>Built and launched the product in one week.</li><li>Hosted the first dinner on October 8, 2026.</li><li>Pitched solo at the SCET Innovation Intelligence Hackathon.</li></ol><a className="text-link" href="https://www.interaction.club/" target="_blank" rel="noreferrer">You’re invited ↗</a></div>
         <a className="feature-visual" href="https://www.interaction.club/" target="_blank" rel="noreferrer"><img src="/interaction-club-preview.jpg" alt="Interaction Club’s playful invitation website" loading="lazy" /></a>
       </article>
+      <aside className="founder-interviews" aria-labelledby="interviews-title">
+        <div><p className="kicker">Taking the idea into the room</p><h3 id="interviews-title">Founder interviews.</h3><p>My work on Cloak led to interviews with accelerator and fellowship teams.</p></div>
+        <div className="interview-names">{["Z Fellows", "Entrepreneurs First", "The Tech Bros", "Antler Singapore", "FC Build", "a16z Alpha Fellowship"].map(name => <span key={name}>{name}</span>)}</div>
+      </aside>
     </section>
     <section id="creator" className="creator-section">
       <div className="creator-heading"><p className="kicker">On the other side of the camera</p><h2>Made to<br /><em>be watched.</em></h2><p>Beauty reviews, PR unboxings, campus life, and the things I’m excited to share. I make the content and do my own marketing.</p><a className="text-link" href="https://www.instagram.com/vivian.yan6/" target="_blank" rel="noreferrer">@vivian.yan6 ↗</a><a className="text-link secondary-link" href="https://www.instagram.com/reel/C_mJKXpSOV4/" target="_blank" rel="noreferrer">Campus life ↗</a><div className="creator-stat"><strong>2M+</strong><span>organic views across my<br />student and lifestyle content</span></div></div>

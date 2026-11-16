@@ -87,3 +87,13 @@ footer{background:var(--ink);color:var(--paper);padding:70px 5% 30px}
 .hero-cookie iframe{display:block;width:100%;height:480px;border:0;background:var(--paper)}.hero-cookie>p{font-size:11px;margin:0;padding:14px 20px}
 @media(max-width:1000px){.opening-stage{gap:4%}.hero-cookie iframe{height:420px}.cookie-caption{padding:14px}.cookie-caption>span{font-size:24px}.cookie-caption a{font-size:10px}}
 @media(max-width:700px){.opening-stage{grid-template-columns:1fr;gap:34px;margin-top:30px}.opening-stage h1{font-size:21vw}.opening-stage h1>span{padding-left:0}.opening-stage .opening-bottom{margin:24px 0}.hero-cookie{transform:none}.hero-cookie iframe{height:440px}.token-note strong{font-size:42px}}
+
+.venture-milestones{list-style:none;padding:0;margin:0 0 28px;width:100%;counter-reset:milestone}
+.venture-milestones li{counter-increment:milestone;border-top:1px solid var(--line);padding:12px 0;display:flex;gap:12px;font-size:13px;line-height:1.5}
+.venture-milestones li::before{content:"0" counter(milestone);font-size:10px;opacity:.6;padding-top:3px}
+.project-facts small{display:block;font-size:9px;opacity:.65;margin-top:5px}
+.founder-interviews{display:grid;grid-template-columns:1fr 1.4fr;gap:8%;padding:40px 0 0;margin-top:45px;border-top:1px solid var(--line)}
+.founder-interviews h3{font-family:"Instrument Serif",serif;font-size:42px;font-weight:400;letter-spacing:-1px;margin-bottom:14px}
+.founder-interviews .kicker{margin-bottom:14px}.founder-interviews p{font-size:14px;max-width:380px}
+.interview-names{display:flex;gap:12px;align-content:center;align-items:center;flex-wrap:wrap}.interview-names>span{padding:12px 16px;border:1px solid var(--line);font-size:15px;font-weight:500;background:#f5f3eb80}.interview-names>p{flex-basis:100%;max-width:none;font-size:11px;opacity:.7;margin:8px 0 0}
+@media(max-width:650px){.founder-interviews{grid-template-columns:1fr;gap:20px}.interview-names>span{font-size:13px;padding:10px 12px}}
