@@ -117,7 +117,7 @@ const builds = [
     imageAlt: "Animal Jam Values homepage and trade calculator",
     meta: "Fan project · Trading tools",
     copy: "An unofficial Animal Jam item catalog and trade calculator that helps players compare offers using estimated item values.",
-    href: "https://animal-jam-values.vercel.app/",
+    href: "https://animaljamvalues.com/",
     linkLabel: "Explore Animal Jam Values",
   },
 ];
