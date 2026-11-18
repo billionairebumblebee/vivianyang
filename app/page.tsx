@@ -138,7 +138,6 @@ export default function PortfolioPage() {
         <div className="opening-intro">
           <h1>VIVIAN<span>YANG<i aria-hidden="true">✳</i></span></h1>
           <div className="opening-bottom"><p>I build products, make videos,<br />and bring people together.</p><a href="#work">Come see what I’m making ↓</a></div>
-          <a className="token-note" href="/codex-stats-oct-17-2026.jpg" target="_blank" rel="noreferrer"><strong>18.1B</strong><span>Lifetime tokens<br /><small>Codex · October 17, 2026 snapshot ↗</small></span></a>
         </div>
         <div id="cookie-jar" className="hero-cookie">
           <div className="cookie-caption"><span>The Cookie Jar</span><a href={cookieJar} target="_blank" rel="noreferrer">Open full experience ↗</a></div>
@@ -150,6 +149,7 @@ export default function PortfolioPage() {
         <a className="collage-pitch" href="#in-public"><img src="/projects/scet-innovation-intelligence.jpg" alt="Vivian presenting Interaction Club at Berkeley" /><span>Ideas out in the world ↗</span></a>
         <a className="collage-invite" href="https://www.interaction.club/" target="_blank" rel="noreferrer"><img src="/projects/interaction-club.png" alt="Interaction Club logo with pink button" /><p>You’re invited.</p><span>Good company starts here ↗</span></a>
         <a className="collage-cat" href="https://money-meow.vercel.app/" target="_blank" rel="noreferrer"><img src="/projects/richard.svg" alt="Richard, Money Meow’s tuxedo cat" /><span>Meet my finance guy ↗</span></a>
+        <a className="collage-tokens" href="/codex-stats-oct-17-2026.jpg" target="_blank" rel="noreferrer"><img src="/codex-stats-oct-17-2026.jpg" alt="Codex usage dashboard showing 18.1 billion lifetime tokens and a 109-day streak" width={1698} height={1038} /><span><strong>18B</strong> tokens used ↗</span><small>Lifetime Codex usage · October 17, 2026</small></a>
       </div>
     </header>
     <section id="work" className="work-section">
@@ -184,7 +184,7 @@ export default function PortfolioPage() {
     </section>
     <section id="experience" className="about-section">
       <div><p className="kicker">A little more about me</p><h2>Engineering mind.<br /><em>Creative energy.</em></h2><p>I study mechanical engineering at UC Berkeley. My work moves between consumer software, physical prototypes, community, and content.</p><a className="text-link" href={resume}>Request my résumé ↗</a></div>
-      <div className="experience-list"><article><h3>Piedmont Consulting Group</h3><p>Co-leading a six-person Berkeley team on Orcana AI’s product, onboarding, research, and go-to-market work.</p></article><article><h3>Engineering beyond the screen</h3><p>Berkeley Lab technical programs, workflow automation, and a team-built sorting-trash-can prototype using CAD, Arduino, and 3D printing.</p></article><details><summary>How I build with AI ↗</summary><p>I define specs, direct implementation, debug, and test. My October 17, 2026 Codex snapshot recorded 18.1B lifetime tokens.</p><a className="text-link" href="/codex-stats-oct-17-2026.jpg" target="_blank" rel="noreferrer">View the snapshot ↗</a></details></div>
+      <div className="experience-list"><article><h3>Piedmont Consulting Group</h3><p>Co-leading a six-person Berkeley team on Orcana AI’s product, onboarding, research, and go-to-market work.</p></article><article><h3>Engineering beyond the screen</h3><p>Berkeley Lab technical programs, workflow automation, and a team-built sorting-trash-can prototype using CAD, Arduino, and 3D printing.</p></article><details><summary>How I build with AI ↗</summary><p>I define specs, direct implementation, debug, and test.</p><a className="text-link" href="/codex-stats-oct-17-2026.jpg" target="_blank" rel="noreferrer">View the snapshot ↗</a></details></div>
     </section>
     <footer id="contact"><p className="kicker">Projects, collaborations, or a good idea</p><a className="footer-title" href={`mailto:${email}`}>Let’s make<br /><em>something.</em> ↗</a><div className="footer-bottom"><a href={`mailto:${email}`}>{email}</a><div><a href="https://github.com/billionairebumblebee" target="_blank" rel="noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/vivianbuilds/" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href={calendly} target="_blank" rel="noreferrer">Book a call ↗</a></div></div><p className="footer-verse">“Let all that you do be done in love.” · 1 Corinthians 16:14</p></footer>
   </main>;

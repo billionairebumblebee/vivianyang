@@ -17,16 +17,22 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #ea
 .opening-bottom{display:flex;align-items:end;justify-content:space-between;gap:24px;margin:38px 0}
 .opening-bottom p{font-size:clamp(20px,2.4vw,32px);line-height:1.25;letter-spacing:-.7px;margin:0}
 .opening-bottom a{font-size:14px;border-bottom:1px solid;padding-bottom:8px}
-.opening-collage{display:grid;grid-template-columns:1.45fr 1fr .66fr;gap:26px;align-items:center;padding:28px 0 10px}
+.opening-collage{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.72fr) minmax(0,.6fr) minmax(0,1.15fr);gap:20px;align-items:center;padding:28px 0 10px}
 .opening-collage>a{transition:transform .3s;box-shadow:0 12px 30px #17246b14}
 .opening-collage>a:hover{transform:rotate(0) translateY(-8px)}
 .collage-pitch{transform:rotate(-3deg);background:#fff;padding:12px}
 .collage-pitch img{width:100%;aspect-ratio:1.65;object-fit:cover;object-position:50% 62%}
 .opening-collage span{display:block;font-size:12px;padding-top:12px}
-.collage-invite{background:#f8c6df;transform:rotate(4deg);padding:34px 24px;text-align:center}
-.collage-invite p{font-family:"Instrument Serif",serif;font-size:40px;margin:24px 0 12px}
-.collage-cat{background:#dfebc9;transform:rotate(-5deg);padding:18px;text-align:center}
+.collage-invite{background:#f8c6df;transform:rotate(4deg);padding:20px 14px;text-align:center}
+.opening-collage .collage-invite p{font-family:"Instrument Serif",serif;font-size:clamp(24px,2.3vw,34px);margin:16px 0 8px}
+.collage-cat{background:#dfebc9;transform:rotate(-5deg);padding:12px;text-align:center}
 .collage-cat img{width:100%;transition:transform .3s}.collage-cat:hover img{transform:rotate(5deg)}
+.collage-tokens{min-width:0;background:#c5d9fb;transform:rotate(3deg);padding:12px;text-align:center}
+.collage-tokens img{width:100%;height:auto}
+.collage-tokens strong{font-family:"Space Grotesk",sans-serif;font-size:clamp(24px,2.5vw,38px);line-height:1;letter-spacing:-.06em}
+.opening-collage .collage-tokens>span{font-size:13px;font-weight:600;padding-top:12px}
+.collage-tokens small{display:block;font-size:9px;line-height:1.5;margin-top:8px}
+@media(min-width:651px) and (max-width:1000px){.opening-collage{grid-template-columns:repeat(2,minmax(0,1fr))}}
 section{padding:90px 5%}.kicker{font-size:11px!important;font-weight:600;text-transform:uppercase;letter-spacing:1.8px;line-height:1.6!important;margin:0 0 22px}
 h2,h3,p{margin-top:0}h2{font-size:clamp(40px,5.5vw,78px);line-height:1.02;letter-spacing:-3px;font-weight:500;margin-bottom:28px}
 em{font-family:"Instrument Serif",serif;font-weight:400}p{font-size:16px;line-height:1.65}
@@ -80,8 +86,6 @@ footer{background:var(--ink);color:var(--paper);padding:70px 5% 30px}
 .opening-intro{min-width:0}.opening-stage h1{font-size:clamp(76px,9.2vw,165px);margin:16px 0 30px;line-height:.88}
 .opening-stage h1>span{padding-left:0}.opening-stage h1 i{font-size:.48em;margin-left:.12em}
 .opening-stage .opening-bottom{flex-direction:column;align-items:start;margin:28px 0;gap:22px}
-.token-note{display:flex;align-items:center;gap:18px;border-top:1px solid var(--line);padding-top:22px;max-width:390px}
-.token-note strong{font-family:"Space Grotesk",sans-serif;font-size:46px;letter-spacing:-3px}.token-note span{font-size:12px;line-height:1.6}.token-note small{font-size:10px;opacity:.7}
 .hero-cookie{min-width:0;background:#f8c6df;border:1px solid var(--line);box-shadow:12px 14px 0 #17246b0b;transform:rotate(1deg);overflow:hidden;border-radius:12px}
 .cookie-caption{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px 20px}.cookie-caption>span{font-family:"Instrument Serif",serif;font-size:29px}.cookie-caption a{font-size:11px;border-bottom:1px solid}
 .hero-cookie iframe{display:block;width:100%;height:480px;border:0;background:var(--paper)}.hero-cookie>p{font-size:11px;margin:0;padding:14px 20px}
@@ -92,6 +96,8 @@ footer{background:var(--ink);color:var(--paper);padding:70px 5% 30px}
 .venture-milestones li{counter-increment:milestone;border-top:1px solid var(--line);padding:12px 0;display:flex;gap:12px;font-size:13px;line-height:1.5}
 .venture-milestones li::before{content:"0" counter(milestone);font-size:10px;opacity:.6;padding-top:3px}
 .project-facts small{display:block;font-size:9px;opacity:.65;margin-top:5px}
+.opening-collage .collage-invite{padding:20px 14px}
+@media(max-width:650px){.opening-collage{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.opening-collage .collage-pitch{grid-column:auto}.opening-collage .collage-invite{padding:18px 12px}.opening-collage .collage-tokens{padding:10px}.opening-collage .collage-tokens>span{font-size:11px}.collage-tokens small{font-size:9px}}
 .founder-interviews{display:grid;grid-template-columns:1fr 1.4fr;gap:8%;padding:40px 0 0;margin-top:45px;border-top:1px solid var(--line)}
 .founder-interviews h3{font-family:"Instrument Serif",serif;font-size:42px;font-weight:400;letter-spacing:-1px;margin-bottom:14px}
 .founder-interviews .kicker{margin-bottom:14px}.founder-interviews p{font-size:14px;max-width:380px}
